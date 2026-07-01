@@ -1,0 +1,171 @@
+CRITICAL - 2026-07-01 14:09:57 --> Error: Class "App\Controllers\BaseAdminController\BaseController" not found
+[Method: GET, Route: /]
+in APPPATH\Controllers\Auth\AuthController.php on line 6.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(340): include_once()
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(320): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp\\htdocs\\absensipintar\\app\\Controllers\\Auth\\AuthController.php')
+ 3 SYSTEMPATH\Autoloader\Autoloader.php(296): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Auth\\AuthController')
+ 4 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Auth\\AuthController')
+ 5 SYSTEMPATH\Router\Router.php(790): class_exists('\\App\\Controllers\\Auth\\AuthController')
+ 6 SYSTEMPATH\Router\Router.php(228): CodeIgniter\Router\Router->processRouteAttributes()
+ 7 SYSTEMPATH\CodeIgniter.php(852): CodeIgniter\Router\Router->handle('/')
+ 8 SYSTEMPATH\CodeIgniter.php(464): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+ 9 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-07-01 14:19:31 --> Error: Class "Controller" not found
+[Method: GET, Route: dashboard]
+in APPPATH\Controllers\BaseAdminController\BaseAdminController.php on line 3.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(340): include_once()
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(320): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp\\htdocs\\absensipintar\\app\\Controllers\\BaseAdminController\\BaseAdminController.php')
+ 3 SYSTEMPATH\Autoloader\Autoloader.php(296): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\BaseAdminController\\BaseAdminController')
+ 4 APPPATH\Controllers\Admin\DashboardController.php(6): CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\BaseAdminController\\BaseAdminController')
+ 5 SYSTEMPATH\Autoloader\Autoloader.php(340): include_once('C:\\xampp\\htdocs\\absensipintar\\app\\Controllers\\Admin\\DashboardController.php')
+ 6 SYSTEMPATH\Autoloader\Autoloader.php(320): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp\\htdocs\\absensipintar\\app\\Controllers\\Admin\\DashboardController.php')
+ 7 SYSTEMPATH\Autoloader\Autoloader.php(296): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Admin\\DashboardController')
+ 8 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Admin\\DashboardController')
+ 9 SYSTEMPATH\Router\Router.php(790): class_exists('\\App\\Controllers\\Admin\\DashboardController')
+10 SYSTEMPATH\Router\Router.php(228): CodeIgniter\Router\Router->processRouteAttributes()
+11 SYSTEMPATH\CodeIgniter.php(852): CodeIgniter\Router\Router->handle('dashboard')
+12 SYSTEMPATH\CodeIgniter.php(464): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+13 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+14 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+15 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+16 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-07-01 14:21:42 --> Error: Class "App\Controllers\BaseAdminController\BaseAdminController" not found
+[Method: GET, Route: dashboard]
+in APPPATH\Controllers\Admin\DashboardController.php on line 6.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(340): include_once()
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(320): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp\\htdocs\\absensipintar\\app\\Controllers\\Admin\\DashboardController.php')
+ 3 SYSTEMPATH\Autoloader\Autoloader.php(296): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Admin\\DashboardController')
+ 4 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Admin\\DashboardController')
+ 5 SYSTEMPATH\Router\Router.php(790): class_exists('\\App\\Controllers\\Admin\\DashboardController')
+ 6 SYSTEMPATH\Router\Router.php(228): CodeIgniter\Router\Router->processRouteAttributes()
+ 7 SYSTEMPATH\CodeIgniter.php(852): CodeIgniter\Router\Router->handle('dashboard')
+ 8 SYSTEMPATH\CodeIgniter.php(464): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+ 9 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-07-01 14:23:00 --> Error: Class "App\Controllers\BaseAdminController" not found
+[Method: GET, Route: dashboard]
+in APPPATH\Controllers\Admin\DashboardController.php on line 6.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(340): include_once()
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(320): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp\\htdocs\\absensipintar\\app\\Controllers\\Admin\\DashboardController.php')
+ 3 SYSTEMPATH\Autoloader\Autoloader.php(296): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Admin\\DashboardController')
+ 4 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Admin\\DashboardController')
+ 5 SYSTEMPATH\Router\Router.php(790): class_exists('\\App\\Controllers\\Admin\\DashboardController')
+ 6 SYSTEMPATH\Router\Router.php(228): CodeIgniter\Router\Router->processRouteAttributes()
+ 7 SYSTEMPATH\CodeIgniter.php(852): CodeIgniter\Router\Router->handle('dashboard')
+ 8 SYSTEMPATH\CodeIgniter.php(464): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+ 9 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-07-01 14:25:32 --> Error: Class "App\Controllers\BaseAdminController" not found
+[Method: GET, Route: dashboard]
+in APPPATH\Controllers\Admin\DashboardController.php on line 6.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(340): include_once()
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(320): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp\\htdocs\\absensipintar\\app\\Controllers\\Admin\\DashboardController.php')
+ 3 SYSTEMPATH\Autoloader\Autoloader.php(296): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Admin\\DashboardController')
+ 4 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Admin\\DashboardController')
+ 5 SYSTEMPATH\Router\Router.php(790): class_exists('\\App\\Controllers\\Admin\\DashboardController')
+ 6 SYSTEMPATH\Router\Router.php(228): CodeIgniter\Router\Router->processRouteAttributes()
+ 7 SYSTEMPATH\CodeIgniter.php(852): CodeIgniter\Router\Router->handle('dashboard')
+ 8 SYSTEMPATH\CodeIgniter.php(464): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+ 9 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-07-01 14:45:25 --> Error: Class "App\Controllers\BaseAdminController\BaseAdminController" not found
+[Method: GET, Route: dashboard]
+in APPPATH\Controllers\Admin\DashboardController.php on line 6.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(340): include_once()
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(320): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp\\htdocs\\absensipintar\\app\\Controllers\\Admin\\DashboardController.php')
+ 3 SYSTEMPATH\Autoloader\Autoloader.php(296): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Admin\\DashboardController')
+ 4 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Admin\\DashboardController')
+ 5 SYSTEMPATH\Router\Router.php(790): class_exists('\\App\\Controllers\\Admin\\DashboardController')
+ 6 SYSTEMPATH\Router\Router.php(228): CodeIgniter\Router\Router->processRouteAttributes()
+ 7 SYSTEMPATH\CodeIgniter.php(852): CodeIgniter\Router\Router->handle('dashboard')
+ 8 SYSTEMPATH\CodeIgniter.php(464): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+ 9 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2026-07-01 14:48:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2026-07-01 14:48:19 --> Error: Call to undefined method CodeIgniter\View\View::extends()
+[Method: GET, Route: dashboard]
+in APPPATH\Views\dashboard\index.php on line 1.
+ 1 SYSTEMPATH\View\View.php(240): include()
+ 2 SYSTEMPATH\View\View.php(243): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1254): CodeIgniter\View\View->render('dashboard/index', [], true)
+ 4 APPPATH\Controllers\Admin\DashboardController.php(14): view('dashboard/index')
+ 5 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\Admin\DashboardController->index()
+ 6 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\DashboardController))
+ 7 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2026-07-01 14:55:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2026-07-01 14:55:55 --> Error: Call to undefined method CodeIgniter\View\View::extends()
+[Method: GET, Route: dashboard]
+in APPPATH\Views\dashboard\index.php on line 1.
+ 1 SYSTEMPATH\View\View.php(240): include()
+ 2 SYSTEMPATH\View\View.php(243): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1254): CodeIgniter\View\View->render('dashboard/index', [], true)
+ 4 APPPATH\Controllers\Admin\DashboardController.php(14): view('dashboard/index')
+ 5 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\Admin\DashboardController->index()
+ 6 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\DashboardController))
+ 7 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2026-07-01 14:56:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2026-07-01 14:56:00 --> Error: Call to undefined method CodeIgniter\View\View::extends()
+[Method: GET, Route: dashboard]
+in APPPATH\Views\dashboard\index.php on line 1.
+ 1 SYSTEMPATH\View\View.php(240): include()
+ 2 SYSTEMPATH\View\View.php(243): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1254): CodeIgniter\View\View->render('dashboard/index', [], true)
+ 4 APPPATH\Controllers\Admin\DashboardController.php(14): view('dashboard/index')
+ 5 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\Admin\DashboardController->index()
+ 6 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\DashboardController))
+ 7 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2026-07-01 15:00:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2026-07-01 15:00:19 --> Error: Call to undefined method CodeIgniter\View\View::extends()
+[Method: GET, Route: dashboard]
+in APPPATH\Views\dashboard\index.php on line 1.
+ 1 SYSTEMPATH\View\View.php(240): include()
+ 2 SYSTEMPATH\View\View.php(243): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1254): CodeIgniter\View\View->render('dashboard/index', [], true)
+ 4 APPPATH\Controllers\Admin\DashboardController.php(14): view('dashboard/index')
+ 5 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\Admin\DashboardController->index()
+ 6 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\DashboardController))
+ 7 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2026-07-01 15:03:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2026-07-01 15:03:27 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "partials/scripts.php"
+[Method: GET, Route: dashboard]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(228): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('partials/scripts.php')
+ 2 SYSTEMPATH\View\View.php(489): CodeIgniter\View\View->render('partials/scripts', null, true)
+ 3 APPPATH\Views\layouts\app.php(20): CodeIgniter\View\View->include('partials/scripts')
+ 4 SYSTEMPATH\View\View.php(240): include('C:\\xampp\\htdocs\\absensipintar\\app\\Views\\layouts\\app.php')
+ 5 SYSTEMPATH\View\View.php(243): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 6 SYSTEMPATH\View\View.php(256): CodeIgniter\View\View->render('layouts/app', [], true)
+ 7 SYSTEMPATH\Common.php(1254): CodeIgniter\View\View->render('dashboard/index', [], true)
+ 8 APPPATH\Controllers\Admin\DashboardController.php(14): view('dashboard/index')
+ 9 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\Admin\DashboardController->index()
+10 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\DashboardController))
+11 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2026-07-01 15:10:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-01 15:12:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-01 15:23:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
