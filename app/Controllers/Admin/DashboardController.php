@@ -7,10 +7,13 @@ class DashboardController extends BaseAdminController
 {
     public function index()
     {
-        // $data = [
-        //     'title' => 'Dashboard',
-        //     'user' => $this->user,
-        // ];
-        return view('dashboard/index');
+        $data = [
+            'title' => 'Dashboard',
+            'guru' => 0,
+            'siswa' => 0,
+            'absensi' => 0,
+            'nfc' => 0,
+        ];
+        return view('dashboard/index', $data);
     }
 }
