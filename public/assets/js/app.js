@@ -23,3 +23,59 @@ if (ctx) {
     },
   });
 }
+
+// const tableJurusan = $("#tableJurusan");
+
+// if (tableJurusan.length) {
+//   tableJurusan.DataTable({
+//     processing: true,
+
+//     responsive: true,
+
+//     ajax: {
+//       url: base_url + "/jurusan/list",
+
+//       dataSrc: "",
+//     },
+
+//     columns: [
+//       {
+//         data: null,
+
+//         render: function (data, type, row, meta) {
+//           return meta.row + 1;
+//         },
+//       },
+
+//       {
+//         data: "kode",
+//       },
+
+//       {
+//         data: "nama_jurusan",
+//       },
+
+//       {
+//         data: "id",
+
+//         render: function (id) {
+//           return `
+
+// <button class="btn btn-warning btn-sm">
+
+// <i class="fa-solid fa-pen"></i>
+
+// </button>
+
+// <button class="btn btn-danger btn-sm">
+
+// <i class="fa-solid fa-trash"></i>
+
+// </button>
+
+// `;
+//         },
+//       },
+//     ],
+//   });
+// }

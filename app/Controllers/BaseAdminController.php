@@ -14,7 +14,15 @@ class BaseAdminController extends Controller
         $this->session = session();
         $this->user = ['id' => session()->get('user_id'), 
                        'nama' => session()->get('nama'), 
-                       'role' => session()->get('role'),
+                       'role' => session()->get('id_role'),
                        'id_sekolah' => session()->get('id_sekolah'), ];
+    }
+    protected function currentUser()
+    {
+        return ['id' => session('user_id'), 
+                       'nama' => session('nama'), 
+                       'username' => session('username'), 
+                       'role' => session('id_role'),
+                       'id_sekolah' => session('id_sekolah'), ];
     }
 }

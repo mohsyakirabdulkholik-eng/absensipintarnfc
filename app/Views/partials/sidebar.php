@@ -23,8 +23,8 @@
 
                 <li class="nav-item">
 
-                    <a href="/dashboard"
-                       class="nav-link">
+                    <a href="<?= site_url('dashboard') ?>"
+                       class="nav-link <?= menu_active('dashboard') ?>">
 
                         <i class="nav-icon fas fa-home"></i>
 

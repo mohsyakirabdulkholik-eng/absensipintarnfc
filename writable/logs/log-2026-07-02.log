@@ -24,3 +24,410 @@ DEBUG - 2026-07-02 04:01:58 --> Session: Class initialized using 'CodeIgniter\Se
 DEBUG - 2026-07-02 04:01:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 DEBUG - 2026-07-02 04:02:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 DEBUG - 2026-07-02 04:02:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-02 04:15:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-02 04:16:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-02 04:16:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-02 04:16:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-02 04:16:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-02 04:27:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-02 04:27:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-02 04:27:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-02 04:27:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-02 04:59:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-02 05:00:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-02 05:11:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-02 06:01:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-02 06:01:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-02 06:02:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-02 06:02:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-02 06:02:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-02 06:02:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-02 06:02:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-02 06:02:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-02 06:10:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-02 06:10:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-02 06:27:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-02 06:27:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-02 06:27:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-02 06:28:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-02 07:00:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-02 07:01:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-02 07:15:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-02 07:15:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-02 07:16:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-02 07:16:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-02 07:16:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-02 07:16:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-02 07:17:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-02 07:17:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-02 07:25:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-02 07:25:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-02 07:25:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-02 07:27:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-02 07:27:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-02 07:36:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-02 23:24:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-02 23:24:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-02 23:25:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-02 23:25:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-02 23:25:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-02 23:25:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-02 23:41:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-02 23:54:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-02 23:54:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-02 23:54:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-02 23:54:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-02 23:54:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-02 23:54:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-02 23:54:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-02 23:54:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2026-07-02 23:55:03 --> Duplicate entry '1-XI IPA' for key 'uk_jurusan_nama'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 300.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(300): mysqli->query('INSERT INTO `jurusan` (`id_sekolah`, `kode`, `nama_jurusan`, `status`, `created_at`, `updated_at`) VALUES (\'1\', \'12\', \'XI IPA\', \'aktif\', \'2026-07-02 23:55:02\', \'2026-07-02 23:55:02\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(908): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `jurusan` (`id_sekolah`, `kode`, `nama_jurusan`, `status`, `created_at`, `updated_at`) VALUES (\'1\', \'12\', \'XI IPA\', \'aktif\', \'2026-07-02 23:55:02\', \'2026-07-02 23:55:02\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(825): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `jurusan` (`id_sekolah`, `kode`, `nama_jurusan`, `status`, `created_at`, `updated_at`) VALUES (\'1\', \'12\', \'XI IPA\', \'aktif\', \'2026-07-02 23:55:02\', \'2026-07-02 23:55:02\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2343): CodeIgniter\Database\BaseConnection->query('INSERT INTO `jurusan` (`id_sekolah`, `kode`, `nama_jurusan`, `status`, `created_at`, `updated_at`) VALUES (:id_sekolah:, :kode:, :nama_jurusan:, :status:, :created_at:, :updated_at:)', [...], false)
+ 5 SYSTEMPATH\Model.php(357): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(899): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(670): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Repositories\JurusanRepository.php(35): CodeIgniter\Model->insert([...])
+ 9 APPPATH\Services\JurusanService.php(27): App\Repositories\JurusanRepository->insert([...])
+10 APPPATH\Controllers\Admin\JurusanController.php(89): App\Services\JurusanService->save([...])
+11 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\Admin\JurusanController->store()
+12 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\JurusanController))
+13 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+14 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+15 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+16 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-07-02 23:55:03 --> CodeIgniter\Database\Exceptions\DatabaseException: Duplicate entry '1-XI IPA' for key 'uk_jurusan_nama'
+[Method: POST, Route: jurusan/store]
+in SYSTEMPATH\Database\BaseConnection.php on line 863.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2343): CodeIgniter\Database\BaseConnection->query('INSERT INTO `jurusan` (`id_sekolah`, `kode`, `nama_jurusan`, `status`, `created_at`, `updated_at`) VALUES (:id_sekolah:, :kode:, :nama_jurusan:, :status:, :created_at:, :updated_at:)', [...], false)
+ 2 SYSTEMPATH\Model.php(357): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(899): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(670): CodeIgniter\BaseModel->insert([...], true)
+ 5 APPPATH\Repositories\JurusanRepository.php(35): CodeIgniter\Model->insert([...])
+ 6 APPPATH\Services\JurusanService.php(27): App\Repositories\JurusanRepository->insert([...])
+ 7 APPPATH\Controllers\Admin\JurusanController.php(89): App\Services\JurusanService->save([...])
+ 8 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\Admin\JurusanController->store()
+ 9 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\JurusanController))
+10 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-07-02 23:55:03 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Duplicate entry '1-XI IPA' for key 'uk_jurusan_nama'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 310.
+ 1 SYSTEMPATH\Database\BaseConnection.php(908): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `jurusan` (`id_sekolah`, `kode`, `nama_jurusan`, `status`, `created_at`, `updated_at`) VALUES (\'1\', \'12\', \'XI IPA\', \'aktif\', \'2026-07-02 23:55:02\', \'2026-07-02 23:55:02\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(825): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `jurusan` (`id_sekolah`, `kode`, `nama_jurusan`, `status`, `created_at`, `updated_at`) VALUES (\'1\', \'12\', \'XI IPA\', \'aktif\', \'2026-07-02 23:55:02\', \'2026-07-02 23:55:02\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2343): CodeIgniter\Database\BaseConnection->query('INSERT INTO `jurusan` (`id_sekolah`, `kode`, `nama_jurusan`, `status`, `created_at`, `updated_at`) VALUES (:id_sekolah:, :kode:, :nama_jurusan:, :status:, :created_at:, :updated_at:)', [...], false)
+ 4 SYSTEMPATH\Model.php(357): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH\BaseModel.php(899): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH\Model.php(670): CodeIgniter\BaseModel->insert([...], true)
+ 7 APPPATH\Repositories\JurusanRepository.php(35): CodeIgniter\Model->insert([...])
+ 8 APPPATH\Services\JurusanService.php(27): App\Repositories\JurusanRepository->insert([...])
+ 9 APPPATH\Controllers\Admin\JurusanController.php(89): App\Services\JurusanService->save([...])
+10 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\Admin\JurusanController->store()
+11 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\JurusanController))
+12 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+15 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-07-02 23:55:03 --> [Caused by] mysqli_sql_exception: Duplicate entry '1-XI IPA' for key 'uk_jurusan_nama'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 300.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(300): mysqli->query('INSERT INTO `jurusan` (`id_sekolah`, `kode`, `nama_jurusan`, `status`, `created_at`, `updated_at`) VALUES (\'1\', \'12\', \'XI IPA\', \'aktif\', \'2026-07-02 23:55:02\', \'2026-07-02 23:55:02\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(908): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `jurusan` (`id_sekolah`, `kode`, `nama_jurusan`, `status`, `created_at`, `updated_at`) VALUES (\'1\', \'12\', \'XI IPA\', \'aktif\', \'2026-07-02 23:55:02\', \'2026-07-02 23:55:02\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(825): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `jurusan` (`id_sekolah`, `kode`, `nama_jurusan`, `status`, `created_at`, `updated_at`) VALUES (\'1\', \'12\', \'XI IPA\', \'aktif\', \'2026-07-02 23:55:02\', \'2026-07-02 23:55:02\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2343): CodeIgniter\Database\BaseConnection->query('INSERT INTO `jurusan` (`id_sekolah`, `kode`, `nama_jurusan`, `status`, `created_at`, `updated_at`) VALUES (:id_sekolah:, :kode:, :nama_jurusan:, :status:, :created_at:, :updated_at:)', [...], false)
+ 5 SYSTEMPATH\Model.php(357): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(899): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(670): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Repositories\JurusanRepository.php(35): CodeIgniter\Model->insert([...])
+ 9 APPPATH\Services\JurusanService.php(27): App\Repositories\JurusanRepository->insert([...])
+10 APPPATH\Controllers\Admin\JurusanController.php(89): App\Services\JurusanService->save([...])
+11 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\Admin\JurusanController->store()
+12 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\JurusanController))
+13 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+14 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+15 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+16 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2026-07-02 23:55:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2026-07-02 23:55:04 --> Duplicate entry '1-XI IPA' for key 'uk_jurusan_nama'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 300.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(300): mysqli->query('INSERT INTO `jurusan` (`id_sekolah`, `kode`, `nama_jurusan`, `status`, `created_at`, `updated_at`) VALUES (\'1\', \'12\', \'XI IPA\', \'aktif\', \'2026-07-02 23:55:03\', \'2026-07-02 23:55:03\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(908): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `jurusan` (`id_sekolah`, `kode`, `nama_jurusan`, `status`, `created_at`, `updated_at`) VALUES (\'1\', \'12\', \'XI IPA\', \'aktif\', \'2026-07-02 23:55:03\', \'2026-07-02 23:55:03\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(825): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `jurusan` (`id_sekolah`, `kode`, `nama_jurusan`, `status`, `created_at`, `updated_at`) VALUES (\'1\', \'12\', \'XI IPA\', \'aktif\', \'2026-07-02 23:55:03\', \'2026-07-02 23:55:03\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2343): CodeIgniter\Database\BaseConnection->query('INSERT INTO `jurusan` (`id_sekolah`, `kode`, `nama_jurusan`, `status`, `created_at`, `updated_at`) VALUES (:id_sekolah:, :kode:, :nama_jurusan:, :status:, :created_at:, :updated_at:)', [...], false)
+ 5 SYSTEMPATH\Model.php(357): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(899): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(670): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Repositories\JurusanRepository.php(35): CodeIgniter\Model->insert([...])
+ 9 APPPATH\Services\JurusanService.php(27): App\Repositories\JurusanRepository->insert([...])
+10 APPPATH\Controllers\Admin\JurusanController.php(89): App\Services\JurusanService->save([...])
+11 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\Admin\JurusanController->store()
+12 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\JurusanController))
+13 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+14 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+15 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+16 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-07-02 23:55:04 --> CodeIgniter\Database\Exceptions\DatabaseException: Duplicate entry '1-XI IPA' for key 'uk_jurusan_nama'
+[Method: POST, Route: jurusan/store]
+in SYSTEMPATH\Database\BaseConnection.php on line 863.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2343): CodeIgniter\Database\BaseConnection->query('INSERT INTO `jurusan` (`id_sekolah`, `kode`, `nama_jurusan`, `status`, `created_at`, `updated_at`) VALUES (:id_sekolah:, :kode:, :nama_jurusan:, :status:, :created_at:, :updated_at:)', [...], false)
+ 2 SYSTEMPATH\Model.php(357): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(899): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(670): CodeIgniter\BaseModel->insert([...], true)
+ 5 APPPATH\Repositories\JurusanRepository.php(35): CodeIgniter\Model->insert([...])
+ 6 APPPATH\Services\JurusanService.php(27): App\Repositories\JurusanRepository->insert([...])
+ 7 APPPATH\Controllers\Admin\JurusanController.php(89): App\Services\JurusanService->save([...])
+ 8 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\Admin\JurusanController->store()
+ 9 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\JurusanController))
+10 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-07-02 23:55:04 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Duplicate entry '1-XI IPA' for key 'uk_jurusan_nama'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 310.
+ 1 SYSTEMPATH\Database\BaseConnection.php(908): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `jurusan` (`id_sekolah`, `kode`, `nama_jurusan`, `status`, `created_at`, `updated_at`) VALUES (\'1\', \'12\', \'XI IPA\', \'aktif\', \'2026-07-02 23:55:03\', \'2026-07-02 23:55:03\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(825): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `jurusan` (`id_sekolah`, `kode`, `nama_jurusan`, `status`, `created_at`, `updated_at`) VALUES (\'1\', \'12\', \'XI IPA\', \'aktif\', \'2026-07-02 23:55:03\', \'2026-07-02 23:55:03\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2343): CodeIgniter\Database\BaseConnection->query('INSERT INTO `jurusan` (`id_sekolah`, `kode`, `nama_jurusan`, `status`, `created_at`, `updated_at`) VALUES (:id_sekolah:, :kode:, :nama_jurusan:, :status:, :created_at:, :updated_at:)', [...], false)
+ 4 SYSTEMPATH\Model.php(357): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH\BaseModel.php(899): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH\Model.php(670): CodeIgniter\BaseModel->insert([...], true)
+ 7 APPPATH\Repositories\JurusanRepository.php(35): CodeIgniter\Model->insert([...])
+ 8 APPPATH\Services\JurusanService.php(27): App\Repositories\JurusanRepository->insert([...])
+ 9 APPPATH\Controllers\Admin\JurusanController.php(89): App\Services\JurusanService->save([...])
+10 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\Admin\JurusanController->store()
+11 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\JurusanController))
+12 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+15 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-07-02 23:55:04 --> [Caused by] mysqli_sql_exception: Duplicate entry '1-XI IPA' for key 'uk_jurusan_nama'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 300.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(300): mysqli->query('INSERT INTO `jurusan` (`id_sekolah`, `kode`, `nama_jurusan`, `status`, `created_at`, `updated_at`) VALUES (\'1\', \'12\', \'XI IPA\', \'aktif\', \'2026-07-02 23:55:03\', \'2026-07-02 23:55:03\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(908): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `jurusan` (`id_sekolah`, `kode`, `nama_jurusan`, `status`, `created_at`, `updated_at`) VALUES (\'1\', \'12\', \'XI IPA\', \'aktif\', \'2026-07-02 23:55:03\', \'2026-07-02 23:55:03\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(825): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `jurusan` (`id_sekolah`, `kode`, `nama_jurusan`, `status`, `created_at`, `updated_at`) VALUES (\'1\', \'12\', \'XI IPA\', \'aktif\', \'2026-07-02 23:55:03\', \'2026-07-02 23:55:03\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2343): CodeIgniter\Database\BaseConnection->query('INSERT INTO `jurusan` (`id_sekolah`, `kode`, `nama_jurusan`, `status`, `created_at`, `updated_at`) VALUES (:id_sekolah:, :kode:, :nama_jurusan:, :status:, :created_at:, :updated_at:)', [...], false)
+ 5 SYSTEMPATH\Model.php(357): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(899): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(670): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Repositories\JurusanRepository.php(35): CodeIgniter\Model->insert([...])
+ 9 APPPATH\Services\JurusanService.php(27): App\Repositories\JurusanRepository->insert([...])
+10 APPPATH\Controllers\Admin\JurusanController.php(89): App\Services\JurusanService->save([...])
+11 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\Admin\JurusanController->store()
+12 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\JurusanController))
+13 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+14 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+15 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+16 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2026-07-02 23:55:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2026-07-02 23:55:05 --> Duplicate entry '1-XI IPA' for key 'uk_jurusan_nama'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 300.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(300): mysqli->query('INSERT INTO `jurusan` (`id_sekolah`, `kode`, `nama_jurusan`, `status`, `created_at`, `updated_at`) VALUES (\'1\', \'12\', \'XI IPA\', \'aktif\', \'2026-07-02 23:55:05\', \'2026-07-02 23:55:05\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(908): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `jurusan` (`id_sekolah`, `kode`, `nama_jurusan`, `status`, `created_at`, `updated_at`) VALUES (\'1\', \'12\', \'XI IPA\', \'aktif\', \'2026-07-02 23:55:05\', \'2026-07-02 23:55:05\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(825): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `jurusan` (`id_sekolah`, `kode`, `nama_jurusan`, `status`, `created_at`, `updated_at`) VALUES (\'1\', \'12\', \'XI IPA\', \'aktif\', \'2026-07-02 23:55:05\', \'2026-07-02 23:55:05\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2343): CodeIgniter\Database\BaseConnection->query('INSERT INTO `jurusan` (`id_sekolah`, `kode`, `nama_jurusan`, `status`, `created_at`, `updated_at`) VALUES (:id_sekolah:, :kode:, :nama_jurusan:, :status:, :created_at:, :updated_at:)', [...], false)
+ 5 SYSTEMPATH\Model.php(357): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(899): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(670): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Repositories\JurusanRepository.php(35): CodeIgniter\Model->insert([...])
+ 9 APPPATH\Services\JurusanService.php(27): App\Repositories\JurusanRepository->insert([...])
+10 APPPATH\Controllers\Admin\JurusanController.php(89): App\Services\JurusanService->save([...])
+11 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\Admin\JurusanController->store()
+12 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\JurusanController))
+13 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+14 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+15 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+16 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-07-02 23:55:05 --> CodeIgniter\Database\Exceptions\DatabaseException: Duplicate entry '1-XI IPA' for key 'uk_jurusan_nama'
+[Method: POST, Route: jurusan/store]
+in SYSTEMPATH\Database\BaseConnection.php on line 863.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2343): CodeIgniter\Database\BaseConnection->query('INSERT INTO `jurusan` (`id_sekolah`, `kode`, `nama_jurusan`, `status`, `created_at`, `updated_at`) VALUES (:id_sekolah:, :kode:, :nama_jurusan:, :status:, :created_at:, :updated_at:)', [...], false)
+ 2 SYSTEMPATH\Model.php(357): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(899): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(670): CodeIgniter\BaseModel->insert([...], true)
+ 5 APPPATH\Repositories\JurusanRepository.php(35): CodeIgniter\Model->insert([...])
+ 6 APPPATH\Services\JurusanService.php(27): App\Repositories\JurusanRepository->insert([...])
+ 7 APPPATH\Controllers\Admin\JurusanController.php(89): App\Services\JurusanService->save([...])
+ 8 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\Admin\JurusanController->store()
+ 9 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\JurusanController))
+10 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-07-02 23:55:05 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Duplicate entry '1-XI IPA' for key 'uk_jurusan_nama'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 310.
+ 1 SYSTEMPATH\Database\BaseConnection.php(908): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `jurusan` (`id_sekolah`, `kode`, `nama_jurusan`, `status`, `created_at`, `updated_at`) VALUES (\'1\', \'12\', \'XI IPA\', \'aktif\', \'2026-07-02 23:55:05\', \'2026-07-02 23:55:05\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(825): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `jurusan` (`id_sekolah`, `kode`, `nama_jurusan`, `status`, `created_at`, `updated_at`) VALUES (\'1\', \'12\', \'XI IPA\', \'aktif\', \'2026-07-02 23:55:05\', \'2026-07-02 23:55:05\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2343): CodeIgniter\Database\BaseConnection->query('INSERT INTO `jurusan` (`id_sekolah`, `kode`, `nama_jurusan`, `status`, `created_at`, `updated_at`) VALUES (:id_sekolah:, :kode:, :nama_jurusan:, :status:, :created_at:, :updated_at:)', [...], false)
+ 4 SYSTEMPATH\Model.php(357): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH\BaseModel.php(899): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH\Model.php(670): CodeIgniter\BaseModel->insert([...], true)
+ 7 APPPATH\Repositories\JurusanRepository.php(35): CodeIgniter\Model->insert([...])
+ 8 APPPATH\Services\JurusanService.php(27): App\Repositories\JurusanRepository->insert([...])
+ 9 APPPATH\Controllers\Admin\JurusanController.php(89): App\Services\JurusanService->save([...])
+10 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\Admin\JurusanController->store()
+11 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\JurusanController))
+12 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+15 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-07-02 23:55:05 --> [Caused by] mysqli_sql_exception: Duplicate entry '1-XI IPA' for key 'uk_jurusan_nama'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 300.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(300): mysqli->query('INSERT INTO `jurusan` (`id_sekolah`, `kode`, `nama_jurusan`, `status`, `created_at`, `updated_at`) VALUES (\'1\', \'12\', \'XI IPA\', \'aktif\', \'2026-07-02 23:55:05\', \'2026-07-02 23:55:05\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(908): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `jurusan` (`id_sekolah`, `kode`, `nama_jurusan`, `status`, `created_at`, `updated_at`) VALUES (\'1\', \'12\', \'XI IPA\', \'aktif\', \'2026-07-02 23:55:05\', \'2026-07-02 23:55:05\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(825): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `jurusan` (`id_sekolah`, `kode`, `nama_jurusan`, `status`, `created_at`, `updated_at`) VALUES (\'1\', \'12\', \'XI IPA\', \'aktif\', \'2026-07-02 23:55:05\', \'2026-07-02 23:55:05\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2343): CodeIgniter\Database\BaseConnection->query('INSERT INTO `jurusan` (`id_sekolah`, `kode`, `nama_jurusan`, `status`, `created_at`, `updated_at`) VALUES (:id_sekolah:, :kode:, :nama_jurusan:, :status:, :created_at:, :updated_at:)', [...], false)
+ 5 SYSTEMPATH\Model.php(357): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(899): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(670): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Repositories\JurusanRepository.php(35): CodeIgniter\Model->insert([...])
+ 9 APPPATH\Services\JurusanService.php(27): App\Repositories\JurusanRepository->insert([...])
+10 APPPATH\Controllers\Admin\JurusanController.php(89): App\Services\JurusanService->save([...])
+11 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\Admin\JurusanController->store()
+12 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\JurusanController))
+13 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+14 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+15 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+16 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2026-07-02 23:55:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-02 23:55:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2026-07-02 23:55:12 --> Duplicate entry '1-11' for key 'uk_jurusan_kode'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 300.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(300): mysqli->query('INSERT INTO `jurusan` (`id_sekolah`, `kode`, `nama_jurusan`, `status`, `created_at`, `updated_at`) VALUES (\'1\', \'11\', \'XI IPA\', \'aktif\', \'2026-07-02 23:55:12\', \'2026-07-02 23:55:12\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(908): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `jurusan` (`id_sekolah`, `kode`, `nama_jurusan`, `status`, `created_at`, `updated_at`) VALUES (\'1\', \'11\', \'XI IPA\', \'aktif\', \'2026-07-02 23:55:12\', \'2026-07-02 23:55:12\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(825): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `jurusan` (`id_sekolah`, `kode`, `nama_jurusan`, `status`, `created_at`, `updated_at`) VALUES (\'1\', \'11\', \'XI IPA\', \'aktif\', \'2026-07-02 23:55:12\', \'2026-07-02 23:55:12\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2343): CodeIgniter\Database\BaseConnection->query('INSERT INTO `jurusan` (`id_sekolah`, `kode`, `nama_jurusan`, `status`, `created_at`, `updated_at`) VALUES (:id_sekolah:, :kode:, :nama_jurusan:, :status:, :created_at:, :updated_at:)', [...], false)
+ 5 SYSTEMPATH\Model.php(357): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(899): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(670): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Repositories\JurusanRepository.php(35): CodeIgniter\Model->insert([...])
+ 9 APPPATH\Services\JurusanService.php(27): App\Repositories\JurusanRepository->insert([...])
+10 APPPATH\Controllers\Admin\JurusanController.php(89): App\Services\JurusanService->save([...])
+11 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\Admin\JurusanController->store()
+12 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\JurusanController))
+13 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+14 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+15 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+16 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-07-02 23:55:12 --> CodeIgniter\Database\Exceptions\DatabaseException: Duplicate entry '1-11' for key 'uk_jurusan_kode'
+[Method: POST, Route: jurusan/store]
+in SYSTEMPATH\Database\BaseConnection.php on line 863.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2343): CodeIgniter\Database\BaseConnection->query('INSERT INTO `jurusan` (`id_sekolah`, `kode`, `nama_jurusan`, `status`, `created_at`, `updated_at`) VALUES (:id_sekolah:, :kode:, :nama_jurusan:, :status:, :created_at:, :updated_at:)', [...], false)
+ 2 SYSTEMPATH\Model.php(357): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(899): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(670): CodeIgniter\BaseModel->insert([...], true)
+ 5 APPPATH\Repositories\JurusanRepository.php(35): CodeIgniter\Model->insert([...])
+ 6 APPPATH\Services\JurusanService.php(27): App\Repositories\JurusanRepository->insert([...])
+ 7 APPPATH\Controllers\Admin\JurusanController.php(89): App\Services\JurusanService->save([...])
+ 8 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\Admin\JurusanController->store()
+ 9 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\JurusanController))
+10 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-07-02 23:55:12 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Duplicate entry '1-11' for key 'uk_jurusan_kode'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 310.
+ 1 SYSTEMPATH\Database\BaseConnection.php(908): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `jurusan` (`id_sekolah`, `kode`, `nama_jurusan`, `status`, `created_at`, `updated_at`) VALUES (\'1\', \'11\', \'XI IPA\', \'aktif\', \'2026-07-02 23:55:12\', \'2026-07-02 23:55:12\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(825): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `jurusan` (`id_sekolah`, `kode`, `nama_jurusan`, `status`, `created_at`, `updated_at`) VALUES (\'1\', \'11\', \'XI IPA\', \'aktif\', \'2026-07-02 23:55:12\', \'2026-07-02 23:55:12\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2343): CodeIgniter\Database\BaseConnection->query('INSERT INTO `jurusan` (`id_sekolah`, `kode`, `nama_jurusan`, `status`, `created_at`, `updated_at`) VALUES (:id_sekolah:, :kode:, :nama_jurusan:, :status:, :created_at:, :updated_at:)', [...], false)
+ 4 SYSTEMPATH\Model.php(357): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH\BaseModel.php(899): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH\Model.php(670): CodeIgniter\BaseModel->insert([...], true)
+ 7 APPPATH\Repositories\JurusanRepository.php(35): CodeIgniter\Model->insert([...])
+ 8 APPPATH\Services\JurusanService.php(27): App\Repositories\JurusanRepository->insert([...])
+ 9 APPPATH\Controllers\Admin\JurusanController.php(89): App\Services\JurusanService->save([...])
+10 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\Admin\JurusanController->store()
+11 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\JurusanController))
+12 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+15 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-07-02 23:55:12 --> [Caused by] mysqli_sql_exception: Duplicate entry '1-11' for key 'uk_jurusan_kode'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 300.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(300): mysqli->query('INSERT INTO `jurusan` (`id_sekolah`, `kode`, `nama_jurusan`, `status`, `created_at`, `updated_at`) VALUES (\'1\', \'11\', \'XI IPA\', \'aktif\', \'2026-07-02 23:55:12\', \'2026-07-02 23:55:12\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(908): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `jurusan` (`id_sekolah`, `kode`, `nama_jurusan`, `status`, `created_at`, `updated_at`) VALUES (\'1\', \'11\', \'XI IPA\', \'aktif\', \'2026-07-02 23:55:12\', \'2026-07-02 23:55:12\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(825): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `jurusan` (`id_sekolah`, `kode`, `nama_jurusan`, `status`, `created_at`, `updated_at`) VALUES (\'1\', \'11\', \'XI IPA\', \'aktif\', \'2026-07-02 23:55:12\', \'2026-07-02 23:55:12\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2343): CodeIgniter\Database\BaseConnection->query('INSERT INTO `jurusan` (`id_sekolah`, `kode`, `nama_jurusan`, `status`, `created_at`, `updated_at`) VALUES (:id_sekolah:, :kode:, :nama_jurusan:, :status:, :created_at:, :updated_at:)', [...], false)
+ 5 SYSTEMPATH\Model.php(357): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(899): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(670): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Repositories\JurusanRepository.php(35): CodeIgniter\Model->insert([...])
+ 9 APPPATH\Services\JurusanService.php(27): App\Repositories\JurusanRepository->insert([...])
+10 APPPATH\Controllers\Admin\JurusanController.php(89): App\Services\JurusanService->save([...])
+11 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\Admin\JurusanController->store()
+12 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\JurusanController))
+13 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+14 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+15 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+16 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2026-07-02 23:55:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2026-07-02 23:55:16 --> Duplicate entry '1-11' for key 'uk_jurusan_kode'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 300.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(300): mysqli->query('INSERT INTO `jurusan` (`id_sekolah`, `kode`, `nama_jurusan`, `status`, `created_at`, `updated_at`) VALUES (\'1\', \'11\', \'XI IPA\', \'aktif\', \'2026-07-02 23:55:16\', \'2026-07-02 23:55:16\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(908): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `jurusan` (`id_sekolah`, `kode`, `nama_jurusan`, `status`, `created_at`, `updated_at`) VALUES (\'1\', \'11\', \'XI IPA\', \'aktif\', \'2026-07-02 23:55:16\', \'2026-07-02 23:55:16\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(825): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `jurusan` (`id_sekolah`, `kode`, `nama_jurusan`, `status`, `created_at`, `updated_at`) VALUES (\'1\', \'11\', \'XI IPA\', \'aktif\', \'2026-07-02 23:55:16\', \'2026-07-02 23:55:16\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2343): CodeIgniter\Database\BaseConnection->query('INSERT INTO `jurusan` (`id_sekolah`, `kode`, `nama_jurusan`, `status`, `created_at`, `updated_at`) VALUES (:id_sekolah:, :kode:, :nama_jurusan:, :status:, :created_at:, :updated_at:)', [...], false)
+ 5 SYSTEMPATH\Model.php(357): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(899): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(670): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Repositories\JurusanRepository.php(35): CodeIgniter\Model->insert([...])
+ 9 APPPATH\Services\JurusanService.php(27): App\Repositories\JurusanRepository->insert([...])
+10 APPPATH\Controllers\Admin\JurusanController.php(89): App\Services\JurusanService->save([...])
+11 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\Admin\JurusanController->store()
+12 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\JurusanController))
+13 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+14 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+15 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+16 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-07-02 23:55:16 --> CodeIgniter\Database\Exceptions\DatabaseException: Duplicate entry '1-11' for key 'uk_jurusan_kode'
+[Method: POST, Route: jurusan/store]
+in SYSTEMPATH\Database\BaseConnection.php on line 863.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2343): CodeIgniter\Database\BaseConnection->query('INSERT INTO `jurusan` (`id_sekolah`, `kode`, `nama_jurusan`, `status`, `created_at`, `updated_at`) VALUES (:id_sekolah:, :kode:, :nama_jurusan:, :status:, :created_at:, :updated_at:)', [...], false)
+ 2 SYSTEMPATH\Model.php(357): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(899): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(670): CodeIgniter\BaseModel->insert([...], true)
+ 5 APPPATH\Repositories\JurusanRepository.php(35): CodeIgniter\Model->insert([...])
+ 6 APPPATH\Services\JurusanService.php(27): App\Repositories\JurusanRepository->insert([...])
+ 7 APPPATH\Controllers\Admin\JurusanController.php(89): App\Services\JurusanService->save([...])
+ 8 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\Admin\JurusanController->store()
+ 9 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\JurusanController))
+10 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-07-02 23:55:16 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Duplicate entry '1-11' for key 'uk_jurusan_kode'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 310.
+ 1 SYSTEMPATH\Database\BaseConnection.php(908): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `jurusan` (`id_sekolah`, `kode`, `nama_jurusan`, `status`, `created_at`, `updated_at`) VALUES (\'1\', \'11\', \'XI IPA\', \'aktif\', \'2026-07-02 23:55:16\', \'2026-07-02 23:55:16\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(825): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `jurusan` (`id_sekolah`, `kode`, `nama_jurusan`, `status`, `created_at`, `updated_at`) VALUES (\'1\', \'11\', \'XI IPA\', \'aktif\', \'2026-07-02 23:55:16\', \'2026-07-02 23:55:16\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2343): CodeIgniter\Database\BaseConnection->query('INSERT INTO `jurusan` (`id_sekolah`, `kode`, `nama_jurusan`, `status`, `created_at`, `updated_at`) VALUES (:id_sekolah:, :kode:, :nama_jurusan:, :status:, :created_at:, :updated_at:)', [...], false)
+ 4 SYSTEMPATH\Model.php(357): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH\BaseModel.php(899): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH\Model.php(670): CodeIgniter\BaseModel->insert([...], true)
+ 7 APPPATH\Repositories\JurusanRepository.php(35): CodeIgniter\Model->insert([...])
+ 8 APPPATH\Services\JurusanService.php(27): App\Repositories\JurusanRepository->insert([...])
+ 9 APPPATH\Controllers\Admin\JurusanController.php(89): App\Services\JurusanService->save([...])
+10 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\Admin\JurusanController->store()
+11 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\JurusanController))
+12 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+15 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-07-02 23:55:16 --> [Caused by] mysqli_sql_exception: Duplicate entry '1-11' for key 'uk_jurusan_kode'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 300.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(300): mysqli->query('INSERT INTO `jurusan` (`id_sekolah`, `kode`, `nama_jurusan`, `status`, `created_at`, `updated_at`) VALUES (\'1\', \'11\', \'XI IPA\', \'aktif\', \'2026-07-02 23:55:16\', \'2026-07-02 23:55:16\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(908): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `jurusan` (`id_sekolah`, `kode`, `nama_jurusan`, `status`, `created_at`, `updated_at`) VALUES (\'1\', \'11\', \'XI IPA\', \'aktif\', \'2026-07-02 23:55:16\', \'2026-07-02 23:55:16\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(825): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `jurusan` (`id_sekolah`, `kode`, `nama_jurusan`, `status`, `created_at`, `updated_at`) VALUES (\'1\', \'11\', \'XI IPA\', \'aktif\', \'2026-07-02 23:55:16\', \'2026-07-02 23:55:16\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2343): CodeIgniter\Database\BaseConnection->query('INSERT INTO `jurusan` (`id_sekolah`, `kode`, `nama_jurusan`, `status`, `created_at`, `updated_at`) VALUES (:id_sekolah:, :kode:, :nama_jurusan:, :status:, :created_at:, :updated_at:)', [...], false)
+ 5 SYSTEMPATH\Model.php(357): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(899): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(670): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Repositories\JurusanRepository.php(35): CodeIgniter\Model->insert([...])
+ 9 APPPATH\Services\JurusanService.php(27): App\Repositories\JurusanRepository->insert([...])
+10 APPPATH\Controllers\Admin\JurusanController.php(89): App\Services\JurusanService->save([...])
+11 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\Admin\JurusanController->store()
+12 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\JurusanController))
+13 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+14 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+15 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+16 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
