@@ -13,7 +13,6 @@ class JurusanModel extends Model
 
     protected $allowedFields = [
         'id_sekolah',
-        'kode',
         'nama_jurusan',
         'status'
     ];

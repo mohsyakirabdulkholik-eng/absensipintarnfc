@@ -1,0 +1,398 @@
+DEBUG - 2026-07-08 02:01:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-08 02:01:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-08 02:01:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-08 02:02:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-08 02:02:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-08 02:03:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-08 02:03:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-08 02:30:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-08 02:39:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-08 02:41:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-08 02:41:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-08 02:41:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-08 02:41:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-08 02:41:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-08 02:41:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-08 02:41:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2026-07-08 02:41:57 --> Unknown column 'kelas.id_kelas' in 'on clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 300.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(300): mysqli->query('SELECT `siswa`.*, `kelas`.`nama_kelas`
+FROM `siswa`
+JOIN `kelas` ON `kelas`.`id_kelas` = `siswa`.`id_kelas`
+WHERE `siswa`.`id_sekolah` = \'1\'
+AND `siswa`.`deleted_at` IS NULL
+ORDER BY `nama_siswa` ASC', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(908): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `siswa`.*, `kelas`.`nama_kelas`
+FROM `siswa`
+JOIN `kelas` ON `kelas`.`id_kelas` = `siswa`.`id_kelas`
+WHERE `siswa`.`id_sekolah` = \'1\'
+AND `siswa`.`deleted_at` IS NULL
+ORDER BY `nama_siswa` ASC')
+ 3 SYSTEMPATH\Database\BaseConnection.php(825): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `siswa`.*, `kelas`.`nama_kelas`
+FROM `siswa`
+JOIN `kelas` ON `kelas`.`id_kelas` = `siswa`.`id_kelas`
+WHERE `siswa`.`id_sekolah` = \'1\'
+AND `siswa`.`deleted_at` IS NULL
+ORDER BY `nama_siswa` ASC')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1647): CodeIgniter\Database\BaseConnection->query('SELECT `siswa`.*, `kelas`.`nama_kelas`
+FROM `siswa`
+JOIN `kelas` ON `kelas`.`id_kelas` = `siswa`.`id_kelas`
+WHERE `siswa`.`id_sekolah` = :siswa.id_sekolah:
+AND `siswa`.`deleted_at` IS NULL
+ORDER BY `nama_siswa` ASC', [...], false)
+ 5 SYSTEMPATH\Model.php(255): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Repositories\SiswaRepository.php(26): CodeIgniter\BaseModel->findAll()
+ 8 APPPATH\Services\SiswaService.php(18): App\Repositories\SiswaRepository->getAll('1')
+ 9 APPPATH\Controllers\Admin\SiswaController.php(32): App\Services\SiswaService->getAll('1')
+10 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\Admin\SiswaController->getData()
+11 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\SiswaController))
+12 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+15 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-07-08 02:41:57 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'kelas.id_kelas' in 'on clause'
+[Method: GET, Route: siswa/data]
+in SYSTEMPATH\Database\BaseConnection.php on line 863.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1647): CodeIgniter\Database\BaseConnection->query('SELECT `siswa`.*, `kelas`.`nama_kelas`
+FROM `siswa`
+JOIN `kelas` ON `kelas`.`id_kelas` = `siswa`.`id_kelas`
+WHERE `siswa`.`id_sekolah` = :siswa.id_sekolah:
+AND `siswa`.`deleted_at` IS NULL
+ORDER BY `nama_siswa` ASC', [...], false)
+ 2 SYSTEMPATH\Model.php(255): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Repositories\SiswaRepository.php(26): CodeIgniter\BaseModel->findAll()
+ 5 APPPATH\Services\SiswaService.php(18): App\Repositories\SiswaRepository->getAll('1')
+ 6 APPPATH\Controllers\Admin\SiswaController.php(32): App\Services\SiswaService->getAll('1')
+ 7 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\Admin\SiswaController->getData()
+ 8 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\SiswaController))
+ 9 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-07-08 02:41:57 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'kelas.id_kelas' in 'on clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 310.
+ 1 SYSTEMPATH\Database\BaseConnection.php(908): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `siswa`.*, `kelas`.`nama_kelas`
+FROM `siswa`
+JOIN `kelas` ON `kelas`.`id_kelas` = `siswa`.`id_kelas`
+WHERE `siswa`.`id_sekolah` = \'1\'
+AND `siswa`.`deleted_at` IS NULL
+ORDER BY `nama_siswa` ASC')
+ 2 SYSTEMPATH\Database\BaseConnection.php(825): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `siswa`.*, `kelas`.`nama_kelas`
+FROM `siswa`
+JOIN `kelas` ON `kelas`.`id_kelas` = `siswa`.`id_kelas`
+WHERE `siswa`.`id_sekolah` = \'1\'
+AND `siswa`.`deleted_at` IS NULL
+ORDER BY `nama_siswa` ASC')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1647): CodeIgniter\Database\BaseConnection->query('SELECT `siswa`.*, `kelas`.`nama_kelas`
+FROM `siswa`
+JOIN `kelas` ON `kelas`.`id_kelas` = `siswa`.`id_kelas`
+WHERE `siswa`.`id_sekolah` = :siswa.id_sekolah:
+AND `siswa`.`deleted_at` IS NULL
+ORDER BY `nama_siswa` ASC', [...], false)
+ 4 SYSTEMPATH\Model.php(255): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+ 6 APPPATH\Repositories\SiswaRepository.php(26): CodeIgniter\BaseModel->findAll()
+ 7 APPPATH\Services\SiswaService.php(18): App\Repositories\SiswaRepository->getAll('1')
+ 8 APPPATH\Controllers\Admin\SiswaController.php(32): App\Services\SiswaService->getAll('1')
+ 9 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\Admin\SiswaController->getData()
+10 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\SiswaController))
+11 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-07-08 02:41:57 --> [Caused by] mysqli_sql_exception: Unknown column 'kelas.id_kelas' in 'on clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 300.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(300): mysqli->query('SELECT `siswa`.*, `kelas`.`nama_kelas`
+FROM `siswa`
+JOIN `kelas` ON `kelas`.`id_kelas` = `siswa`.`id_kelas`
+WHERE `siswa`.`id_sekolah` = \'1\'
+AND `siswa`.`deleted_at` IS NULL
+ORDER BY `nama_siswa` ASC', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(908): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `siswa`.*, `kelas`.`nama_kelas`
+FROM `siswa`
+JOIN `kelas` ON `kelas`.`id_kelas` = `siswa`.`id_kelas`
+WHERE `siswa`.`id_sekolah` = \'1\'
+AND `siswa`.`deleted_at` IS NULL
+ORDER BY `nama_siswa` ASC')
+ 3 SYSTEMPATH\Database\BaseConnection.php(825): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `siswa`.*, `kelas`.`nama_kelas`
+FROM `siswa`
+JOIN `kelas` ON `kelas`.`id_kelas` = `siswa`.`id_kelas`
+WHERE `siswa`.`id_sekolah` = \'1\'
+AND `siswa`.`deleted_at` IS NULL
+ORDER BY `nama_siswa` ASC')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1647): CodeIgniter\Database\BaseConnection->query('SELECT `siswa`.*, `kelas`.`nama_kelas`
+FROM `siswa`
+JOIN `kelas` ON `kelas`.`id_kelas` = `siswa`.`id_kelas`
+WHERE `siswa`.`id_sekolah` = :siswa.id_sekolah:
+AND `siswa`.`deleted_at` IS NULL
+ORDER BY `nama_siswa` ASC', [...], false)
+ 5 SYSTEMPATH\Model.php(255): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Repositories\SiswaRepository.php(26): CodeIgniter\BaseModel->findAll()
+ 8 APPPATH\Services\SiswaService.php(18): App\Repositories\SiswaRepository->getAll('1')
+ 9 APPPATH\Controllers\Admin\SiswaController.php(32): App\Services\SiswaService->getAll('1')
+10 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\Admin\SiswaController->getData()
+11 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\SiswaController))
+12 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+15 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2026-07-08 02:42:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2026-07-08 02:42:28 --> Unknown column 'kelas.id_kelas' in 'on clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 300.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(300): mysqli->query('SELECT `siswa`.*, `kelas`.`nama_kelas`
+FROM `siswa`
+JOIN `kelas` ON `kelas`.`id_kelas` = `siswa`.`id_kelas`
+WHERE `siswa`.`id_sekolah` = \'1\'
+AND `siswa`.`deleted_at` IS NULL
+ORDER BY `nama_siswa` ASC', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(908): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `siswa`.*, `kelas`.`nama_kelas`
+FROM `siswa`
+JOIN `kelas` ON `kelas`.`id_kelas` = `siswa`.`id_kelas`
+WHERE `siswa`.`id_sekolah` = \'1\'
+AND `siswa`.`deleted_at` IS NULL
+ORDER BY `nama_siswa` ASC')
+ 3 SYSTEMPATH\Database\BaseConnection.php(825): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `siswa`.*, `kelas`.`nama_kelas`
+FROM `siswa`
+JOIN `kelas` ON `kelas`.`id_kelas` = `siswa`.`id_kelas`
+WHERE `siswa`.`id_sekolah` = \'1\'
+AND `siswa`.`deleted_at` IS NULL
+ORDER BY `nama_siswa` ASC')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1647): CodeIgniter\Database\BaseConnection->query('SELECT `siswa`.*, `kelas`.`nama_kelas`
+FROM `siswa`
+JOIN `kelas` ON `kelas`.`id_kelas` = `siswa`.`id_kelas`
+WHERE `siswa`.`id_sekolah` = :siswa.id_sekolah:
+AND `siswa`.`deleted_at` IS NULL
+ORDER BY `nama_siswa` ASC', [...], false)
+ 5 SYSTEMPATH\Model.php(255): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Repositories\SiswaRepository.php(26): CodeIgniter\BaseModel->findAll()
+ 8 APPPATH\Services\SiswaService.php(18): App\Repositories\SiswaRepository->getAll('1')
+ 9 APPPATH\Controllers\Admin\SiswaController.php(32): App\Services\SiswaService->getAll('1')
+10 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\Admin\SiswaController->getData()
+11 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\SiswaController))
+12 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+15 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-07-08 02:42:28 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'kelas.id_kelas' in 'on clause'
+[Method: GET, Route: siswa/data]
+in SYSTEMPATH\Database\BaseConnection.php on line 863.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1647): CodeIgniter\Database\BaseConnection->query('SELECT `siswa`.*, `kelas`.`nama_kelas`
+FROM `siswa`
+JOIN `kelas` ON `kelas`.`id_kelas` = `siswa`.`id_kelas`
+WHERE `siswa`.`id_sekolah` = :siswa.id_sekolah:
+AND `siswa`.`deleted_at` IS NULL
+ORDER BY `nama_siswa` ASC', [...], false)
+ 2 SYSTEMPATH\Model.php(255): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Repositories\SiswaRepository.php(26): CodeIgniter\BaseModel->findAll()
+ 5 APPPATH\Services\SiswaService.php(18): App\Repositories\SiswaRepository->getAll('1')
+ 6 APPPATH\Controllers\Admin\SiswaController.php(32): App\Services\SiswaService->getAll('1')
+ 7 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\Admin\SiswaController->getData()
+ 8 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\SiswaController))
+ 9 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-07-08 02:42:28 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'kelas.id_kelas' in 'on clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 310.
+ 1 SYSTEMPATH\Database\BaseConnection.php(908): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `siswa`.*, `kelas`.`nama_kelas`
+FROM `siswa`
+JOIN `kelas` ON `kelas`.`id_kelas` = `siswa`.`id_kelas`
+WHERE `siswa`.`id_sekolah` = \'1\'
+AND `siswa`.`deleted_at` IS NULL
+ORDER BY `nama_siswa` ASC')
+ 2 SYSTEMPATH\Database\BaseConnection.php(825): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `siswa`.*, `kelas`.`nama_kelas`
+FROM `siswa`
+JOIN `kelas` ON `kelas`.`id_kelas` = `siswa`.`id_kelas`
+WHERE `siswa`.`id_sekolah` = \'1\'
+AND `siswa`.`deleted_at` IS NULL
+ORDER BY `nama_siswa` ASC')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1647): CodeIgniter\Database\BaseConnection->query('SELECT `siswa`.*, `kelas`.`nama_kelas`
+FROM `siswa`
+JOIN `kelas` ON `kelas`.`id_kelas` = `siswa`.`id_kelas`
+WHERE `siswa`.`id_sekolah` = :siswa.id_sekolah:
+AND `siswa`.`deleted_at` IS NULL
+ORDER BY `nama_siswa` ASC', [...], false)
+ 4 SYSTEMPATH\Model.php(255): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+ 6 APPPATH\Repositories\SiswaRepository.php(26): CodeIgniter\BaseModel->findAll()
+ 7 APPPATH\Services\SiswaService.php(18): App\Repositories\SiswaRepository->getAll('1')
+ 8 APPPATH\Controllers\Admin\SiswaController.php(32): App\Services\SiswaService->getAll('1')
+ 9 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\Admin\SiswaController->getData()
+10 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\SiswaController))
+11 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-07-08 02:42:28 --> [Caused by] mysqli_sql_exception: Unknown column 'kelas.id_kelas' in 'on clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 300.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(300): mysqli->query('SELECT `siswa`.*, `kelas`.`nama_kelas`
+FROM `siswa`
+JOIN `kelas` ON `kelas`.`id_kelas` = `siswa`.`id_kelas`
+WHERE `siswa`.`id_sekolah` = \'1\'
+AND `siswa`.`deleted_at` IS NULL
+ORDER BY `nama_siswa` ASC', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(908): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `siswa`.*, `kelas`.`nama_kelas`
+FROM `siswa`
+JOIN `kelas` ON `kelas`.`id_kelas` = `siswa`.`id_kelas`
+WHERE `siswa`.`id_sekolah` = \'1\'
+AND `siswa`.`deleted_at` IS NULL
+ORDER BY `nama_siswa` ASC')
+ 3 SYSTEMPATH\Database\BaseConnection.php(825): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `siswa`.*, `kelas`.`nama_kelas`
+FROM `siswa`
+JOIN `kelas` ON `kelas`.`id_kelas` = `siswa`.`id_kelas`
+WHERE `siswa`.`id_sekolah` = \'1\'
+AND `siswa`.`deleted_at` IS NULL
+ORDER BY `nama_siswa` ASC')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1647): CodeIgniter\Database\BaseConnection->query('SELECT `siswa`.*, `kelas`.`nama_kelas`
+FROM `siswa`
+JOIN `kelas` ON `kelas`.`id_kelas` = `siswa`.`id_kelas`
+WHERE `siswa`.`id_sekolah` = :siswa.id_sekolah:
+AND `siswa`.`deleted_at` IS NULL
+ORDER BY `nama_siswa` ASC', [...], false)
+ 5 SYSTEMPATH\Model.php(255): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Repositories\SiswaRepository.php(26): CodeIgniter\BaseModel->findAll()
+ 8 APPPATH\Services\SiswaService.php(18): App\Repositories\SiswaRepository->getAll('1')
+ 9 APPPATH\Controllers\Admin\SiswaController.php(32): App\Services\SiswaService->getAll('1')
+10 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\Admin\SiswaController->getData()
+11 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\SiswaController))
+12 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+15 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2026-07-08 02:46:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-08 02:46:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-08 03:40:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-08 03:40:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-08 03:42:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-08 03:43:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-08 03:43:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-08 03:43:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-08 03:47:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-08 03:47:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-08 03:49:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2026-07-08 03:49:06 --> Cannot add or update a child row: a foreign key constraint fails (`absensi_pintar`.`siswa`, CONSTRAINT `siswa_ibfk_2` FOREIGN KEY (`id_kelas`) REFERENCES `kelas` (`id`))
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 300.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(300): mysqli->query('INSERT INTO `siswa` (`id_sekolah`, `id_kelas`, `uid_nfc`, `nis`, `nisn`, `nama_siswa`, `jenis_kelamin`, `tempat_lahir`, `tanggal_lahir`, `alamat`, `nama_ortu`, `no_hp`, `status`, `created_at`, `updated_at`) VALUES (\'1\', \'\', \'\', \'1233144\', \'\', \'salut\', \'L\', \'bandung barat\', \'2010-02-08\', \'\', \'barong\', \'\', \'aktif\', \'2026-07-08 03:49:06\', \'2026-07-08 03:49:06\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(908): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `siswa` (`id_sekolah`, `id_kelas`, `uid_nfc`, `nis`, `nisn`, `nama_siswa`, `jenis_kelamin`, `tempat_lahir`, `tanggal_lahir`, `alamat`, `nama_ortu`, `no_hp`, `status`, `created_at`, `updated_at`) VALUES (\'1\', \'\', \'\', \'1233144\', \'\', \'salut\', \'L\', \'bandung barat\', \'2010-02-08\', \'\', \'barong\', \'\', \'aktif\', \'2026-07-08 03:49:06\', \'2026-07-08 03:49:06\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(825): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `siswa` (`id_sekolah`, `id_kelas`, `uid_nfc`, `nis`, `nisn`, `nama_siswa`, `jenis_kelamin`, `tempat_lahir`, `tanggal_lahir`, `alamat`, `nama_ortu`, `no_hp`, `status`, `created_at`, `updated_at`) VALUES (\'1\', \'\', \'\', \'1233144\', \'\', \'salut\', \'L\', \'bandung barat\', \'2010-02-08\', \'\', \'barong\', \'\', \'aktif\', \'2026-07-08 03:49:06\', \'2026-07-08 03:49:06\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2343): CodeIgniter\Database\BaseConnection->query('INSERT INTO `siswa` (`id_sekolah`, `id_kelas`, `uid_nfc`, `nis`, `nisn`, `nama_siswa`, `jenis_kelamin`, `tempat_lahir`, `tanggal_lahir`, `alamat`, `nama_ortu`, `no_hp`, `status`, `created_at`, `updated_at`) VALUES (:id_sekolah:, :id_kelas:, :uid_nfc:, :nis:, :nisn:, :nama_siswa:, :jenis_kelamin:, :tempat_lahir:, :tanggal_lahir:, :alamat:, :nama_ortu:, :no_hp:, :status:, :created_at:, :updated_at:)', [...], false)
+ 5 SYSTEMPATH\Model.php(357): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(899): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(670): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Repositories\SiswaRepository.php(34): CodeIgniter\Model->insert([...])
+ 9 APPPATH\Services\SiswaService.php(32): App\Repositories\SiswaRepository->insert([...])
+10 APPPATH\Controllers\Admin\SiswaController.php(98): App\Services\SiswaService->save([...])
+11 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\Admin\SiswaController->store()
+12 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\SiswaController))
+13 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+14 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+15 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+16 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-07-08 03:49:06 --> CodeIgniter\Database\Exceptions\DatabaseException: Cannot add or update a child row: a foreign key constraint fails (`absensi_pintar`.`siswa`, CONSTRAINT `siswa_ibfk_2` FOREIGN KEY (`id_kelas`) REFERENCES `kelas` (`id`))
+[Method: POST, Route: siswa/store]
+in SYSTEMPATH\Database\BaseConnection.php on line 863.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2343): CodeIgniter\Database\BaseConnection->query('INSERT INTO `siswa` (`id_sekolah`, `id_kelas`, `uid_nfc`, `nis`, `nisn`, `nama_siswa`, `jenis_kelamin`, `tempat_lahir`, `tanggal_lahir`, `alamat`, `nama_ortu`, `no_hp`, `status`, `created_at`, `updated_at`) VALUES (:id_sekolah:, :id_kelas:, :uid_nfc:, :nis:, :nisn:, :nama_siswa:, :jenis_kelamin:, :tempat_lahir:, :tanggal_lahir:, :alamat:, :nama_ortu:, :no_hp:, :status:, :created_at:, :updated_at:)', [...], false)
+ 2 SYSTEMPATH\Model.php(357): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(899): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(670): CodeIgniter\BaseModel->insert([...], true)
+ 5 APPPATH\Repositories\SiswaRepository.php(34): CodeIgniter\Model->insert([...])
+ 6 APPPATH\Services\SiswaService.php(32): App\Repositories\SiswaRepository->insert([...])
+ 7 APPPATH\Controllers\Admin\SiswaController.php(98): App\Services\SiswaService->save([...])
+ 8 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\Admin\SiswaController->store()
+ 9 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\SiswaController))
+10 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-07-08 03:49:06 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Cannot add or update a child row: a foreign key constraint fails (`absensi_pintar`.`siswa`, CONSTRAINT `siswa_ibfk_2` FOREIGN KEY (`id_kelas`) REFERENCES `kelas` (`id`))
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 310.
+ 1 SYSTEMPATH\Database\BaseConnection.php(908): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `siswa` (`id_sekolah`, `id_kelas`, `uid_nfc`, `nis`, `nisn`, `nama_siswa`, `jenis_kelamin`, `tempat_lahir`, `tanggal_lahir`, `alamat`, `nama_ortu`, `no_hp`, `status`, `created_at`, `updated_at`) VALUES (\'1\', \'\', \'\', \'1233144\', \'\', \'salut\', \'L\', \'bandung barat\', \'2010-02-08\', \'\', \'barong\', \'\', \'aktif\', \'2026-07-08 03:49:06\', \'2026-07-08 03:49:06\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(825): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `siswa` (`id_sekolah`, `id_kelas`, `uid_nfc`, `nis`, `nisn`, `nama_siswa`, `jenis_kelamin`, `tempat_lahir`, `tanggal_lahir`, `alamat`, `nama_ortu`, `no_hp`, `status`, `created_at`, `updated_at`) VALUES (\'1\', \'\', \'\', \'1233144\', \'\', \'salut\', \'L\', \'bandung barat\', \'2010-02-08\', \'\', \'barong\', \'\', \'aktif\', \'2026-07-08 03:49:06\', \'2026-07-08 03:49:06\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2343): CodeIgniter\Database\BaseConnection->query('INSERT INTO `siswa` (`id_sekolah`, `id_kelas`, `uid_nfc`, `nis`, `nisn`, `nama_siswa`, `jenis_kelamin`, `tempat_lahir`, `tanggal_lahir`, `alamat`, `nama_ortu`, `no_hp`, `status`, `created_at`, `updated_at`) VALUES (:id_sekolah:, :id_kelas:, :uid_nfc:, :nis:, :nisn:, :nama_siswa:, :jenis_kelamin:, :tempat_lahir:, :tanggal_lahir:, :alamat:, :nama_ortu:, :no_hp:, :status:, :created_at:, :updated_at:)', [...], false)
+ 4 SYSTEMPATH\Model.php(357): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH\BaseModel.php(899): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH\Model.php(670): CodeIgniter\BaseModel->insert([...], true)
+ 7 APPPATH\Repositories\SiswaRepository.php(34): CodeIgniter\Model->insert([...])
+ 8 APPPATH\Services\SiswaService.php(32): App\Repositories\SiswaRepository->insert([...])
+ 9 APPPATH\Controllers\Admin\SiswaController.php(98): App\Services\SiswaService->save([...])
+10 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\Admin\SiswaController->store()
+11 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\SiswaController))
+12 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+15 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-07-08 03:49:06 --> [Caused by] mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`absensi_pintar`.`siswa`, CONSTRAINT `siswa_ibfk_2` FOREIGN KEY (`id_kelas`) REFERENCES `kelas` (`id`))
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 300.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(300): mysqli->query('INSERT INTO `siswa` (`id_sekolah`, `id_kelas`, `uid_nfc`, `nis`, `nisn`, `nama_siswa`, `jenis_kelamin`, `tempat_lahir`, `tanggal_lahir`, `alamat`, `nama_ortu`, `no_hp`, `status`, `created_at`, `updated_at`) VALUES (\'1\', \'\', \'\', \'1233144\', \'\', \'salut\', \'L\', \'bandung barat\', \'2010-02-08\', \'\', \'barong\', \'\', \'aktif\', \'2026-07-08 03:49:06\', \'2026-07-08 03:49:06\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(908): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `siswa` (`id_sekolah`, `id_kelas`, `uid_nfc`, `nis`, `nisn`, `nama_siswa`, `jenis_kelamin`, `tempat_lahir`, `tanggal_lahir`, `alamat`, `nama_ortu`, `no_hp`, `status`, `created_at`, `updated_at`) VALUES (\'1\', \'\', \'\', \'1233144\', \'\', \'salut\', \'L\', \'bandung barat\', \'2010-02-08\', \'\', \'barong\', \'\', \'aktif\', \'2026-07-08 03:49:06\', \'2026-07-08 03:49:06\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(825): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `siswa` (`id_sekolah`, `id_kelas`, `uid_nfc`, `nis`, `nisn`, `nama_siswa`, `jenis_kelamin`, `tempat_lahir`, `tanggal_lahir`, `alamat`, `nama_ortu`, `no_hp`, `status`, `created_at`, `updated_at`) VALUES (\'1\', \'\', \'\', \'1233144\', \'\', \'salut\', \'L\', \'bandung barat\', \'2010-02-08\', \'\', \'barong\', \'\', \'aktif\', \'2026-07-08 03:49:06\', \'2026-07-08 03:49:06\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2343): CodeIgniter\Database\BaseConnection->query('INSERT INTO `siswa` (`id_sekolah`, `id_kelas`, `uid_nfc`, `nis`, `nisn`, `nama_siswa`, `jenis_kelamin`, `tempat_lahir`, `tanggal_lahir`, `alamat`, `nama_ortu`, `no_hp`, `status`, `created_at`, `updated_at`) VALUES (:id_sekolah:, :id_kelas:, :uid_nfc:, :nis:, :nisn:, :nama_siswa:, :jenis_kelamin:, :tempat_lahir:, :tanggal_lahir:, :alamat:, :nama_ortu:, :no_hp:, :status:, :created_at:, :updated_at:)', [...], false)
+ 5 SYSTEMPATH\Model.php(357): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(899): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(670): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Repositories\SiswaRepository.php(34): CodeIgniter\Model->insert([...])
+ 9 APPPATH\Services\SiswaService.php(32): App\Repositories\SiswaRepository->insert([...])
+10 APPPATH\Controllers\Admin\SiswaController.php(98): App\Services\SiswaService->save([...])
+11 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\Admin\SiswaController->store()
+12 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\SiswaController))
+13 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+14 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+15 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+16 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2026-07-08 03:55:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2026-07-08 03:55:34 --> Error: Call to undefined method App\Services\KelasService::getBySekolah()
+[Method: GET, Route: kelas/list]
+in APPPATH\Controllers\Admin\KelasController.php on line 41.
+ 1 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\Admin\KelasController->list()
+ 2 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\KelasController))
+ 3 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2026-07-08 04:10:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-08 04:10:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-08 04:10:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-08 04:11:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-08 04:11:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-08 04:11:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-08 04:11:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-08 04:12:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-08 04:12:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-08 04:13:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-08 04:13:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-08 04:14:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-08 04:14:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-08 04:14:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-08 04:14:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-08 04:14:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-08 04:14:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-08 04:15:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-08 04:15:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-08 04:16:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-08 04:16:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-08 04:17:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-08 04:17:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-08 04:18:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-08 04:18:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-08 04:21:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-08 04:21:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-08 04:21:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-08 04:21:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-08 04:35:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-08 04:36:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-08 04:36:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-08 04:36:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-08 04:36:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-08 04:51:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-08 04:51:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-08 04:51:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-08 04:51:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-08 04:51:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-08 04:52:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-08 04:52:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.

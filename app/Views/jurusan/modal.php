@@ -10,12 +10,7 @@
             <div class="modal-body">
 
             <input type="hidden" id="id">
-            <div class="mb-3">
-                <label>Kode</label>
-
-            <input type="text" id="kode" name="kode" class="form-control">
-        </div>
-
+        
         <div class="mb-3">
             <label>Nama Jurusan</label>
             <input type="text" id="nama_jurusan" name="nama_jurusan" class="form-control">

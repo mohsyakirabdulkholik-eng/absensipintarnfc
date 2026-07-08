@@ -23,6 +23,9 @@
     <link rel="stylesheet"
           href="<?= base_url('assets/adminlte/dist/css/adminlte.min.css')?>">
 
+          <link rel="stylesheet"
+href="https://cdn.datatables.net/2.3.1/css/dataTables.bootstrap5.css">
+
           <!-- sweatalert2 -->
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 

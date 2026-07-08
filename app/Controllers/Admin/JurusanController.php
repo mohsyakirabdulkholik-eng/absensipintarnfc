@@ -4,6 +4,7 @@ namespace App\Controllers\Admin;
 
 use App\Controllers\BaseAdminController;
 use App\Services\JurusanService;
+use App\Traits\AjaxResponseTrait;
 
 class JurusanController extends BaseAdminController
 {
@@ -53,11 +54,7 @@ class JurusanController extends BaseAdminController
     $validation = \Config\Services::validation();
 
     $rules = [
-
-        'kode'=>'required',
-
         'nama_jurusan'=>'required'
-
     ];
 
     if(!$this->validate($rules)){
@@ -74,23 +71,26 @@ class JurusanController extends BaseAdminController
 
     }
 
-    $data=[
-
-        'id_sekolah'=>session('id_sekolah'),
-
-        'kode'=>$this->request->getPost('kode'),
-
-        'nama_jurusan'=>$this->request->getPost('nama_jurusan'),
-
-        'status'=>'aktif'
-
-    ];
+    if ($this->jurusanService->isExists(session('id_sekolah'), $this->request->getPost('nama_jurusan'))) {
+            
+            return $this->response->setJSON([
+                'success' => false,
+                'message' => 'Nama jurusan sudah terdaftar.'
+                ]);
+        }
+                
+        $data=[
+    
+            'id_sekolah'=>session('id_sekolah'),
+            'nama_jurusan'=>$this->request->getPost('nama_jurusan'), 
+            'status'=>'aktif'
+    
+        ];
 
     $this->jurusanService->save($data);
 
     return $this->response
     ->setJSON(
-
         responseSuccess(
             'Jurusan berhasil ditambahkan.'
         )
@@ -102,8 +102,7 @@ class JurusanController extends BaseAdminController
     public function update($id)
     {
         $data = [
-            'kode'         => $this->request->getPost('kode'),
-            'nama_jurusan' => $this->request->getPost('nama_jurusan')
+                  'nama_jurusan' => $this->request->getPost('nama_jurusan')
         ];
 
         $this->jurusanService->update($id, $data);
@@ -122,5 +121,15 @@ class JurusanController extends BaseAdminController
             'status'  => true,
             'message' => 'Data berhasil dihapus.'
         ]);
+    }
+    public function options()
+    {
+        return $this->response
+            ->setJSON(
+
+                $this->jurusanService
+                    ->getAll(session('id_sekolah'))
+
+            );
     }
 }

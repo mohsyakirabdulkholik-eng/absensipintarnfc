@@ -13,9 +13,7 @@
         </h3>
         <small class="text-muted">Kelola data jurusan sekolah</small>
 
-        <button
-            class="btn btn-primary"
-            id="btnTambah">
+        <button class="btn btn-primary" id="btnTambah">
 
             <i class="fa-solid fa-plus"></i>
 
@@ -26,28 +24,17 @@
     </div>
 
     <div class="card-body">
+       <table id="tableJurusan" class="table table-striped table-hover table-bordered w-100">
+        <thead>
+            <tr>
+                <th width="5%">No</th>
+                <th>Nama Jurusan</th>
+                <th width="15%">Aksi</th>
+            </tr>
 
-       <table
-id="tableJurusan"
-class="table table-striped table-hover table-bordered w-100">
+        </thead>
 
-<thead>
-
-<tr>
-
-<th width="5%">No</th>
-
-<th>Kode</th>
-
-<th>Nama Jurusan</th>
-
-<th width="15%">Aksi</th>
-
-</tr>
-
-</thead>
-
-</table>
+    </table>
 
 <?= view('jurusan/modal') ?>
 

@@ -1,6 +1,8 @@
 $(function () {
   // Initialize Bootstrap modal and DataTable
-  const modalJurusan = new bootstrap.Modal("#modalJurusan");
+  const modalJurusan = new bootstrap.Modal(
+    document.getElementById("modalJurusan"),
+  );
   const table = $("#tableJurusan");
 
   // Submit form jurusan
@@ -58,8 +60,6 @@ $(function () {
     $.get(base_url + "/jurusan/show/" + id, function (res) {
       if (res.success) {
         $("#id").val(res.data.id);
-
-        $("#kode").val(res.data.kode);
 
         $("#nama_jurusan").val(res.data.nama_jurusan);
 
@@ -127,11 +127,6 @@ $(function () {
           return meta.settings._iDisplayStart + meta.row + 1;
         },
       },
-
-      {
-        data: "kode",
-      },
-
       {
         data: "nama_jurusan",
       },
@@ -143,18 +138,18 @@ $(function () {
 
         render: function (data) {
           return `
-                        <button
-                            class="btn btn-warning btn-sm btn-edit"
-                            data-id="${data.id}">
-                            <i class="fa-solid fa-pen"></i>
-                        </button>
+                  <button
+                      class="btn btn-warning btn-sm btn-edit"
+                      data-id="${data.id}">
+                      <i class="fa-solid fa-pen"></i>
+                  </button>
 
-                        <button
-                            class="btn btn-danger btn-sm btn-delete"
-                            data-id="${data.id}">
-                            <i class="fa-solid fa-trash"></i>
-                        </button>
-                    `;
+                  <button
+                      class="btn btn-danger btn-sm btn-delete"
+                      data-id="${data.id}">
+                      <i class="fa-solid fa-trash"></i>
+                  </button>
+              `;
         },
       },
     ],

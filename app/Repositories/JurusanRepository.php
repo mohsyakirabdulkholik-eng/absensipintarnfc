@@ -17,7 +17,7 @@ class JurusanRepository
     {
         return $this->model
             ->where('id_sekolah', $idSekolah)
-            ->orderBy('kode', 'ASC')
+            ->orderBy('nama_jurusan', 'ASC')
             ->findAll();
     }
 
@@ -43,5 +43,19 @@ class JurusanRepository
     public function deleteData($id)
     {
         return $this->model->delete($id);
+    }
+    public function getBySekolah($idSekolah)
+    {
+        return $this->model
+            ->where('id_sekolah',$idSekolah)
+            ->orderBy('nama_jurusan')
+            ->findAll();
+    }
+    public function isExists($idSekolah, $namaJurusan)
+    {
+        return $this->model
+            ->where('id_sekolah', $idSekolah)
+            ->where('nama_jurusan', $namaJurusan)
+            ->countAllResults() > 0;
     }
 }

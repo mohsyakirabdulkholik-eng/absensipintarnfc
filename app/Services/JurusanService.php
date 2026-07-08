@@ -31,6 +31,10 @@ class JurusanService
     {
         return $this->repository->updateData($id, $data);
     }
+    public function isExists($idSekolah, $namaJurusan)
+    {
+        return $this->repository->isExists($idSekolah, $namaJurusan);
+    }
 
     public function delete($id)
     {

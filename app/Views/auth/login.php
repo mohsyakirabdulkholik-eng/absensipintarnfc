@@ -1,71 +1,44 @@
 <!DOCTYPE html>
-<html lang="id">
+    <html lang="id">
+        <head>
+        <meta charset="UTF-8">
 
-<head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<meta charset="UTF-8">
+        <title><?= $title ?></title>
 
-<meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet"
+        href="<?= base_url('assets/adminlte/dist/css/adminlte.css') ?>">
 
-<title><?= $title ?></title>
+        <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 
-<link rel="stylesheet"
-href="<?= base_url('assets/adminlte/dist/css/adminlte.css') ?>">
-
-<link rel="stylesheet"
-href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
-
-</head>
+        </head>
 
 <body class="login-page bg-body-secondary">
 
 <div class="login-box">
+    <div class="card card-outline card-primary">
+        <div class="card-header text-center">
+            <h3>Smart Absensi</h3>
+        </div>
+    <div class="card-body">
+    <form id="formLogin">
+        <div class="mb-3">
+            <input type="text" name="login" class="form-control"  placeholder="Username atau Email">
+        </div>
 
-<div class="card card-outline card-primary">
+    <div class="mb-3">
+        <input type="password" name="password" class="form-control" placeholder="Password">
+    </div>
 
-<div class="card-header text-center">
-    
+            <button class="btn btn-primary w-100"> Masuk </button>
 
-<h3>Smart Absensi</h3>
+    </form>
 
-</div>
+        </div>
 
-<div class="card-body">
-
-<form id="formLogin">
-
-<div class="mb-3">
-
-<input
-type="text"
-name="login"
-class="form-control"
-placeholder="Username atau Email">
-
-</div>
-
-<div class="mb-3">
-
-<input
-type="password"
-name="password"
-class="form-control"
-placeholder="Password">
-
-</div>
-
-<button
-class="btn btn-primary w-100">
-
-Masuk
-
-</button>
-
-</form>
-
-</div>
-
-</div>
+    </div>
 
 </div>
 
@@ -75,58 +48,41 @@ Masuk
 
 <script>
 $('#formLogin').submit(function(e){
-
 e.preventDefault();
+    $.ajax({
+        url:"<?= site_url('login')?>",
+        method:"POST",
+        data:$(this).serialize(),
+        dataType:"json",
 
-$.ajax({
+    success:function(res){
 
-url:"<?= site_url('login')?>",
-
-method:"POST",
-
-data:$(this).serialize(),
-
-dataType:"json",
-
-success:function(res){
-
-if(res.status){
-
-Swal.fire({
-
-icon:'success',
-
-title:'Berhasil',
-
-text:res.message,
-
-timer:1200,
-
-showConfirmButton:false
-
-});
+    if(res.status){
+        Swal.fire({
+        icon:'success',
+        title:'Berhasil',
+        text:res.message,
+        timer:1200,
+        showConfirmButton:false
+    });
 
 setTimeout(function(){
 
-window.location="<?= site_url('dashboard')?>";
+        window.location="<?= site_url('dashboard')?>";
 
-},1200);
+    },1200);
 
-}else{
+    }else{
 
-Swal.fire({
+    Swal.fire({
+        icon:'error',
+        title:'Login Gagal',
+        text:res.message
+    });
 
-icon:'error',
+    }
 
-title:'Login Gagal',
-
-text:res.message
-
-});
-
-}
-
-}
+    }
 
 });
 
