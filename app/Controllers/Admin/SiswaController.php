@@ -79,6 +79,7 @@ class SiswaController extends BaseAdminController
                 'message' => 'UID NFC sudah terdaftar.'
             ]);
         }
+        
            $data = [
                 'id_sekolah'      => session('id_sekolah'),
                 'id_kelas'        => $this->request->getPost('id_kelas'),
@@ -92,9 +93,11 @@ class SiswaController extends BaseAdminController
                 'alamat'          => trim($this->request->getPost('alamat')),
                 'nama_ortu'       => trim($this->request->getPost('nama_ortu')),
                 'no_hp'           => trim($this->request->getPost('no_hp')),
+                'foto'            => $this->request->getFile('foto'),
                 'status'          => $this->request->getPost('status')
             ];
 
+                       
         $this->siswaService->save($data);
 
          return $this->response
@@ -125,9 +128,11 @@ class SiswaController extends BaseAdminController
                     'alamat'          => trim($this->request->getPost('alamat')),
                     'nama_ortu'       => trim($this->request->getPost('nama_ortu')),
                     'no_hp'           => trim($this->request->getPost('no_hp')),
+                    'foto'            => $this->request->getFile('foto'),
                     'status'          => $this->request->getPost('status')
-                ];      
+                ];  
                 
+                                       
             $this->siswaService->update($id, $data);
 
             return $this->response->setJSON([
