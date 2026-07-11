@@ -1,0 +1,1028 @@
+DEBUG - 2026-07-10 00:36:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-10 00:36:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-10 00:36:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-10 00:36:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-10 00:36:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-10 00:36:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-10 02:22:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-10 02:22:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-10 02:31:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-10 02:31:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2026-07-10 02:32:40 --> Error: Class "App\Controllers\Admin\BaseController" not found
+[Method: GET, Route: semester]
+in APPPATH\Controllers\Admin\SemesterController.php on line 7.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(340): include_once()
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(320): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp\\htdocs\\absensipintar\\app\\Controllers\\Admin\\SemesterController.php')
+ 3 SYSTEMPATH\Autoloader\Autoloader.php(296): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Admin\\SemesterController')
+ 4 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Admin\\SemesterController')
+ 5 SYSTEMPATH\Router\Router.php(790): class_exists('\\App\\Controllers\\Admin\\SemesterController')
+ 6 SYSTEMPATH\Router\Router.php(228): CodeIgniter\Router\Router->processRouteAttributes()
+ 7 SYSTEMPATH\CodeIgniter.php(852): CodeIgniter\Router\Router->handle('semester')
+ 8 SYSTEMPATH\CodeIgniter.php(464): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+ 9 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2026-07-10 02:35:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2026-07-10 02:35:34 --> Error: Class "App\Services\TahunAjaranRepository" not found
+[Method: GET, Route: semester]
+in APPPATH\Services\SemesterService.php on line 14.
+ 1 APPPATH\Controllers\Admin\SemesterController.php(14): App\Services\SemesterService->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(944): App\Controllers\Admin\SemesterController->__construct()
+ 3 SYSTEMPATH\CodeIgniter.php(511): CodeIgniter\CodeIgniter->createController()
+ 4 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2026-07-10 02:36:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2026-07-10 02:36:55 --> [DEPRECATED] Creation of dynamic property App\Services\SemesterService::$tahunRepository is deprecated in APPPATH\Services\SemesterService.php on line 14.
+ 1 APPPATH\Controllers\Admin\SemesterController.php(14): App\Services\SemesterService->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(944): App\Controllers\Admin\SemesterController->__construct()
+ 3 SYSTEMPATH\CodeIgniter.php(511): CodeIgniter\CodeIgniter->createController()
+ 4 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-07-10 02:36:55 --> ErrorException: Undefined variable $title
+[Method: GET, Route: semester]
+in APPPATH\Views\semester\index.php on line 9.
+ 1 APPPATH\Views\semester\index.php(9): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $title', 'C:\\xampp\\htdocs\\absensipintar\\app\\Views\\semester\\index.php', 9)
+ 2 SYSTEMPATH\View\View.php(240): include('C:\\xampp\\htdocs\\absensipintar\\app\\Views\\semester\\index.php')
+ 3 SYSTEMPATH\View\View.php(243): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1254): CodeIgniter\View\View->render('semester/index', [], true)
+ 5 APPPATH\Controllers\Admin\SemesterController.php(22): view('semester/index')
+ 6 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\Admin\SemesterController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\SemesterController))
+ 8 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2026-07-10 02:38:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2026-07-10 02:38:17 --> [DEPRECATED] Creation of dynamic property App\Services\SemesterService::$tahunRepository is deprecated in APPPATH\Services\SemesterService.php on line 14.
+ 1 APPPATH\Controllers\Admin\SemesterController.php(15): App\Services\SemesterService->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(944): App\Controllers\Admin\SemesterController->__construct()
+ 3 SYSTEMPATH\CodeIgniter.php(511): CodeIgniter\CodeIgniter->createController()
+ 4 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-07-10 02:38:17 --> ErrorException: Undefined variable $title
+[Method: GET, Route: semester]
+in APPPATH\Views\semester\index.php on line 9.
+ 1 APPPATH\Views\semester\index.php(9): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $title', 'C:\\xampp\\htdocs\\absensipintar\\app\\Views\\semester\\index.php', 9)
+ 2 SYSTEMPATH\View\View.php(240): include('C:\\xampp\\htdocs\\absensipintar\\app\\Views\\semester\\index.php')
+ 3 SYSTEMPATH\View\View.php(243): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1254): CodeIgniter\View\View->render('semester/index', [], true)
+ 5 APPPATH\Controllers\Admin\SemesterController.php(27): view('semester/index')
+ 6 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\Admin\SemesterController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\SemesterController))
+ 8 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2026-07-10 02:38:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2026-07-10 02:38:20 --> [DEPRECATED] Creation of dynamic property App\Services\SemesterService::$tahunRepository is deprecated in APPPATH\Services\SemesterService.php on line 14.
+ 1 APPPATH\Controllers\Admin\SemesterController.php(15): App\Services\SemesterService->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(944): App\Controllers\Admin\SemesterController->__construct()
+ 3 SYSTEMPATH\CodeIgniter.php(511): CodeIgniter\CodeIgniter->createController()
+ 4 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-07-10 02:38:20 --> ErrorException: Undefined variable $title
+[Method: GET, Route: semester]
+in APPPATH\Views\semester\index.php on line 9.
+ 1 APPPATH\Views\semester\index.php(9): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $title', 'C:\\xampp\\htdocs\\absensipintar\\app\\Views\\semester\\index.php', 9)
+ 2 SYSTEMPATH\View\View.php(240): include('C:\\xampp\\htdocs\\absensipintar\\app\\Views\\semester\\index.php')
+ 3 SYSTEMPATH\View\View.php(243): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1254): CodeIgniter\View\View->render('semester/index', [], true)
+ 5 APPPATH\Controllers\Admin\SemesterController.php(27): view('semester/index')
+ 6 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\Admin\SemesterController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\SemesterController))
+ 8 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2026-07-10 02:38:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2026-07-10 02:38:39 --> [DEPRECATED] Creation of dynamic property App\Services\SemesterService::$tahunRepository is deprecated in APPPATH\Services\SemesterService.php on line 14.
+ 1 APPPATH\Controllers\Admin\SemesterController.php(15): App\Services\SemesterService->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(944): App\Controllers\Admin\SemesterController->__construct()
+ 3 SYSTEMPATH\CodeIgniter.php(511): CodeIgniter\CodeIgniter->createController()
+ 4 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2026-07-10 02:52:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2026-07-10 02:52:03 --> [DEPRECATED] Creation of dynamic property App\Services\SemesterService::$tahunRepository is deprecated in APPPATH\Services\SemesterService.php on line 14.
+ 1 APPPATH\Controllers\Admin\SemesterController.php(15): App\Services\SemesterService->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(944): App\Controllers\Admin\SemesterController->__construct()
+ 3 SYSTEMPATH\CodeIgniter.php(511): CodeIgniter\CodeIgniter->createController()
+ 4 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2026-07-10 02:53:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2026-07-10 02:53:21 --> [DEPRECATED] Creation of dynamic property App\Services\SemesterService::$tahunRepository is deprecated in APPPATH\Services\SemesterService.php on line 14.
+ 1 APPPATH\Controllers\Admin\SemesterController.php(15): App\Services\SemesterService->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(944): App\Controllers\Admin\SemesterController->__construct()
+ 3 SYSTEMPATH\CodeIgniter.php(511): CodeIgniter\CodeIgniter->createController()
+ 4 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2026-07-10 02:59:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-10 02:59:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-10 03:00:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-10 03:00:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-10 03:00:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2026-07-10 03:00:23 --> [DEPRECATED] Creation of dynamic property App\Services\SemesterService::$tahunRepository is deprecated in APPPATH\Services\SemesterService.php on line 14.
+ 1 APPPATH\Controllers\Admin\SemesterController.php(15): App\Services\SemesterService->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(944): App\Controllers\Admin\SemesterController->__construct()
+ 3 SYSTEMPATH\CodeIgniter.php(511): CodeIgniter\CodeIgniter->createController()
+ 4 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2026-07-10 03:03:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2026-07-10 03:03:54 --> [DEPRECATED] Creation of dynamic property App\Services\SemesterService::$tahunRepository is deprecated in APPPATH\Services\SemesterService.php on line 14.
+ 1 APPPATH\Controllers\Admin\SemesterController.php(15): App\Services\SemesterService->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(944): App\Controllers\Admin\SemesterController->__construct()
+ 3 SYSTEMPATH\CodeIgniter.php(511): CodeIgniter\CodeIgniter->createController()
+ 4 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2026-07-10 03:05:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2026-07-10 03:05:55 --> [DEPRECATED] Creation of dynamic property App\Services\SemesterService::$tahunRepository is deprecated in APPPATH\Services\SemesterService.php on line 14.
+ 1 APPPATH\Controllers\Admin\SemesterController.php(15): App\Services\SemesterService->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(944): App\Controllers\Admin\SemesterController->__construct()
+ 3 SYSTEMPATH\CodeIgniter.php(511): CodeIgniter\CodeIgniter->createController()
+ 4 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2026-07-10 03:11:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2026-07-10 03:11:04 --> [DEPRECATED] Creation of dynamic property App\Services\SemesterService::$tahunRepository is deprecated in APPPATH\Services\SemesterService.php on line 14.
+ 1 APPPATH\Controllers\Admin\SemesterController.php(15): App\Services\SemesterService->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(944): App\Controllers\Admin\SemesterController->__construct()
+ 3 SYSTEMPATH\CodeIgniter.php(511): CodeIgniter\CodeIgniter->createController()
+ 4 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2026-07-10 03:13:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-10 03:13:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-10 03:14:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2026-07-10 03:14:06 --> [DEPRECATED] Creation of dynamic property App\Services\SemesterService::$tahunRepository is deprecated in APPPATH\Services\SemesterService.php on line 14.
+ 1 APPPATH\Controllers\Admin\SemesterController.php(15): App\Services\SemesterService->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(944): App\Controllers\Admin\SemesterController->__construct()
+ 3 SYSTEMPATH\CodeIgniter.php(511): CodeIgniter\CodeIgniter->createController()
+ 4 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2026-07-10 03:14:06 --> Unknown column 'tahun_ajaran.nama_tahun' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 300.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(300): mysqli->query('SELECT `semester`.*, `tahun_ajaran`.`nama_tahun`
+FROM `semester`
+JOIN `tahun_ajaran` ON `tahun_ajaran`.`id` = `semester`.`id_tahun`
+WHERE `tahun_ajaran`.`id_sekolah` = \'1\'
+ORDER BY `tahun_ajaran`.`nama_tahun` DESC, `semester`.`nama` ASC', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(908): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `semester`.*, `tahun_ajaran`.`nama_tahun`
+FROM `semester`
+JOIN `tahun_ajaran` ON `tahun_ajaran`.`id` = `semester`.`id_tahun`
+WHERE `tahun_ajaran`.`id_sekolah` = \'1\'
+ORDER BY `tahun_ajaran`.`nama_tahun` DESC, `semester`.`nama` ASC')
+ 3 SYSTEMPATH\Database\BaseConnection.php(825): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `semester`.*, `tahun_ajaran`.`nama_tahun`
+FROM `semester`
+JOIN `tahun_ajaran` ON `tahun_ajaran`.`id` = `semester`.`id_tahun`
+WHERE `tahun_ajaran`.`id_sekolah` = \'1\'
+ORDER BY `tahun_ajaran`.`nama_tahun` DESC, `semester`.`nama` ASC')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1647): CodeIgniter\Database\BaseConnection->query('SELECT `semester`.*, `tahun_ajaran`.`nama_tahun`
+FROM `semester`
+JOIN `tahun_ajaran` ON `tahun_ajaran`.`id` = `semester`.`id_tahun`
+WHERE `tahun_ajaran`.`id_sekolah` = :tahun_ajaran.id_sekolah:
+ORDER BY `tahun_ajaran`.`nama_tahun` DESC, `semester`.`nama` ASC', [...], false)
+ 5 SYSTEMPATH\Model.php(255): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Repositories\SemesterRepository.php(27): CodeIgniter\BaseModel->findAll()
+ 8 APPPATH\Services\SemesterService.php(22): App\Repositories\SemesterRepository->getAll('1')
+ 9 APPPATH\Controllers\Admin\SemesterController.php(37): App\Services\SemesterService->getAll('1')
+10 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\Admin\SemesterController->getData()
+11 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\SemesterController))
+12 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+15 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-07-10 03:14:06 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'tahun_ajaran.nama_tahun' in 'field list'
+[Method: GET, Route: semester/data]
+in SYSTEMPATH\Database\BaseConnection.php on line 863.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1647): CodeIgniter\Database\BaseConnection->query('SELECT `semester`.*, `tahun_ajaran`.`nama_tahun`
+FROM `semester`
+JOIN `tahun_ajaran` ON `tahun_ajaran`.`id` = `semester`.`id_tahun`
+WHERE `tahun_ajaran`.`id_sekolah` = :tahun_ajaran.id_sekolah:
+ORDER BY `tahun_ajaran`.`nama_tahun` DESC, `semester`.`nama` ASC', [...], false)
+ 2 SYSTEMPATH\Model.php(255): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Repositories\SemesterRepository.php(27): CodeIgniter\BaseModel->findAll()
+ 5 APPPATH\Services\SemesterService.php(22): App\Repositories\SemesterRepository->getAll('1')
+ 6 APPPATH\Controllers\Admin\SemesterController.php(37): App\Services\SemesterService->getAll('1')
+ 7 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\Admin\SemesterController->getData()
+ 8 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\SemesterController))
+ 9 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-07-10 03:14:06 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'tahun_ajaran.nama_tahun' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 310.
+ 1 SYSTEMPATH\Database\BaseConnection.php(908): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `semester`.*, `tahun_ajaran`.`nama_tahun`
+FROM `semester`
+JOIN `tahun_ajaran` ON `tahun_ajaran`.`id` = `semester`.`id_tahun`
+WHERE `tahun_ajaran`.`id_sekolah` = \'1\'
+ORDER BY `tahun_ajaran`.`nama_tahun` DESC, `semester`.`nama` ASC')
+ 2 SYSTEMPATH\Database\BaseConnection.php(825): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `semester`.*, `tahun_ajaran`.`nama_tahun`
+FROM `semester`
+JOIN `tahun_ajaran` ON `tahun_ajaran`.`id` = `semester`.`id_tahun`
+WHERE `tahun_ajaran`.`id_sekolah` = \'1\'
+ORDER BY `tahun_ajaran`.`nama_tahun` DESC, `semester`.`nama` ASC')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1647): CodeIgniter\Database\BaseConnection->query('SELECT `semester`.*, `tahun_ajaran`.`nama_tahun`
+FROM `semester`
+JOIN `tahun_ajaran` ON `tahun_ajaran`.`id` = `semester`.`id_tahun`
+WHERE `tahun_ajaran`.`id_sekolah` = :tahun_ajaran.id_sekolah:
+ORDER BY `tahun_ajaran`.`nama_tahun` DESC, `semester`.`nama` ASC', [...], false)
+ 4 SYSTEMPATH\Model.php(255): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+ 6 APPPATH\Repositories\SemesterRepository.php(27): CodeIgniter\BaseModel->findAll()
+ 7 APPPATH\Services\SemesterService.php(22): App\Repositories\SemesterRepository->getAll('1')
+ 8 APPPATH\Controllers\Admin\SemesterController.php(37): App\Services\SemesterService->getAll('1')
+ 9 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\Admin\SemesterController->getData()
+10 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\SemesterController))
+11 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-07-10 03:14:06 --> [Caused by] mysqli_sql_exception: Unknown column 'tahun_ajaran.nama_tahun' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 300.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(300): mysqli->query('SELECT `semester`.*, `tahun_ajaran`.`nama_tahun`
+FROM `semester`
+JOIN `tahun_ajaran` ON `tahun_ajaran`.`id` = `semester`.`id_tahun`
+WHERE `tahun_ajaran`.`id_sekolah` = \'1\'
+ORDER BY `tahun_ajaran`.`nama_tahun` DESC, `semester`.`nama` ASC', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(908): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `semester`.*, `tahun_ajaran`.`nama_tahun`
+FROM `semester`
+JOIN `tahun_ajaran` ON `tahun_ajaran`.`id` = `semester`.`id_tahun`
+WHERE `tahun_ajaran`.`id_sekolah` = \'1\'
+ORDER BY `tahun_ajaran`.`nama_tahun` DESC, `semester`.`nama` ASC')
+ 3 SYSTEMPATH\Database\BaseConnection.php(825): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `semester`.*, `tahun_ajaran`.`nama_tahun`
+FROM `semester`
+JOIN `tahun_ajaran` ON `tahun_ajaran`.`id` = `semester`.`id_tahun`
+WHERE `tahun_ajaran`.`id_sekolah` = \'1\'
+ORDER BY `tahun_ajaran`.`nama_tahun` DESC, `semester`.`nama` ASC')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1647): CodeIgniter\Database\BaseConnection->query('SELECT `semester`.*, `tahun_ajaran`.`nama_tahun`
+FROM `semester`
+JOIN `tahun_ajaran` ON `tahun_ajaran`.`id` = `semester`.`id_tahun`
+WHERE `tahun_ajaran`.`id_sekolah` = :tahun_ajaran.id_sekolah:
+ORDER BY `tahun_ajaran`.`nama_tahun` DESC, `semester`.`nama` ASC', [...], false)
+ 5 SYSTEMPATH\Model.php(255): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Repositories\SemesterRepository.php(27): CodeIgniter\BaseModel->findAll()
+ 8 APPPATH\Services\SemesterService.php(22): App\Repositories\SemesterRepository->getAll('1')
+ 9 APPPATH\Controllers\Admin\SemesterController.php(37): App\Services\SemesterService->getAll('1')
+10 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\Admin\SemesterController->getData()
+11 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\SemesterController))
+12 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+15 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2026-07-10 03:15:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2026-07-10 03:15:45 --> [DEPRECATED] Creation of dynamic property App\Services\SemesterService::$tahunRepository is deprecated in APPPATH\Services\SemesterService.php on line 14.
+ 1 APPPATH\Controllers\Admin\SemesterController.php(15): App\Services\SemesterService->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(944): App\Controllers\Admin\SemesterController->__construct()
+ 3 SYSTEMPATH\CodeIgniter.php(511): CodeIgniter\CodeIgniter->createController()
+ 4 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-07-10 03:15:45 --> TypeError: responseSuccess(): Argument #1 ($message) must be of type string, array given, called in C:\xampp\htdocs\absensipintar\app\Controllers\Admin\SemesterController.php on line 39
+[Method: GET, Route: semester/data]
+in APPPATH\Helpers\response_helper.php on line 3.
+ 1 APPPATH\Controllers\Admin\SemesterController.php(39): responseSuccess([])
+ 2 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\Admin\SemesterController->getData()
+ 3 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\SemesterController))
+ 4 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2026-07-10 03:59:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2026-07-10 03:59:35 --> [DEPRECATED] Creation of dynamic property App\Services\SemesterService::$tahunRepository is deprecated in APPPATH\Services\SemesterService.php on line 14.
+ 1 APPPATH\Controllers\Admin\SemesterController.php(15): App\Services\SemesterService->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(944): App\Controllers\Admin\SemesterController->__construct()
+ 3 SYSTEMPATH\CodeIgniter.php(511): CodeIgniter\CodeIgniter->createController()
+ 4 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-07-10 03:59:35 --> ErrorException: Undefined property: App\Controllers\Admin\SemesterController::$semesterService
+[Method: GET, Route: semester/getData]
+in APPPATH\Controllers\Admin\SemesterController.php on line 38.
+ 1 APPPATH\Controllers\Admin\SemesterController.php(38): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\Admin\\SemesterController::$semesterService', 'C:\\xampp\\htdocs\\absensipintar\\app\\Controllers\\Admin\\SemesterController.php', 38)
+ 2 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\Admin\SemesterController->getData()
+ 3 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\SemesterController))
+ 4 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2026-07-10 04:02:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2026-07-10 04:02:59 --> [DEPRECATED] Creation of dynamic property App\Repositories\SemesterRepository::$tahunModel is deprecated in APPPATH\Repositories\SemesterRepository.php on line 15.
+ 1 APPPATH\Services\SemesterService.php(13): App\Repositories\SemesterRepository->__construct()
+ 2 APPPATH\Controllers\Admin\SemesterController.php(15): App\Services\SemesterService->__construct()
+ 3 SYSTEMPATH\CodeIgniter.php(944): App\Controllers\Admin\SemesterController->__construct()
+ 4 SYSTEMPATH\CodeIgniter.php(511): CodeIgniter\CodeIgniter->createController()
+ 5 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+WARNING - 2026-07-10 04:02:59 --> [DEPRECATED] Creation of dynamic property App\Services\SemesterService::$tahunRepository is deprecated in APPPATH\Services\SemesterService.php on line 14.
+ 1 APPPATH\Controllers\Admin\SemesterController.php(15): App\Services\SemesterService->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(944): App\Controllers\Admin\SemesterController->__construct()
+ 3 SYSTEMPATH\CodeIgniter.php(511): CodeIgniter\CodeIgniter->createController()
+ 4 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-07-10 04:02:59 --> ErrorException: Undefined property: App\Controllers\Admin\SemesterController::$semesterService
+[Method: GET, Route: semester/getData]
+in APPPATH\Controllers\Admin\SemesterController.php on line 38.
+ 1 APPPATH\Controllers\Admin\SemesterController.php(38): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\Admin\\SemesterController::$semesterService', 'C:\\xampp\\htdocs\\absensipintar\\app\\Controllers\\Admin\\SemesterController.php', 38)
+ 2 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\Admin\SemesterController->getData()
+ 3 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\SemesterController))
+ 4 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2026-07-10 04:06:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2026-07-10 04:06:00 --> [DEPRECATED] Creation of dynamic property App\Services\SemesterService::$tahunRepository is deprecated in APPPATH\Services\SemesterService.php on line 14.
+ 1 APPPATH\Controllers\Admin\SemesterController.php(15): App\Services\SemesterService->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(944): App\Controllers\Admin\SemesterController->__construct()
+ 3 SYSTEMPATH\CodeIgniter.php(511): CodeIgniter\CodeIgniter->createController()
+ 4 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2026-07-10 04:06:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2026-07-10 04:06:05 --> [DEPRECATED] Creation of dynamic property App\Services\SemesterService::$tahunRepository is deprecated in APPPATH\Services\SemesterService.php on line 14.
+ 1 APPPATH\Controllers\Admin\SemesterController.php(15): App\Services\SemesterService->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(944): App\Controllers\Admin\SemesterController->__construct()
+ 3 SYSTEMPATH\CodeIgniter.php(511): CodeIgniter\CodeIgniter->createController()
+ 4 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-07-10 04:06:05 --> ErrorException: Undefined property: App\Controllers\Admin\SemesterController::$Service
+[Method: GET, Route: semester/getData]
+in APPPATH\Controllers\Admin\SemesterController.php on line 38.
+ 1 APPPATH\Controllers\Admin\SemesterController.php(38): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\Admin\\SemesterController::$Service', 'C:\\xampp\\htdocs\\absensipintar\\app\\Controllers\\Admin\\SemesterController.php', 38)
+ 2 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\Admin\SemesterController->getData()
+ 3 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\SemesterController))
+ 4 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2026-07-10 04:06:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2026-07-10 04:06:08 --> [DEPRECATED] Creation of dynamic property App\Services\SemesterService::$tahunRepository is deprecated in APPPATH\Services\SemesterService.php on line 14.
+ 1 APPPATH\Controllers\Admin\SemesterController.php(15): App\Services\SemesterService->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(944): App\Controllers\Admin\SemesterController->__construct()
+ 3 SYSTEMPATH\CodeIgniter.php(511): CodeIgniter\CodeIgniter->createController()
+ 4 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-07-10 04:06:08 --> ErrorException: Undefined property: App\Controllers\Admin\SemesterController::$Service
+[Method: GET, Route: semester/getData]
+in APPPATH\Controllers\Admin\SemesterController.php on line 38.
+ 1 APPPATH\Controllers\Admin\SemesterController.php(38): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\Admin\\SemesterController::$Service', 'C:\\xampp\\htdocs\\absensipintar\\app\\Controllers\\Admin\\SemesterController.php', 38)
+ 2 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\Admin\SemesterController->getData()
+ 3 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\SemesterController))
+ 4 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2026-07-10 04:06:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2026-07-10 04:06:32 --> [DEPRECATED] Creation of dynamic property App\Services\SemesterService::$tahunRepository is deprecated in APPPATH\Services\SemesterService.php on line 14.
+ 1 APPPATH\Controllers\Admin\SemesterController.php(15): App\Services\SemesterService->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(944): App\Controllers\Admin\SemesterController->__construct()
+ 3 SYSTEMPATH\CodeIgniter.php(511): CodeIgniter\CodeIgniter->createController()
+ 4 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2026-07-10 04:06:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2026-07-10 04:06:44 --> [DEPRECATED] Creation of dynamic property App\Services\SemesterService::$tahunRepository is deprecated in APPPATH\Services\SemesterService.php on line 14.
+ 1 APPPATH\Controllers\Admin\SemesterController.php(15): App\Services\SemesterService->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(944): App\Controllers\Admin\SemesterController->__construct()
+ 3 SYSTEMPATH\CodeIgniter.php(511): CodeIgniter\CodeIgniter->createController()
+ 4 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2026-07-10 07:22:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-10 07:22:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-10 07:22:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-10 07:22:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-10 07:22:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-10 07:22:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2026-07-10 07:22:59 --> [DEPRECATED] Creation of dynamic property App\Services\SemesterService::$tahunRepository is deprecated in APPPATH\Services\SemesterService.php on line 14.
+ 1 APPPATH\Controllers\Admin\SemesterController.php(15): App\Services\SemesterService->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(944): App\Controllers\Admin\SemesterController->__construct()
+ 3 SYSTEMPATH\CodeIgniter.php(511): CodeIgniter\CodeIgniter->createController()
+ 4 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2026-07-10 07:28:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-10 07:28:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-10 07:28:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2026-07-10 07:28:53 --> [DEPRECATED] Creation of dynamic property App\Services\SemesterService::$tahunRepository is deprecated in APPPATH\Services\SemesterService.php on line 14.
+ 1 APPPATH\Controllers\Admin\SemesterController.php(15): App\Services\SemesterService->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(944): App\Controllers\Admin\SemesterController->__construct()
+ 3 SYSTEMPATH\CodeIgniter.php(511): CodeIgniter\CodeIgniter->createController()
+ 4 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2026-07-10 07:31:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2026-07-10 07:31:32 --> [DEPRECATED] Creation of dynamic property App\Services\SemesterService::$tahunRepository is deprecated in APPPATH\Services\SemesterService.php on line 14.
+ 1 APPPATH\Controllers\Admin\SemesterController.php(15): App\Services\SemesterService->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(944): App\Controllers\Admin\SemesterController->__construct()
+ 3 SYSTEMPATH\CodeIgniter.php(511): CodeIgniter\CodeIgniter->createController()
+ 4 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2026-07-10 07:32:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2026-07-10 07:32:56 --> [DEPRECATED] Creation of dynamic property App\Services\SemesterService::$tahunRepository is deprecated in APPPATH\Services\SemesterService.php on line 14.
+ 1 APPPATH\Controllers\Admin\SemesterController.php(15): App\Services\SemesterService->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(944): App\Controllers\Admin\SemesterController->__construct()
+ 3 SYSTEMPATH\CodeIgniter.php(511): CodeIgniter\CodeIgniter->createController()
+ 4 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2026-07-10 07:35:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2026-07-10 07:35:20 --> [DEPRECATED] Creation of dynamic property App\Services\SemesterService::$tahunRepository is deprecated in APPPATH\Services\SemesterService.php on line 14.
+ 1 APPPATH\Controllers\Admin\SemesterController.php(15): App\Services\SemesterService->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(944): App\Controllers\Admin\SemesterController->__construct()
+ 3 SYSTEMPATH\CodeIgniter.php(511): CodeIgniter\CodeIgniter->createController()
+ 4 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2026-07-10 07:36:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-10 07:36:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-10 07:36:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-10 07:36:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-10 07:36:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2026-07-10 07:36:37 --> [DEPRECATED] Creation of dynamic property App\Services\SemesterService::$tahunRepository is deprecated in APPPATH\Services\SemesterService.php on line 14.
+ 1 APPPATH\Controllers\Admin\SemesterController.php(15): App\Services\SemesterService->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(944): App\Controllers\Admin\SemesterController->__construct()
+ 3 SYSTEMPATH\CodeIgniter.php(511): CodeIgniter\CodeIgniter->createController()
+ 4 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2026-07-10 07:37:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2026-07-10 07:37:43 --> [DEPRECATED] Creation of dynamic property App\Services\SemesterService::$tahunRepository is deprecated in APPPATH\Services\SemesterService.php on line 14.
+ 1 APPPATH\Controllers\Admin\SemesterController.php(15): App\Services\SemesterService->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(944): App\Controllers\Admin\SemesterController->__construct()
+ 3 SYSTEMPATH\CodeIgniter.php(511): CodeIgniter\CodeIgniter->createController()
+ 4 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2026-07-10 07:37:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2026-07-10 07:37:45 --> [DEPRECATED] Creation of dynamic property App\Services\SemesterService::$tahunRepository is deprecated in APPPATH\Services\SemesterService.php on line 14.
+ 1 APPPATH\Controllers\Admin\SemesterController.php(15): App\Services\SemesterService->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(944): App\Controllers\Admin\SemesterController->__construct()
+ 3 SYSTEMPATH\CodeIgniter.php(511): CodeIgniter\CodeIgniter->createController()
+ 4 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2026-07-10 07:38:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2026-07-10 07:38:14 --> [DEPRECATED] Creation of dynamic property App\Services\SemesterService::$tahunRepository is deprecated in APPPATH\Services\SemesterService.php on line 14.
+ 1 APPPATH\Controllers\Admin\SemesterController.php(15): App\Services\SemesterService->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(944): App\Controllers\Admin\SemesterController->__construct()
+ 3 SYSTEMPATH\CodeIgniter.php(511): CodeIgniter\CodeIgniter->createController()
+ 4 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2026-07-10 07:48:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2026-07-10 07:48:17 --> [DEPRECATED] Creation of dynamic property App\Services\SemesterService::$tahunRepository is deprecated in APPPATH\Services\SemesterService.php on line 14.
+ 1 APPPATH\Controllers\Admin\SemesterController.php(15): App\Services\SemesterService->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(944): App\Controllers\Admin\SemesterController->__construct()
+ 3 SYSTEMPATH\CodeIgniter.php(511): CodeIgniter\CodeIgniter->createController()
+ 4 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2026-07-10 07:48:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2026-07-10 07:48:18 --> [DEPRECATED] Creation of dynamic property App\Services\SemesterService::$tahunRepository is deprecated in APPPATH\Services\SemesterService.php on line 14.
+ 1 APPPATH\Controllers\Admin\SemesterController.php(15): App\Services\SemesterService->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(944): App\Controllers\Admin\SemesterController->__construct()
+ 3 SYSTEMPATH\CodeIgniter.php(511): CodeIgniter\CodeIgniter->createController()
+ 4 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2026-07-10 07:48:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2026-07-10 07:48:29 --> [DEPRECATED] Creation of dynamic property App\Services\SemesterService::$tahunRepository is deprecated in APPPATH\Services\SemesterService.php on line 14.
+ 1 APPPATH\Controllers\Admin\SemesterController.php(15): App\Services\SemesterService->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(944): App\Controllers\Admin\SemesterController->__construct()
+ 3 SYSTEMPATH\CodeIgniter.php(511): CodeIgniter\CodeIgniter->createController()
+ 4 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2026-07-10 07:48:29 --> Column 'id_tahun' cannot be null
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 300.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(300): mysqli->query('INSERT INTO `semester` (`id_tahun`, `nama`, `aktif`) VALUES (NULL, \'2026/2027\', 0)', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(908): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `semester` (`id_tahun`, `nama`, `aktif`) VALUES (NULL, \'2026/2027\', 0)')
+ 3 SYSTEMPATH\Database\BaseConnection.php(825): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `semester` (`id_tahun`, `nama`, `aktif`) VALUES (NULL, \'2026/2027\', 0)')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2343): CodeIgniter\Database\BaseConnection->query('INSERT INTO `semester` (`id_tahun`, `nama`, `aktif`) VALUES (:id_tahun:, :nama:, :aktif:)', [...], false)
+ 5 SYSTEMPATH\Model.php(357): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(899): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(670): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Repositories\SemesterRepository.php(44): CodeIgniter\Model->insert([...])
+ 9 APPPATH\Services\SemesterService.php(42): App\Repositories\SemesterRepository->insert([...])
+10 APPPATH\Controllers\Admin\SemesterController.php(68): App\Services\SemesterService->save([...])
+11 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\Admin\SemesterController->store()
+12 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\SemesterController))
+13 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+14 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+15 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+16 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2026-07-10 07:57:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2026-07-10 07:57:11 --> [DEPRECATED] Creation of dynamic property App\Services\SemesterService::$tahunRepository is deprecated in APPPATH\Services\SemesterService.php on line 14.
+ 1 APPPATH\Controllers\Admin\SemesterController.php(15): App\Services\SemesterService->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(944): App\Controllers\Admin\SemesterController->__construct()
+ 3 SYSTEMPATH\CodeIgniter.php(511): CodeIgniter\CodeIgniter->createController()
+ 4 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2026-07-10 07:57:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2026-07-10 07:57:12 --> [DEPRECATED] Creation of dynamic property App\Services\SemesterService::$tahunRepository is deprecated in APPPATH\Services\SemesterService.php on line 14.
+ 1 APPPATH\Controllers\Admin\SemesterController.php(15): App\Services\SemesterService->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(944): App\Controllers\Admin\SemesterController->__construct()
+ 3 SYSTEMPATH\CodeIgniter.php(511): CodeIgniter\CodeIgniter->createController()
+ 4 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2026-07-10 07:59:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2026-07-10 07:59:16 --> [DEPRECATED] Creation of dynamic property App\Services\SemesterService::$tahunRepository is deprecated in APPPATH\Services\SemesterService.php on line 14.
+ 1 APPPATH\Controllers\Admin\SemesterController.php(15): App\Services\SemesterService->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(944): App\Controllers\Admin\SemesterController->__construct()
+ 3 SYSTEMPATH\CodeIgniter.php(511): CodeIgniter\CodeIgniter->createController()
+ 4 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2026-07-10 07:59:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2026-07-10 07:59:17 --> [DEPRECATED] Creation of dynamic property App\Services\SemesterService::$tahunRepository is deprecated in APPPATH\Services\SemesterService.php on line 14.
+ 1 APPPATH\Controllers\Admin\SemesterController.php(15): App\Services\SemesterService->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(944): App\Controllers\Admin\SemesterController->__construct()
+ 3 SYSTEMPATH\CodeIgniter.php(511): CodeIgniter\CodeIgniter->createController()
+ 4 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2026-07-10 07:59:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2026-07-10 07:59:55 --> [DEPRECATED] Creation of dynamic property App\Services\SemesterService::$tahunRepository is deprecated in APPPATH\Services\SemesterService.php on line 14.
+ 1 APPPATH\Controllers\Admin\SemesterController.php(15): App\Services\SemesterService->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(944): App\Controllers\Admin\SemesterController->__construct()
+ 3 SYSTEMPATH\CodeIgniter.php(511): CodeIgniter\CodeIgniter->createController()
+ 4 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2026-07-10 07:59:55 --> Cannot add or update a child row: a foreign key constraint fails (`absensi_pintar`.`semester`, CONSTRAINT `semester_ibfk_1` FOREIGN KEY (`id_tahun`) REFERENCES `tahun_ajaran` (`id`))
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 300.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(300): mysqli->query('INSERT INTO `semester` (`id_tahun`, `nama`, `aktif`) VALUES (\'\', \'2026/2027\', 0)', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(908): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `semester` (`id_tahun`, `nama`, `aktif`) VALUES (\'\', \'2026/2027\', 0)')
+ 3 SYSTEMPATH\Database\BaseConnection.php(825): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `semester` (`id_tahun`, `nama`, `aktif`) VALUES (\'\', \'2026/2027\', 0)')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2343): CodeIgniter\Database\BaseConnection->query('INSERT INTO `semester` (`id_tahun`, `nama`, `aktif`) VALUES (:id_tahun:, :nama:, :aktif:)', [...], false)
+ 5 SYSTEMPATH\Model.php(357): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(899): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(670): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Repositories\SemesterRepository.php(44): CodeIgniter\Model->insert([...])
+ 9 APPPATH\Services\SemesterService.php(42): App\Repositories\SemesterRepository->insert([...])
+10 APPPATH\Controllers\Admin\SemesterController.php(68): App\Services\SemesterService->save([...])
+11 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\Admin\SemesterController->store()
+12 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\SemesterController))
+13 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+14 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+15 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+16 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2026-07-10 08:00:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2026-07-10 08:00:24 --> [DEPRECATED] Creation of dynamic property App\Services\SemesterService::$tahunRepository is deprecated in APPPATH\Services\SemesterService.php on line 14.
+ 1 APPPATH\Controllers\Admin\SemesterController.php(15): App\Services\SemesterService->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(944): App\Controllers\Admin\SemesterController->__construct()
+ 3 SYSTEMPATH\CodeIgniter.php(511): CodeIgniter\CodeIgniter->createController()
+ 4 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2026-07-10 08:00:24 --> Cannot add or update a child row: a foreign key constraint fails (`absensi_pintar`.`semester`, CONSTRAINT `semester_ibfk_1` FOREIGN KEY (`id_tahun`) REFERENCES `tahun_ajaran` (`id`))
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 300.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(300): mysqli->query('INSERT INTO `semester` (`id_tahun`, `nama`, `aktif`) VALUES (\'\', \'2026/2027\', 0)', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(908): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `semester` (`id_tahun`, `nama`, `aktif`) VALUES (\'\', \'2026/2027\', 0)')
+ 3 SYSTEMPATH\Database\BaseConnection.php(825): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `semester` (`id_tahun`, `nama`, `aktif`) VALUES (\'\', \'2026/2027\', 0)')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2343): CodeIgniter\Database\BaseConnection->query('INSERT INTO `semester` (`id_tahun`, `nama`, `aktif`) VALUES (:id_tahun:, :nama:, :aktif:)', [...], false)
+ 5 SYSTEMPATH\Model.php(357): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(899): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(670): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Repositories\SemesterRepository.php(44): CodeIgniter\Model->insert([...])
+ 9 APPPATH\Services\SemesterService.php(42): App\Repositories\SemesterRepository->insert([...])
+10 APPPATH\Controllers\Admin\SemesterController.php(68): App\Services\SemesterService->save([...])
+11 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\Admin\SemesterController->store()
+12 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\SemesterController))
+13 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+14 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+15 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+16 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2026-07-10 08:07:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2026-07-10 08:07:50 --> [DEPRECATED] Creation of dynamic property App\Services\SemesterService::$tahunRepository is deprecated in APPPATH\Services\SemesterService.php on line 14.
+ 1 APPPATH\Controllers\Admin\SemesterController.php(15): App\Services\SemesterService->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(944): App\Controllers\Admin\SemesterController->__construct()
+ 3 SYSTEMPATH\CodeIgniter.php(511): CodeIgniter\CodeIgniter->createController()
+ 4 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2026-07-10 08:07:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2026-07-10 08:07:51 --> [DEPRECATED] Creation of dynamic property App\Services\SemesterService::$tahunRepository is deprecated in APPPATH\Services\SemesterService.php on line 14.
+ 1 APPPATH\Controllers\Admin\SemesterController.php(15): App\Services\SemesterService->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(944): App\Controllers\Admin\SemesterController->__construct()
+ 3 SYSTEMPATH\CodeIgniter.php(511): CodeIgniter\CodeIgniter->createController()
+ 4 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2026-07-10 08:09:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2026-07-10 08:09:20 --> [DEPRECATED] Creation of dynamic property App\Services\SemesterService::$tahunRepository is deprecated in APPPATH\Services\SemesterService.php on line 14.
+ 1 APPPATH\Controllers\Admin\SemesterController.php(15): App\Services\SemesterService->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(944): App\Controllers\Admin\SemesterController->__construct()
+ 3 SYSTEMPATH\CodeIgniter.php(511): CodeIgniter\CodeIgniter->createController()
+ 4 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2026-07-10 08:09:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2026-07-10 08:09:20 --> [DEPRECATED] Creation of dynamic property App\Services\SemesterService::$tahunRepository is deprecated in APPPATH\Services\SemesterService.php on line 14.
+ 1 APPPATH\Controllers\Admin\SemesterController.php(15): App\Services\SemesterService->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(944): App\Controllers\Admin\SemesterController->__construct()
+ 3 SYSTEMPATH\CodeIgniter.php(511): CodeIgniter\CodeIgniter->createController()
+ 4 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2026-07-10 08:12:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2026-07-10 08:12:43 --> [DEPRECATED] Creation of dynamic property App\Services\SemesterService::$tahunRepository is deprecated in APPPATH\Services\SemesterService.php on line 14.
+ 1 APPPATH\Controllers\Admin\SemesterController.php(15): App\Services\SemesterService->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(944): App\Controllers\Admin\SemesterController->__construct()
+ 3 SYSTEMPATH\CodeIgniter.php(511): CodeIgniter\CodeIgniter->createController()
+ 4 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2026-07-10 08:12:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2026-07-10 08:12:44 --> [DEPRECATED] Creation of dynamic property App\Services\SemesterService::$tahunRepository is deprecated in APPPATH\Services\SemesterService.php on line 14.
+ 1 APPPATH\Controllers\Admin\SemesterController.php(15): App\Services\SemesterService->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(944): App\Controllers\Admin\SemesterController->__construct()
+ 3 SYSTEMPATH\CodeIgniter.php(511): CodeIgniter\CodeIgniter->createController()
+ 4 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2026-07-10 08:12:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-10 08:13:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-10 08:13:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-10 08:13:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-10 08:14:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2026-07-10 08:14:14 --> [DEPRECATED] Creation of dynamic property App\Services\SemesterService::$tahunRepository is deprecated in APPPATH\Services\SemesterService.php on line 14.
+ 1 APPPATH\Controllers\Admin\SemesterController.php(15): App\Services\SemesterService->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(944): App\Controllers\Admin\SemesterController->__construct()
+ 3 SYSTEMPATH\CodeIgniter.php(511): CodeIgniter\CodeIgniter->createController()
+ 4 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2026-07-10 08:15:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-10 08:15:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-10 08:15:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-10 08:15:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2026-07-10 08:15:36 --> [DEPRECATED] Creation of dynamic property App\Services\SemesterService::$tahunRepository is deprecated in APPPATH\Services\SemesterService.php on line 14.
+ 1 APPPATH\Controllers\Admin\SemesterController.php(15): App\Services\SemesterService->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(944): App\Controllers\Admin\SemesterController->__construct()
+ 3 SYSTEMPATH\CodeIgniter.php(511): CodeIgniter\CodeIgniter->createController()
+ 4 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2026-07-10 08:15:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2026-07-10 08:15:36 --> [DEPRECATED] Creation of dynamic property App\Services\SemesterService::$tahunRepository is deprecated in APPPATH\Services\SemesterService.php on line 14.
+ 1 APPPATH\Controllers\Admin\SemesterController.php(15): App\Services\SemesterService->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(944): App\Controllers\Admin\SemesterController->__construct()
+ 3 SYSTEMPATH\CodeIgniter.php(511): CodeIgniter\CodeIgniter->createController()
+ 4 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2026-07-10 08:15:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-10 08:16:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2026-07-10 08:16:41 --> [DEPRECATED] Creation of dynamic property App\Services\SemesterService::$tahunRepository is deprecated in APPPATH\Services\SemesterService.php on line 14.
+ 1 APPPATH\Controllers\Admin\SemesterController.php(15): App\Services\SemesterService->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(944): App\Controllers\Admin\SemesterController->__construct()
+ 3 SYSTEMPATH\CodeIgniter.php(511): CodeIgniter\CodeIgniter->createController()
+ 4 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2026-07-10 08:16:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2026-07-10 08:16:42 --> [DEPRECATED] Creation of dynamic property App\Services\SemesterService::$tahunRepository is deprecated in APPPATH\Services\SemesterService.php on line 14.
+ 1 APPPATH\Controllers\Admin\SemesterController.php(15): App\Services\SemesterService->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(944): App\Controllers\Admin\SemesterController->__construct()
+ 3 SYSTEMPATH\CodeIgniter.php(511): CodeIgniter\CodeIgniter->createController()
+ 4 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2026-07-10 08:16:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-10 08:17:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-10 08:17:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-10 08:18:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-10 08:18:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-10 08:18:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2026-07-10 08:18:14 --> [DEPRECATED] Creation of dynamic property App\Services\SemesterService::$tahunRepository is deprecated in APPPATH\Services\SemesterService.php on line 14.
+ 1 APPPATH\Controllers\Admin\SemesterController.php(15): App\Services\SemesterService->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(944): App\Controllers\Admin\SemesterController->__construct()
+ 3 SYSTEMPATH\CodeIgniter.php(511): CodeIgniter\CodeIgniter->createController()
+ 4 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2026-07-10 08:18:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2026-07-10 08:18:15 --> [DEPRECATED] Creation of dynamic property App\Services\SemesterService::$tahunRepository is deprecated in APPPATH\Services\SemesterService.php on line 14.
+ 1 APPPATH\Controllers\Admin\SemesterController.php(15): App\Services\SemesterService->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(944): App\Controllers\Admin\SemesterController->__construct()
+ 3 SYSTEMPATH\CodeIgniter.php(511): CodeIgniter\CodeIgniter->createController()
+ 4 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2026-07-10 08:18:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-10 08:23:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2026-07-10 08:23:50 --> [DEPRECATED] Creation of dynamic property App\Services\SemesterService::$tahunRepository is deprecated in APPPATH\Services\SemesterService.php on line 14.
+ 1 APPPATH\Controllers\Admin\SemesterController.php(15): App\Services\SemesterService->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(944): App\Controllers\Admin\SemesterController->__construct()
+ 3 SYSTEMPATH\CodeIgniter.php(511): CodeIgniter\CodeIgniter->createController()
+ 4 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2026-07-10 08:23:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2026-07-10 08:23:52 --> [DEPRECATED] Creation of dynamic property App\Services\SemesterService::$tahunRepository is deprecated in APPPATH\Services\SemesterService.php on line 14.
+ 1 APPPATH\Controllers\Admin\SemesterController.php(15): App\Services\SemesterService->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(944): App\Controllers\Admin\SemesterController->__construct()
+ 3 SYSTEMPATH\CodeIgniter.php(511): CodeIgniter\CodeIgniter->createController()
+ 4 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2026-07-10 08:23:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-10 08:26:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2026-07-10 08:26:04 --> [DEPRECATED] Creation of dynamic property App\Services\SemesterService::$tahunRepository is deprecated in APPPATH\Services\SemesterService.php on line 14.
+ 1 APPPATH\Controllers\Admin\SemesterController.php(15): App\Services\SemesterService->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(944): App\Controllers\Admin\SemesterController->__construct()
+ 3 SYSTEMPATH\CodeIgniter.php(511): CodeIgniter\CodeIgniter->createController()
+ 4 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2026-07-10 08:26:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2026-07-10 08:26:06 --> [DEPRECATED] Creation of dynamic property App\Services\SemesterService::$tahunRepository is deprecated in APPPATH\Services\SemesterService.php on line 14.
+ 1 APPPATH\Controllers\Admin\SemesterController.php(15): App\Services\SemesterService->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(944): App\Controllers\Admin\SemesterController->__construct()
+ 3 SYSTEMPATH\CodeIgniter.php(511): CodeIgniter\CodeIgniter->createController()
+ 4 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2026-07-10 08:26:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-10 08:43:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2026-07-10 08:43:31 --> [DEPRECATED] Creation of dynamic property App\Services\SemesterService::$tahunRepository is deprecated in APPPATH\Services\SemesterService.php on line 14.
+ 1 APPPATH\Controllers\Admin\SemesterController.php(15): App\Services\SemesterService->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(944): App\Controllers\Admin\SemesterController->__construct()
+ 3 SYSTEMPATH\CodeIgniter.php(511): CodeIgniter\CodeIgniter->createController()
+ 4 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2026-07-10 08:43:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2026-07-10 08:43:33 --> [DEPRECATED] Creation of dynamic property App\Services\SemesterService::$tahunRepository is deprecated in APPPATH\Services\SemesterService.php on line 14.
+ 1 APPPATH\Controllers\Admin\SemesterController.php(15): App\Services\SemesterService->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(944): App\Controllers\Admin\SemesterController->__construct()
+ 3 SYSTEMPATH\CodeIgniter.php(511): CodeIgniter\CodeIgniter->createController()
+ 4 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2026-07-10 08:56:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2026-07-10 08:56:49 --> [DEPRECATED] Creation of dynamic property App\Services\SemesterService::$tahunRepository is deprecated in APPPATH\Services\SemesterService.php on line 14.
+ 1 APPPATH\Controllers\Admin\SemesterController.php(15): App\Services\SemesterService->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(944): App\Controllers\Admin\SemesterController->__construct()
+ 3 SYSTEMPATH\CodeIgniter.php(511): CodeIgniter\CodeIgniter->createController()
+ 4 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2026-07-10 08:56:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2026-07-10 08:56:51 --> [DEPRECATED] Creation of dynamic property App\Services\SemesterService::$tahunRepository is deprecated in APPPATH\Services\SemesterService.php on line 14.
+ 1 APPPATH\Controllers\Admin\SemesterController.php(15): App\Services\SemesterService->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(944): App\Controllers\Admin\SemesterController->__construct()
+ 3 SYSTEMPATH\CodeIgniter.php(511): CodeIgniter\CodeIgniter->createController()
+ 4 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2026-07-10 08:56:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2026-07-10 08:56:57 --> [DEPRECATED] Creation of dynamic property App\Services\SemesterService::$tahunRepository is deprecated in APPPATH\Services\SemesterService.php on line 14.
+ 1 APPPATH\Controllers\Admin\SemesterController.php(15): App\Services\SemesterService->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(944): App\Controllers\Admin\SemesterController->__construct()
+ 3 SYSTEMPATH\CodeIgniter.php(511): CodeIgniter\CodeIgniter->createController()
+ 4 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2026-07-10 08:56:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2026-07-10 08:56:59 --> [DEPRECATED] Creation of dynamic property App\Services\SemesterService::$tahunRepository is deprecated in APPPATH\Services\SemesterService.php on line 14.
+ 1 APPPATH\Controllers\Admin\SemesterController.php(15): App\Services\SemesterService->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(944): App\Controllers\Admin\SemesterController->__construct()
+ 3 SYSTEMPATH\CodeIgniter.php(511): CodeIgniter\CodeIgniter->createController()
+ 4 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2026-07-10 08:57:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-10 08:57:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2026-07-10 08:57:49 --> [DEPRECATED] Creation of dynamic property App\Services\SemesterService::$tahunRepository is deprecated in APPPATH\Services\SemesterService.php on line 14.
+ 1 APPPATH\Controllers\Admin\SemesterController.php(15): App\Services\SemesterService->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(944): App\Controllers\Admin\SemesterController->__construct()
+ 3 SYSTEMPATH\CodeIgniter.php(511): CodeIgniter\CodeIgniter->createController()
+ 4 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2026-07-10 08:57:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2026-07-10 08:57:52 --> [DEPRECATED] Creation of dynamic property App\Services\SemesterService::$tahunRepository is deprecated in APPPATH\Services\SemesterService.php on line 14.
+ 1 APPPATH\Controllers\Admin\SemesterController.php(15): App\Services\SemesterService->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(944): App\Controllers\Admin\SemesterController->__construct()
+ 3 SYSTEMPATH\CodeIgniter.php(511): CodeIgniter\CodeIgniter->createController()
+ 4 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2026-07-10 08:57:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-10 08:58:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2026-07-10 08:58:49 --> [DEPRECATED] Creation of dynamic property App\Services\SemesterService::$tahunRepository is deprecated in APPPATH\Services\SemesterService.php on line 14.
+ 1 APPPATH\Controllers\Admin\SemesterController.php(15): App\Services\SemesterService->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(944): App\Controllers\Admin\SemesterController->__construct()
+ 3 SYSTEMPATH\CodeIgniter.php(511): CodeIgniter\CodeIgniter->createController()
+ 4 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2026-07-10 08:58:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2026-07-10 08:58:51 --> [DEPRECATED] Creation of dynamic property App\Services\SemesterService::$tahunRepository is deprecated in APPPATH\Services\SemesterService.php on line 14.
+ 1 APPPATH\Controllers\Admin\SemesterController.php(15): App\Services\SemesterService->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(944): App\Controllers\Admin\SemesterController->__construct()
+ 3 SYSTEMPATH\CodeIgniter.php(511): CodeIgniter\CodeIgniter->createController()
+ 4 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2026-07-10 08:58:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-10 09:03:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2026-07-10 09:03:24 --> [DEPRECATED] Creation of dynamic property App\Services\SemesterService::$tahunRepository is deprecated in APPPATH\Services\SemesterService.php on line 14.
+ 1 APPPATH\Controllers\Admin\SemesterController.php(15): App\Services\SemesterService->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(944): App\Controllers\Admin\SemesterController->__construct()
+ 3 SYSTEMPATH\CodeIgniter.php(511): CodeIgniter\CodeIgniter->createController()
+ 4 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2026-07-10 09:03:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2026-07-10 09:03:26 --> [DEPRECATED] Creation of dynamic property App\Services\SemesterService::$tahunRepository is deprecated in APPPATH\Services\SemesterService.php on line 14.
+ 1 APPPATH\Controllers\Admin\SemesterController.php(15): App\Services\SemesterService->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(944): App\Controllers\Admin\SemesterController->__construct()
+ 3 SYSTEMPATH\CodeIgniter.php(511): CodeIgniter\CodeIgniter->createController()
+ 4 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2026-07-10 09:03:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-10 09:04:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2026-07-10 09:04:18 --> [DEPRECATED] Creation of dynamic property App\Services\SemesterService::$tahunRepository is deprecated in APPPATH\Services\SemesterService.php on line 14.
+ 1 APPPATH\Controllers\Admin\SemesterController.php(15): App\Services\SemesterService->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(944): App\Controllers\Admin\SemesterController->__construct()
+ 3 SYSTEMPATH\CodeIgniter.php(511): CodeIgniter\CodeIgniter->createController()
+ 4 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2026-07-10 09:04:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2026-07-10 09:04:20 --> [DEPRECATED] Creation of dynamic property App\Services\SemesterService::$tahunRepository is deprecated in APPPATH\Services\SemesterService.php on line 14.
+ 1 APPPATH\Controllers\Admin\SemesterController.php(15): App\Services\SemesterService->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(944): App\Controllers\Admin\SemesterController->__construct()
+ 3 SYSTEMPATH\CodeIgniter.php(511): CodeIgniter\CodeIgniter->createController()
+ 4 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2026-07-10 09:04:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-10 09:24:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2026-07-10 09:24:12 --> [DEPRECATED] Creation of dynamic property App\Services\SemesterService::$tahunRepository is deprecated in APPPATH\Services\SemesterService.php on line 14.
+ 1 APPPATH\Controllers\Admin\SemesterController.php(15): App\Services\SemesterService->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(944): App\Controllers\Admin\SemesterController->__construct()
+ 3 SYSTEMPATH\CodeIgniter.php(511): CodeIgniter\CodeIgniter->createController()
+ 4 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2026-07-10 09:24:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2026-07-10 09:24:14 --> [DEPRECATED] Creation of dynamic property App\Services\SemesterService::$tahunRepository is deprecated in APPPATH\Services\SemesterService.php on line 14.
+ 1 APPPATH\Controllers\Admin\SemesterController.php(15): App\Services\SemesterService->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(944): App\Controllers\Admin\SemesterController->__construct()
+ 3 SYSTEMPATH\CodeIgniter.php(511): CodeIgniter\CodeIgniter->createController()
+ 4 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2026-07-10 09:24:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-10 09:30:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-10 09:30:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2026-07-10 09:30:26 --> [DEPRECATED] Creation of dynamic property App\Services\SemesterService::$tahunRepository is deprecated in APPPATH\Services\SemesterService.php on line 14.
+ 1 APPPATH\Controllers\Admin\SemesterController.php(15): App\Services\SemesterService->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(944): App\Controllers\Admin\SemesterController->__construct()
+ 3 SYSTEMPATH\CodeIgniter.php(511): CodeIgniter\CodeIgniter->createController()
+ 4 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2026-07-10 09:30:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2026-07-10 09:30:27 --> [DEPRECATED] Creation of dynamic property App\Services\SemesterService::$tahunRepository is deprecated in APPPATH\Services\SemesterService.php on line 14.
+ 1 APPPATH\Controllers\Admin\SemesterController.php(15): App\Services\SemesterService->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(944): App\Controllers\Admin\SemesterController->__construct()
+ 3 SYSTEMPATH\CodeIgniter.php(511): CodeIgniter\CodeIgniter->createController()
+ 4 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2026-07-10 09:30:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2026-07-10 09:30:34 --> [DEPRECATED] Creation of dynamic property App\Services\SemesterService::$tahunRepository is deprecated in APPPATH\Services\SemesterService.php on line 14.
+ 1 APPPATH\Controllers\Admin\SemesterController.php(15): App\Services\SemesterService->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(944): App\Controllers\Admin\SemesterController->__construct()
+ 3 SYSTEMPATH\CodeIgniter.php(511): CodeIgniter\CodeIgniter->createController()
+ 4 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2026-07-10 09:30:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2026-07-10 09:30:34 --> [DEPRECATED] Creation of dynamic property App\Services\SemesterService::$tahunRepository is deprecated in APPPATH\Services\SemesterService.php on line 14.
+ 1 APPPATH\Controllers\Admin\SemesterController.php(15): App\Services\SemesterService->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(944): App\Controllers\Admin\SemesterController->__construct()
+ 3 SYSTEMPATH\CodeIgniter.php(511): CodeIgniter\CodeIgniter->createController()
+ 4 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2026-07-10 16:48:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-10 16:48:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-10 16:48:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-10 16:49:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-10 16:49:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-10 17:21:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-10 17:21:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-10 17:22:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-10 17:22:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-10 17:25:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-10 17:25:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-10 17:26:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-10 17:26:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-10 17:26:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-10 17:26:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-10 17:26:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-10 17:26:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-10 17:26:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.

@@ -7,7 +7,7 @@ use CodeIgniter\Model;
 class SiswaModel extends Model
 {
     protected $table            = 'siswa';
-    protected $primaryKey       = 'id_siswa';
+    protected $primaryKey       = 'id';
 
     protected $returnType       = 'array';
     protected $useSoftDeletes   = true;

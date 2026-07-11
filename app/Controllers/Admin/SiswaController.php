@@ -10,6 +10,26 @@ class SiswaController extends BaseAdminController
 {
     protected SiswaService $siswaService;
 
+    private function getFormData(): array
+    {
+        return [
+            'id_sekolah'      => session('id_sekolah'),
+            'id_kelas'        => $this->request->getPost('id_kelas'),
+            'uid_nfc'         => trim($this->request->getPost('uid_nfc')),
+            'nis'             => trim($this->request->getPost('nis')),
+            'nisn'            => trim($this->request->getPost('nisn')),
+            'nama_siswa'      => trim($this->request->getPost('nama_siswa')),
+            'jenis_kelamin'   => $this->request->getPost('jenis_kelamin'),
+            'tempat_lahir'    => trim($this->request->getPost('tempat_lahir')),
+            'tanggal_lahir'   => $this->request->getPost('tanggal_lahir'),
+            'alamat'          => trim($this->request->getPost('alamat')),
+            'nama_ortu'       => trim($this->request->getPost('nama_ortu')),
+            'no_hp'           => trim($this->request->getPost('no_hp')),
+            'foto'            => $this->request->getFile('foto'),
+            'status'          => $this->request->getPost('status'),
+        ];
+    }
+
     public function __construct()
     {
         $this->siswaService = new SiswaService();
@@ -45,113 +65,41 @@ class SiswaController extends BaseAdminController
 
         }
 
-        return $this->response->setJSON([
-            'success' => true,
-            'data' => $siswa
-        ]);
+        return $this->response->setJSON(responseSuccess('Data ditemukan.', $siswa));
     }
     
-    public function store()
+   public function store()
     {
-        $nis = $this->request->getPost('nis');
+        try {
 
-        if (!empty($nis) && $this->siswaService->cekNis($nis)) {
-            return $this->response->setJSON([
-                'success' => false,
-                'message' => 'NIS sudah digunakan.'
-            ]);
+            $this->siswaService->save(
+                $this->getFormData()
+            );
+
+            return $this->response->setJSON(
+                responseSuccess('Siswa berhasil ditambahkan.')
+            );
+
+        } catch (\Throwable $e) {
+
+            return $this->response->setJSON(
+                responseError($e->getMessage())
+            );
+
         }
-        
-        $nisn = trim($this->request->getPost('nisn'));
-
-        if (!empty($nisn) && $this->siswaService->cekNisn($nisn)) {
-            return $this->response->setJSON([
-                'success' => false,
-                'message' => 'NISN sudah digunakan.'
-            ]);
-        }
-
-        $uid = trim($this->request->getPost('uid_nfc'));
-
-        if (!empty($uid) && $this->siswaService->cekUid($uid)) {
-            return $this->response->setJSON([
-                'success' => false,
-                'message' => 'UID NFC sudah terdaftar.'
-            ]);
-        }
-        
-           $data = [
-                'id_sekolah'      => session('id_sekolah'),
-                'id_kelas'        => $this->request->getPost('id_kelas'),
-                'uid_nfc'         => $this->request->getPost('uid_nfc'),
-                'nis'             => trim($this->request->getPost('nis')),
-                'nisn'            => trim($this->request->getPost('nisn')),
-                'nama_siswa'      => trim($this->request->getPost('nama_siswa')),
-                'jenis_kelamin'   => $this->request->getPost('jenis_kelamin'),
-                'tempat_lahir'    => trim($this->request->getPost('tempat_lahir')),
-                'tanggal_lahir'   => $this->request->getPost('tanggal_lahir'),
-                'alamat'          => trim($this->request->getPost('alamat')),
-                'nama_ortu'       => trim($this->request->getPost('nama_ortu')),
-                'no_hp'           => trim($this->request->getPost('no_hp')),
-                'foto'            => $this->request->getFile('foto'),
-                'status'          => $this->request->getPost('status')
-            ];
-
-                       
-        $this->siswaService->save($data);
-
-         return $this->response
-        ->setJSON(
-
-        responseSuccess(
-            'Siswa berhasil ditambahkan.'
-        )
-
-    );
-
-}
-
+    }
    public function update($id)
     {
         try {
 
-            $data = [
-                    'id_sekolah'      => session('id_sekolah'),
-                    'id_kelas'        => $this->request->getPost('id_kelas'),
-                    'uid_nfc'         => $this->request->getPost('uid_nfc'),
-                    'nis'             => trim($this->request->getPost('nis')),
-                    'nisn'            => trim($this->request->getPost('nisn')),
-                    'nama_siswa'      => trim($this->request->getPost('nama_siswa')),
-                    'jenis_kelamin'   => $this->request->getPost('jenis_kelamin'),
-                    'tempat_lahir'    => trim($this->request->getPost('tempat_lahir')),
-                    'tanggal_lahir'   => $this->request->getPost('tanggal_lahir'),
-                    'alamat'          => trim($this->request->getPost('alamat')),
-                    'nama_ortu'       => trim($this->request->getPost('nama_ortu')),
-                    'no_hp'           => trim($this->request->getPost('no_hp')),
-                    'foto'            => $this->request->getFile('foto'),
-                    'status'          => $this->request->getPost('status')
-                ];  
-                
-                                       
-            $this->siswaService->update($id, $data);
+                               
+            $this->siswaService->update($id, $this->getFormData());
 
-            return $this->response->setJSON([
-
-                'success' => true,
-
-                'message' => 'Data siswa berhasil diubah.'
-
-            ]);
+            return $this->response->setJSON(responseSuccess('Siswa berhasil diubah.'));
 
         } catch (\Throwable $e) {
 
-            return $this->response->setJSON([
-
-                'success' => false,
-
-                'message' => $e->getMessage()
-
-            ]);
+            return $this->response->setJSON(responseError($e->getMessage()));
 
         }
     }
@@ -160,9 +108,6 @@ class SiswaController extends BaseAdminController
     {
         $this->siswaService->delete($id);
 
-        return $this->response->setJSON([
-            'success' => true,
-            'message' => 'Data siswa berhasil dihapus.'
-        ]);
+        return $this->response->setJSON(responseSuccess('Data siswa berhasil dihapus.'));
     }
 }

@@ -17,40 +17,73 @@
 
     <div class="sidebar-wrapper">
                
-        <nav>
+       <nav>
             <ul class="nav sidebar-menu flex-column" data-lte-toggle="treeview" role="menu">
-                
+
                 <li class="nav-item">
                     <a href="<?= site_url('dashboard') ?>"
-                       class="nav-link <?= menu_active('dashboard') ?>">
+                        class="nav-link <?= menu_active('dashboard') ?>">
                         <i class="nav-icon fas fa-home"></i>
                         <p>Dashboard</p>
                     </a>
                 </li>
+
                 <li class="nav-item">
                     <a href="<?= base_url('jurusan') ?>" class="nav-link">
-                        <i class="fa-solid fa-chalkboard-user"></i>
+                        <i class="nav-icon fa-solid fa-building-columns"></i>
                         <p>Jurusan</p>
                     </a>
                 </li>
+
                 <li class="nav-item">
                     <a href="<?= base_url('kelas') ?>" class="nav-link">
-                        <i class="fa-solid fa-chalkboard-user"></i>
+                        <i class="nav-icon fa-solid fa-school"></i>
                         <p>Kelas</p>
                     </a>
                 </li>
+
                 <li class="nav-item">
                     <a href="<?= base_url('guru') ?>" class="nav-link">
-                        <i class="fa-solid fa-chalkboard-user"></i>
+                        <i class="nav-icon fa-solid fa-chalkboard-user"></i>
                         <p>Guru</p>
                     </a>
                 </li>
+
                 <li class="nav-item">
                     <a href="<?= base_url('siswa') ?>" class="nav-link">
-                        <i class="fa-solid fa-chalkboard-user"></i>
+                        <i class="nav-icon fa-solid fa-user-graduate"></i>
                         <p>Siswa</p>
                     </a>
                 </li>
+
+                <li class="nav-item">
+                    <a href="<?= base_url('tahunajaran') ?>" class="nav-link">
+                        <i class="nav-icon fa-solid fa-calendar-days"></i>
+                        <p>Tahun Ajaran</p>
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a href="<?= base_url('semester') ?>" class="nav-link">
+                        <i class="nav-icon fa-solid fa-calendar-week"></i>
+                        <p>Semester</p>
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a href="<?= base_url('harilibur') ?>" class="nav-link">
+                        <i class="nav-icon fa-solid fa-calendar-xmark"></i>
+                        <p>Hari Libur</p>
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a href="<?= base_url('pengaturanabsensi') ?>" class="nav-link">
+                        <i class="nav-icon fa-solid fa-clock"></i>
+                        <p>Pengaturan Absensi</p>
+                    </a>
+                </li>
+
             </ul>
         </nav>
 

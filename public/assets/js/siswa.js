@@ -83,7 +83,7 @@ $(function () {
 
     $.get(base_url + "/siswa/show/" + id, function (res) {
       if (res.success) {
-        $("#id").val(res.data.id_siswa);
+        $("#id").val(res.data.id);
 
         $("#nis").val(res.data.nis);
 

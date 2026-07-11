@@ -22,30 +22,27 @@ class SiswaService
     {
         return $this->repository->find($id);
     }
+
     public function getBySekolah($idSekolah)
     {
         return $this->repository->getBySekolah($idSekolah);
     }
 
+    /**
+     * Simpan data siswa
+     */
     public function save(array $data)
     {
-        if (!empty($data['foto']) && $data['foto']->isValid()) {
+        $this->validateUnique($data);
 
-            $data['foto'] = uploadImage(
-                $data['foto'],
-                'uploads/siswa',
-                'SISWA'
-            );
-
-        } else {
-
-            $data['foto'] = 'default.png';
-
-        }
+        $data['foto'] = $this->uploadFoto($data['foto']);
 
         return $this->repository->insert($data);
     }
 
+    /**
+     * Update data siswa
+     */
     public function update($id, array $data)
     {
         $siswa = $this->repository->find($id);
@@ -54,28 +51,22 @@ class SiswaService
             throw new \Exception('Data siswa tidak ditemukan.');
         }
 
-        if (!empty($data['foto']) && $data['foto']->isValid()) {
+        $this->validateUnique($data, $siswa);
 
-            $fotoBaru = uploadImage(
-            $data['foto'],
-            'uploads/siswa',
-            'SISWA'
-        );
+        if (
+            !empty($data['foto']) &&
+            $data['foto']->isValid() &&
+            $data['foto']->getError() !== UPLOAD_ERR_NO_FILE
+        ) {
 
-        if ($fotoBaru !== null) {
+            $fotoBaru = $this->uploadFoto($data['foto']);
 
-            deleteImage(
-                'uploads/siswa',
-                $siswa['foto']
-            );
+            if ($fotoBaru !== 'default.png') {
 
-            $data['foto'] = $fotoBaru;
+                deleteImage('uploads/siswa', $siswa['foto']);
 
-        } else {
-
-            unset($data['foto']);
-
-        }
+                $data['foto'] = $fotoBaru;
+            }
 
         } else {
 
@@ -86,7 +77,10 @@ class SiswaService
         return $this->repository->updateData($id, $data);
     }
 
-   public function delete($id)
+    /**
+     * Hapus data siswa
+     */
+    public function delete($id)
     {
         $siswa = $this->repository->find($id);
 
@@ -102,18 +96,58 @@ class SiswaService
         return $this->repository->deleteData($id);
     }
 
-    public function cekNis($nis)
+    /**
+     * Validasi data unik
+     */
+    private function validateUnique(array $data, ?array $oldData = null): void
     {
-        return $this->repository->cekNis($nis);
+        if (
+            !empty($data['nis']) &&
+            ($oldData === null || $data['nis'] !== $oldData['nis']) &&
+            $this->repository->cekNis($data['nis'])
+        ) {
+            throw new \Exception('NIS sudah digunakan.');
+        }
+
+        if (
+            !empty($data['nisn']) &&
+            ($oldData === null || $data['nisn'] !== $oldData['nisn']) &&
+            $this->repository->cekNisn($data['nisn'])
+        ) {
+            throw new \Exception('NISN sudah digunakan.');
+        }
+
+        if (
+            !empty($data['uid_nfc']) &&
+            ($oldData === null || $data['uid_nfc'] !== $oldData['uid_nfc']) &&
+            $this->repository->cekUid($data['uid_nfc'])
+        ) {
+            throw new \Exception('UID NFC sudah terdaftar.');
+        }
     }
 
-    public function cekNisn($nisn)
+    /**
+     * Upload foto siswa
+     */
+    private function uploadFoto($foto): string
     {
-        return $this->repository->cekNisn($nisn);
-    }
+        if (
+            !empty($foto) &&
+            $foto->isValid() &&
+            $foto->getError() !== UPLOAD_ERR_NO_FILE
+        ) {
 
-    public function cekUid($uid)
-    {
-        return $this->repository->cekUid($uid);
+            $fileName = uploadImage(
+                $foto,
+                'uploads/siswa',
+                'SISWA'
+            );
+
+            if ($fileName !== null) {
+                return $fileName;
+            }
+        }
+
+        return 'default.png';
     }
 }

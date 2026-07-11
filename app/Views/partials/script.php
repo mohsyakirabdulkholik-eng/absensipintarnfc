@@ -30,6 +30,17 @@ switch ($uri) {
     case 'siswa':
         echo '<script src="'.base_url('assets/js/siswa.js').'"></script>';
         break;
+    case 'tahunajaran':
+        echo '<script src="'.base_url('assets/js/tahunajaran.js').'"></script>';
+        break;
+    case 'semester':
+        echo '<script src="'.base_url('assets/js/semester.js').'"></script>';
+        break;
+    case 'harilibur':
+        echo '<script src="'.base_url('assets/js/harilibur.js').'"></script>';
+        break;
+    case 'pengaturanabsensi':
+        echo '<script src="'.base_url('assets/js/pengaturanabsensi.js').'"></script>';
+        break;
 
 }
-?>
