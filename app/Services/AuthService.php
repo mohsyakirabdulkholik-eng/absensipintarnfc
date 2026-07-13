@@ -137,4 +137,9 @@ class AuthService
                 $userData
             );
     }
+    // ambil data jenjang
+    public function getJenjang(): array
+    {
+        return $this->authRepository->getJenjang();
+    }
 }

@@ -28,12 +28,22 @@
                     </a>
                 </li>
 
-                <li class="nav-item">
-                    <a href="<?= base_url('jurusan') ?>" class="nav-link">
-                        <i class="nav-icon fa-solid fa-building-columns"></i>
-                        <p>Jurusan</p>
-                    </a>
-                </li>
+                <?php if(session('is_jurusan')) : ?>
+
+                    <li class="nav-item">
+
+                        <a href="<?= base_url('jurusan') ?>"
+                        class="nav-link <?= menu_active('jurusan') ?>">
+
+                            <i class="fa-solid fa-building-columns"></i>
+
+                            <p>Jurusan</p>
+
+                        </a>
+
+                    </li>
+
+                <?php endif; ?>
 
                 <li class="nav-item">
                     <a href="<?= base_url('kelas') ?>" class="nav-link">

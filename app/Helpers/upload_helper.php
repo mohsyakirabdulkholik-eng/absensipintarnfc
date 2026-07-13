@@ -1,46 +1,65 @@
 <?php
 
+use CodeIgniter\HTTP\Files\UploadedFile;
+
 if (!function_exists('uploadImage')) {
 
     /**
      * Upload Image
      *
-     * @param \CodeIgniter\HTTP\Files\UploadedFile|null $file
-     * @param string $folder
-     * @param string $prefix
-     * @return string|null
+     * @throws Exception
      */
-    function uploadImage($file, string $folder, string $prefix = 'IMG'): ?string
-    {
-        if (!$file || !$file->isValid() || $file->hasMoved()) {
-            return null;
+    function uploadImage(
+        UploadedFile $file,
+        string $folder,
+        string $prefix = 'IMG',
+        int $maxSize = 2 // MB
+    ): string {
+
+        if (!$file->isValid()) {
+            throw new Exception('File tidak valid.');
         }
 
-        // Validasi ekstensi
-        $allowed = ['jpg', 'jpeg', 'png', 'webp'];
-        $ext = strtolower($file->getExtension());
-
-        if (!in_array($ext, $allowed)) {
-            return null;
+        if ($file->hasMoved()) {
+            throw new Exception('File sudah dipindahkan.');
         }
 
-        // Nama file unik
+        // Validasi MIME Type
+        $allowedMime = [
+            'image/jpeg',
+            'image/png',
+            'image/webp'
+        ];
+
+        if (!in_array($file->getMimeType(), $allowedMime)) {
+            throw new Exception(
+                'Format gambar harus JPG, PNG atau WEBP.'
+            );
+        }
+
+        // Maksimal ukuran
+        if ($file->getSize() > ($maxSize * 1024 * 1024)) {
+            throw new Exception(
+                "Ukuran gambar maksimal {$maxSize} MB."
+            );
+        }
+
+        // Nama file
         $fileName = sprintf(
             '%s_%s_%04d.%s',
             strtoupper($prefix),
             date('YmdHis'),
             random_int(1000, 9999),
-            $ext
+            strtolower($file->getExtension())
         );
 
         // Folder tujuan
-        $destination = rtrim(FCPATH . trim($folder, '/'), '/');
+        $destination = FCPATH . trim($folder, '/');
 
         if (!is_dir($destination)) {
             mkdir($destination, 0775, true);
         }
 
-        // Upload file
         $file->move($destination, $fileName);
 
         return $fileName;
@@ -50,19 +69,25 @@ if (!function_exists('uploadImage')) {
 if (!function_exists('deleteImage')) {
 
     /**
-     * Delete Image
-     *
-     * @param string $folder
-     * @param string|null $fileName
-     * @return void
+     * Hapus Image
      */
-    function deleteImage(string $folder, ?string $fileName): void
-    {
-        if (empty($fileName) || $fileName === 'default.png') {
+    function deleteImage(
+        string $folder,
+        ?string $fileName,
+        string $defaultFile = 'default.png'
+    ): void {
+
+        if (
+            empty($fileName) ||
+            $fileName === $defaultFile
+        ) {
             return;
         }
 
-        $path = rtrim(FCPATH . trim($folder, '/'), '/') . '/' . $fileName;
+        $path = FCPATH .
+            trim($folder, '/') .
+            '/' .
+            $fileName;
 
         if (is_file($path)) {
             unlink($path);

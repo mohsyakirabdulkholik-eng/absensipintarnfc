@@ -1,14 +1,31 @@
 <?= $this->extend('layouts/app') ?>
 <?= $this->section('content') ?>
+<div class="content-header">
+    <div class="container-fluid">
+        <div class="row mb-2">
+            <div class="col-sm-6">
+                <h3 class="m-0"><?= esc($title) ?></h3>
+            </div>
+            <div class="col-sm-6 text-end">
+
+                <button class="btn btn-primary" id="btnTambah">
+
+                    <i class="fas fa-plus-circle"></i>
+                    Tambah Guru
+
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
 <div class="card">
     <div class="card-header d-flex justify-content-between align-items-center">
         <h3 class="card-title mb-0">
             Data Guru
         </h3>
         <small class="text-muted">Kelola data guru sekolah</small>
-        <button class="btn btn-primary" id="btnTambah">
-            <i class="fa-solid fa-plus"></i> Tambah Guru
-        </button>
+
     </div>
 
     <div class="card-body">

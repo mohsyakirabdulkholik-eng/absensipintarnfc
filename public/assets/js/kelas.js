@@ -44,6 +44,63 @@ $(function () {
       },
     });
   });
+
+  // variabel collums
+  let columns = [
+    {
+      data: null,
+      render: function (data, type, row, meta) {
+        return meta.row + 1;
+      },
+    },
+
+    {
+      data: "nama_kelas",
+    },
+  ];
+
+  // Tambahkan kolom jurusan hanya jika diperlukan
+  if (IS_JURUSAN) {
+    columns.push({
+      data: "nama_jurusan",
+
+      defaultContent: "-",
+    });
+  }
+
+  columns.push(
+    {
+      data: "status",
+
+      render: function (data) {
+        return data === "aktif"
+          ? '<span class="badge bg-success">Aktif</span>'
+          : '<span class="badge bg-danger">Nonaktif</span>';
+      },
+    },
+
+    {
+      data: null,
+
+      orderable: false,
+
+      searchable: false,
+
+      render: function (data) {
+        return `
+                    <button class="btn btn-warning btn-sm btn-edit"
+                        data-id="${data.id}">
+                        <i class="fa-solid fa-pen"></i>
+                    </button>
+
+                    <button class="btn btn-danger btn-sm btn-delete"
+                        data-id="${data.id}">
+                        <i class="fa-solid fa-trash"></i>
+                    </button>
+                `;
+      },
+    },
+  );
   // munculkan modal
   $("#btnTambah").click(function () {
     $("#formKelas")[0].reset();
@@ -115,57 +172,9 @@ $(function () {
       url: base_url + "/kelas/data",
       dataSrc: "",
     },
-
-    columns: [
-      {
-        data: null,
-
-        render: function (data, type, row, meta) {
-          return meta.row + 1;
-        },
-      },
-
-      {
-        data: "nama_jurusan",
-
-        defaultContent: "-",
-      },
-
-      {
-        data: "nama_kelas",
-      },
-
-      {
-        data: "status",
-
-        render: function (data) {
-          if (data == "aktif") {
-            return '<span class="badge bg-success">Aktif</span>';
-          }
-
-          return '<span class="badge bg-danger">Nonaktif</span>';
-        },
-      },
-
-      {
-        data: null,
-
-        render: function (data) {
-          return `
-        <button class="btn btn-warning btn-sm btn-edit"
-            data-id="${data.id}">
-            <i class="fa-solid fa-pen"></i>
-        </button>
-
-        <button class="btn btn-danger btn-sm btn-delete"
-            data-id="${data.id}">
-            <i class="fa-solid fa-trash"></i>
-        </button>
-        `;
-        },
-      },
-    ],
+    columns: columns,
   });
+
   // ambil data jurusan untuk select option
   $.get(base_url + "/jurusan/options", function (data) {
     let option = '<option value="">- Tidak Ada -</option>';

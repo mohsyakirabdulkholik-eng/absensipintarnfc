@@ -13,6 +13,13 @@ $routes->get('/register', 'Auth\AuthController::register');
 $routes->post('/register/store', 'Auth\AuthController::storeRegister');
 
 $routes->group('', ['filter' => 'auth'], function ($routes) {
+    
+    //  route ke profile
+    $routes->get('profile', 'Admin\ProfileController::index');
+    $routes->post('profile/update', 'Admin\ProfileController::update');
+    $routes->post('profile/upload-photo', 'Admin\ProfileController::uploadPhoto');
+    $routes->post('profile/upload-logo', 'Admin\ProfileController::uploadLogo');
+
     $routes->get('dashboard', 'Admin\DashboardController::index');
 
         $routes->group('jurusan', function ($routes) {

@@ -3,6 +3,8 @@
 namespace App\Controllers\Auth;
 use App\Controllers\BaseController;
 use App\Services\AuthService;
+use App\Traits\AjaxResponseTrait;
+
 
 class AuthController extends BaseController
 {
@@ -39,7 +41,8 @@ class AuthController extends BaseController
         }
 
         return view('auth/register', [
-            'title' => 'Daftar Akun'
+            'title' => 'Daftar Akun',
+            'jenjang'  => $this->authService->getJenjang()
         ]);
     }
     public function storeRegister()

@@ -10,18 +10,20 @@
             <div class="modal-body">
 
             <input type="hidden" name="id" id="id">
-            <div class="mb-3">
-               <label>Jurusan</label>
+            <?php if(session('is_jurusan')) : ?>
+                <div class="mb-3">
+                <label>Jurusan</label>
 
-                <select
-                    id="id_jurusan"
-                    name="id_jurusan"
-                    class="form-select">
+                    <select
+                        id="id_jurusan"
+                        name="id_jurusan"
+                        class="form-select">
 
-                    <option value="">- Tidak Ada -</option>
+                        <option value="">- Tidak Ada -</option>
 
-                </select>
-        </div>
+                    </select>
+                </div>
+            <?php endif; ?>
 
         <div class="mb-3">
             <label>Nama Kelas</label>

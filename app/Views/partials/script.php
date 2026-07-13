@@ -42,5 +42,40 @@ switch ($uri) {
     case 'pengaturanabsensi':
         echo '<script src="'.base_url('assets/js/pengaturanabsensi.js').'"></script>';
         break;
+    case 'profile':
+        echo '<script src="'.base_url('assets/js/profile.js').'"></script>';
+        break;
 
-}
+} 
+
+?>
+
+<script>
+$(document).on("click", ".btn-logout", function () {
+
+    Swal.fire({
+
+        title: "Logout?",
+
+        text: "Anda akan keluar dari sistem.",
+
+        icon: "question",
+
+        showCancelButton: true,
+
+        confirmButtonText: "Logout",
+
+        cancelButtonText: "Batal"
+
+    }).then((result) => {
+
+        if (result.isConfirmed) {
+
+            window.location = "<?= site_url('logout') ?>";
+
+        }
+
+    });
+
+});
+</script>
