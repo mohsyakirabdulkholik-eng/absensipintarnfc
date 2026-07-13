@@ -93,7 +93,18 @@
                         <p>Pengaturan Absensi</p>
                     </a>
                 </li>
+                <li class="nav-item">
 
+                    <a href="<?= site_url('setting-sekolah') ?>"
+                    class="nav-link <?= menu_active('setting-sekolah') ?>">
+
+                        <i class="nav-icon fa-solid fa-school"></i>
+
+                        <p>Pengaturan Sekolah</p>
+
+                    </a>
+
+                </li>
             </ul>
         </nav>
 

@@ -12,6 +12,9 @@ class SekolahModel extends Model
 
     protected $returnType = 'array';
 
+    protected $useSoftDeletes   = false;
+    protected $protectFields    = true;
+
     protected $allowedFields = [
 
         'nama_sekolah',
@@ -26,17 +29,21 @@ class SekolahModel extends Model
 
         'email',
 
+        'website',
+
+        'kepala_sekolah',
+
+        'motto',
+
         'logo',
 
-        'status',
-
-        'created_at',
-
-        'updated_at',
-
-        'deleted_at'
+        'status'
 
     ];
 
-    protected $useTimestamps = false;
+    protected $useTimestamps = true;
+
+    protected $createdField  = 'created_at';
+
+    protected $updatedField  = 'updated_at';
 }

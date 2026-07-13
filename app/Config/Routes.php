@@ -20,6 +20,11 @@ $routes->group('', ['filter' => 'auth'], function ($routes) {
     $routes->post('profile/upload-photo', 'Admin\ProfileController::uploadPhoto');
     $routes->post('profile/upload-logo', 'Admin\ProfileController::uploadLogo');
 
+    // route ke setting_sekolah
+    $routes->get('setting-sekolah', 'Admin\SettingSekolahController::index');
+    $routes->post('setting-sekolah/update', 'Admin\SettingSekolahController::update');
+    $routes->post('setting-sekolah/upload-logo', 'Admin\SettingSekolahController::uploadLogo');
+
     $routes->get('dashboard', 'Admin\DashboardController::index');
 
         $routes->group('jurusan', function ($routes) {

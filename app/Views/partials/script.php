@@ -45,6 +45,10 @@ switch ($uri) {
     case 'profile':
         echo '<script src="'.base_url('assets/js/profile.js').'"></script>';
         break;
+    case 'setting-sekolah':
+        echo '<script src="'.base_url('assets/js/setting-sekolah.js').'"></script>';
+        break;
+
 
 } 
 
