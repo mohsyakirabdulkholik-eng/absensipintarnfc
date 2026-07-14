@@ -105,6 +105,13 @@
                     </a>
 
                 </li>
+                <li class="nav-item">
+                    <a href="<?= base_url('perangkat') ?>"
+                    class="nav-link <?= uri_string() == 'perangkat' ? 'active' : '' ?>">
+                        <i class="nav-icon fas fa-mobile-alt"></i>
+                        <p>Perangkat</p>
+                    </a>
+                </li>
             </ul>
         </nav>
 

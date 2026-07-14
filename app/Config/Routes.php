@@ -28,12 +28,12 @@ $routes->group('', ['filter' => 'auth'], function ($routes) {
     $routes->get('dashboard', 'Admin\DashboardController::index');
 
         $routes->group('jurusan', function ($routes) {
-        $routes->get('/', 'Admin\JurusanController::index');
-        $routes->get('data', 'Admin\JurusanController::getData');
-        $routes->post('store', 'Admin\JurusanController::store');
-        $routes->get('show/(:num)', 'Admin\JurusanController::show/$1');
-        $routes->post('update/(:num)', 'Admin\JurusanController::update/$1');
-        $routes->delete('delete/(:num)', 'Admin\JurusanController::delete/$1');
+            $routes->get('/', 'Admin\JurusanController::index');
+            $routes->get('data', 'Admin\JurusanController::getData');
+            $routes->post('store', 'Admin\JurusanController::store');
+            $routes->get('show/(:num)', 'Admin\JurusanController::show/$1');
+            $routes->post('update/(:num)', 'Admin\JurusanController::update/$1');
+            $routes->delete('delete/(:num)', 'Admin\JurusanController::delete/$1');
     });
      $routes->group('kelas', function ($routes) {
         $routes->get('/', 'Admin\KelasController::index');
@@ -87,14 +87,25 @@ $routes->group('', ['filter' => 'auth'], function ($routes) {
     });
 
     $routes->group('harilibur', static function ($routes) {
+        $routes->get('/', 'Admin\HariLiburController::index');
+        $routes->get('getData', 'Admin\HariLiburController::getData');
+        $routes->get('show/(:num)', 'Admin\HariLiburController::show/$1');
+        $routes->post('store', 'Admin\HariLiburController::store');
+        $routes->post('update/(:num)', 'Admin\HariLiburController::update/$1');
+        $routes->post('delete/(:num)', 'Admin\HariLiburController::delete/$1');
 
-    $routes->get('/', 'Admin\HariLiburController::index');
-    $routes->get('getData', 'Admin\HariLiburController::getData');
-    $routes->get('show/(:num)', 'Admin\HariLiburController::show/$1');
-    $routes->post('store', 'Admin\HariLiburController::store');
-    $routes->post('update/(:num)', 'Admin\HariLiburController::update/$1');
-    $routes->post('delete/(:num)', 'Admin\HariLiburController::delete/$1');
-
+    });
+    // route menuju perangkat
+    $routes->group('perangkat', function ($routes) {
+        $routes->get('/', 'Admin\PerangkatController::index');
+        $routes->get('data', 'Admin\PerangkatController::getData');
+        $routes->post('save', 'Admin\PerangkatController::save');
+         $routes->get('detail/(:num)', 'Admin\PerangkatController::detail/$1');
+        $routes->get('edit/(:num)', 'Admin\PerangkatController::edit/$1');
+        $routes->post('delete/(:num)', 'Admin\PerangkatController::delete/$1');
+        $routes->post('regenerate-token/(:num)', 'Admin\PerangkatController::regenerateToken/$1');
+        $routes->post('reset-device/(:num)', 'Admin\PerangkatController::resetDevice/$1');
+        $routes->post('toggle-status/(:num)', 'Admin\PerangkatController::toggleStatus/$1');
     });
 
     /*
