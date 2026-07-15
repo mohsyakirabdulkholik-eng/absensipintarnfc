@@ -125,4 +125,18 @@ $routes->group('', ['filter' => 'auth'], function ($routes) {
         $routes->get('getAktif', 'Admin\PengaturanAbsensiController::getAktif');
 
     });
+
 });
+
+// route ke API Device
+    $routes->group('api/device', function ($routes) {
+
+        $routes->post('pair', 'Api\DeviceController::pair');
+
+        $routes->post('authenticate', 'Api\DeviceController::authenticate');
+
+        $routes->post('heartbeat', 'Api\DeviceController::heartbeat');
+
+        $routes->post('unpair', 'Api\DeviceController::unpair');
+
+    });
