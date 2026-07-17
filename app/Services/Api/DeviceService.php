@@ -12,6 +12,36 @@ class DeviceService
     {
         $this->repository = new DeviceRepository();
     }
+
+    /**
+     * Ambil perangkat aktif berdasarkan token
+     */
+    private function getValidDevice(string $token): array
+    {
+        $device = $this->repository->findByToken($token);
+
+        if (!$device) {
+            return [
+                'success' => false,
+                'code'    => 'DEVICE_NOT_FOUND',
+                'message' => 'Perangkat tidak ditemukan.'
+            ];
+        }
+
+        if ($device['status'] !== 'aktif') {
+            return [
+                'success' => false,
+                'code'    => 'DEVICE_INACTIVE',
+                'message' => 'Perangkat dinonaktifkan.'
+            ];
+        }
+
+        return [
+            'success' => true,
+            'data'    => $device
+        ];
+    }
+
     /**
      * Pairing Android
      */
@@ -33,23 +63,13 @@ class DeviceService
             ];
         }
 
-        $device = $this->repository->findByToken($data['token']);
+        $result = $this->getValidDevice($data['token']);
 
-        if (!$device) {
-            return [
-                'success' => false,
-                'code'    => 'DEVICE_NOT_FOUND',
-                'message' => 'Token perangkat tidak ditemukan.'
-            ];
+        if (!$result['success']) {
+            return $result;
         }
 
-        if ($device['status'] !== 'aktif') {
-            return [
-                'success' => false,
-                'code'    => 'DEVICE_INACTIVE',
-                'message' => 'Perangkat dinonaktifkan oleh administrator.'
-            ];
-        }
+        $device = $result['data'];
 
         $android = $this->repository->isAndroidUsed($data['android_id']);
 
@@ -111,23 +131,13 @@ class DeviceService
             ];
         }
 
-        $device = $this->repository->findByToken($data['token']);
+        $result = $this->getValidDevice($data['token']);
 
-        if (!$device) {
-            return [
-                'success' => false,
-                'code'    => 'DEVICE_NOT_FOUND',
-                'message' => 'Perangkat tidak ditemukan.'
-            ];
+        if (!$result['success']) {
+            return $result;
         }
 
-        if ($device['status'] !== 'aktif') {
-            return [
-                'success' => false,
-                'code'    => 'DEVICE_INACTIVE',
-                'message' => 'Perangkat dinonaktifkan.'
-            ];
-        }
+        $device = $result['data'];
 
         $this->repository->updateHeartbeat($device['id']);
 
@@ -154,15 +164,13 @@ class DeviceService
             ];
         }
 
-        $device = $this->repository->findByToken($data['token']);
+        $result = $this->getValidDevice($data['token']);
 
-        if (!$device) {
-            return [
-                'success' => false,
-                'code'    => 'DEVICE_NOT_FOUND',
-                'message' => 'Perangkat tidak ditemukan.'
-            ];
+        if (!$result['success']) {
+            return $result;
         }
+
+        $device = $result['data'];
 
         $this->repository->clearPairing($device['id']);
 
@@ -174,27 +182,17 @@ class DeviceService
     }
 
     /**
-     * Autentikasi Device
+     * Authenticate Device
      */
     public function authenticate(string $token): array
     {
-        $device = $this->repository->findByToken($token);
+        $result = $this->getValidDevice($token);
 
-        if (!$device) {
-            return [
-                'success' => false,
-                'code'    => 'DEVICE_NOT_FOUND',
-                'message' => 'Perangkat tidak ditemukan.'
-            ];
+        if (!$result['success']) {
+            return $result;
         }
 
-        if ($device['status'] !== 'aktif') {
-            return [
-                'success' => false,
-                'code'    => 'DEVICE_INACTIVE',
-                'message' => 'Perangkat dinonaktifkan.'
-            ];
-        }
+        $device = $result['data'];
 
         if (empty($device['android_id'])) {
             return [
@@ -210,17 +208,46 @@ class DeviceService
             'message' => 'Autentikasi berhasil.',
             'data' => [
 
-                    'device_id'      => $device['id'],
+                'device_id'      => $device['id'],
 
-                    'id_sekolah'     => $device['id_sekolah'],
+                'id_sekolah'     => $device['id_sekolah'],
 
-                    'nama_perangkat' => $device['nama_perangkat'],
+                'nama_perangkat' => $device['nama_perangkat'],
 
-                    'status'         => $device['status'],
+                'status'         => $device['status'],
 
-                    'last_sync'      => $device['last_sync']
+                'last_sync'      => $device['last_sync']
 
-                ]
+            ]
+        ];
+    }
+
+    /**
+     * Validasi perangkat untuk seluruh API
+     */
+    public function validateDevice(string $token): array
+    {
+        $result = $this->getValidDevice($token);
+
+        if (!$result['success']) {
+            return $result;
+        }
+
+        $device = $result['data'];
+
+        if (empty($device['android_id'])) {
+            return [
+                'success' => false,
+                'code'    => 'DEVICE_NOT_PAIRED',
+                'message' => 'Perangkat belum dipairing.'
+            ];
+        }
+
+        return [
+            'success' => true,
+            'code'    => 'DEVICE_VALID',
+            'message' => 'Perangkat valid.',
+            'data'    => $device
         ];
     }
 }

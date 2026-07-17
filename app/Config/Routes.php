@@ -129,14 +129,18 @@ $routes->group('', ['filter' => 'auth'], function ($routes) {
 });
 
 // route ke API Device
-    $routes->group('api/device', function ($routes) {
+    $routes->group('api/', function ($routes) {
 
-        $routes->post('pair', 'Api\DeviceController::pair');
+        $routes->post('device/pair', 'Api\DeviceController::pair');
 
-        $routes->post('authenticate', 'Api\DeviceController::authenticate');
+        $routes->post('device/authenticate', 'Api\DeviceController::authenticate');
 
-        $routes->post('heartbeat', 'Api\DeviceController::heartbeat');
+        $routes->post('device/heartbeat', 'Api\DeviceController::heartbeat');
 
-        $routes->post('unpair', 'Api\DeviceController::unpair');
+        $routes->post('device/unpair', 'Api\DeviceController::unpair');
+
+        $routes->post('attendance', 'Api\AbsensiController::attendance');
+
+        $routes->post('nfc/read', 'Api\NfcController::read');
 
     });

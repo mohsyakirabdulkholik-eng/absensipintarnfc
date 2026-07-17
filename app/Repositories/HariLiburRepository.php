@@ -66,4 +66,17 @@ class HariLiburRepository
             ->where('tanggal', $tanggal)
             ->first();
     }
+    /**
+     * Cek hari libur
+     */
+    public function isHoliday(
+        int $idSekolah,
+        string $tanggal
+    ): ?array
+    {
+        return $this->model
+            ->where('id_sekolah', $idSekolah)
+            ->where('tanggal', $tanggal)
+            ->first();
+    }
 }

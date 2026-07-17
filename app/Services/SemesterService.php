@@ -110,4 +110,8 @@ class SemesterService
     {
         return $this->repository->getSemesterAktif($idSekolah);
     }
+    public function getAktif($idSekolah)
+    {
+        return $this->repository->getSemesterAktif($idSekolah);
+    }
 }

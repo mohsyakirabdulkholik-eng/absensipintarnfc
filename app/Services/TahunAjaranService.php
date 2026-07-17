@@ -95,4 +95,9 @@ class TahunAjaranService
 
         return $this->repository->aktifkan($id);
     }
+    public function getAktif(int $idSekolah): ?array
+    {
+        return $this->repository
+            ->getAktif($idSekolah);
+    }
 }

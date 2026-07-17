@@ -88,4 +88,15 @@ class TahunAjaranRepository
                 'aktif' => 1
             ]);
     }
+
+    /**
+     * Ambil Tahun Ajaran Aktif
+     */
+    public function getAktif(int $idSekolah): ?array
+    {
+        return $this->model
+            ->where('id_sekolah', $idSekolah)
+            ->where('aktif', 1)
+            ->first();
+    }
 }

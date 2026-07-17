@@ -75,4 +75,17 @@ class HariLiburService
 
         return $this->repository->deleteData($id);
     }
+    /**
+     * Cek apakah hari ini libur
+     */
+    public function isHoliday(
+        int $idSekolah,
+        string $tanggal
+    ): ?array
+    {
+        return $this->repository->isHoliday(
+            $idSekolah,
+            $tanggal
+        );
+    }
 }
