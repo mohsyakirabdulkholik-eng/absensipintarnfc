@@ -15,7 +15,6 @@ class SiswaController extends BaseAdminController
         return [
             'id_sekolah'      => session('id_sekolah'),
             'id_kelas'        => $this->request->getPost('id_kelas'),
-            'uid_nfc'         => trim($this->request->getPost('uid_nfc')),
             'nis'             => trim($this->request->getPost('nis')),
             'nisn'            => trim($this->request->getPost('nisn')),
             'nama_siswa'      => trim($this->request->getPost('nama_siswa')),

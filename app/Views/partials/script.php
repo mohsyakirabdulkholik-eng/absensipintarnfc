@@ -48,6 +48,9 @@ switch ($uri) {
     case 'setting-sekolah':
         echo '<script src="'.base_url('assets/js/setting-sekolah.js').'"></script>';
         break;
+    case 'kartu-nfc':
+        echo '<script src="'.base_url('assets/js/kartunfc.js').'"></script>';
+        break;
     case 'perangkat':
         echo '<script src="'.base_url('assets/js/perangkat.js').'"></script>
             <script src="'.base_url('assets/plugins/qrcode/qrcode.min.js').'"></script>';

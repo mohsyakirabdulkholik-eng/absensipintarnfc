@@ -137,36 +137,7 @@
 
                         </div>
 
-                        <div class="col-md-6 mb-3">
-
-                            <label class="form-label">
-                                UID NFC
-                            </label>
-
-                            <div class="input-group">
-
-                                <input
-                                    type="text"
-                                    class="form-control"
-                                    id="uid_nfc"
-                                    name="uid_nfc"
-                                    placeholder="Belum Terdaftar"
-                                    readonly>
-
-                                <button
-                                    class="btn btn-outline-secondary"
-                                    type="button"
-                                    disabled>
-
-                                    <i class="fa-solid fa-wifi"></i>
-
-                                </button>
-
-                            </div>
-
-                        </div>
-
-                    </div>
+                   </div>
 
                     <div class="row">
 

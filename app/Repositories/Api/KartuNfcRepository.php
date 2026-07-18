@@ -44,4 +44,44 @@ class KartuNfcRepository
             ->get()
             ->getRowArray();
     }
+
+    /**
+     * Cari kartu aktif berdasarkan guru
+     */
+    public function findByGuru(
+        int $idGuru,
+        int $idSekolah
+    ): ?array {
+        return $this->db->table('kartu_nfc')
+            ->where('id_guru', $idGuru)
+            ->where('id_sekolah', $idSekolah)
+            ->where('status', 'aktif')
+            ->get()
+            ->getRowArray();
+    }
+
+    /**
+     * Cari kartu aktif berdasarkan siswa
+     */
+    public function findBySiswa(
+        int $idSiswa,
+        int $idSekolah
+    ): ?array {
+        return $this->db->table('kartu_nfc')
+            ->where('id_siswa', $idSiswa)
+            ->where('id_sekolah', $idSekolah)
+            ->where('status', 'aktif')
+            ->get()
+            ->getRowArray();
+    }
+
+    /**
+     * Simpan kartu NFC
+     */
+    public function insert(array $data): bool
+    {
+        return $this->db
+            ->table('kartu_nfc')
+            ->insert($data);
+    }
 }

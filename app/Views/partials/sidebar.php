@@ -112,6 +112,18 @@
                         <p>Perangkat</p>
                     </a>
                 </li>
+                <li class="nav-item">
+                    <a
+                        href="<?= base_url('kartu-nfc') ?>"
+                        class="nav-link <?= url_is('kartu-nfc*') ? 'active' : '' ?>"
+                    >
+                        <i class="nav-icon fas fa-id-card "></i>
+
+                        <p>
+                            Kartu NFC
+                        </p>
+                    </a>
+                </li>
             </ul>
         </nav>
 

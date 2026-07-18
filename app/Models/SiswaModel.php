@@ -29,7 +29,6 @@ class SiswaModel extends Model
         'no_hp',
         'foto',
         'status',
-        'uid_nfc'
     ];
 
     protected bool $allowEmptyInserts = false;

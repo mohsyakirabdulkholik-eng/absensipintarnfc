@@ -108,6 +108,19 @@ $routes->group('', ['filter' => 'auth'], function ($routes) {
         $routes->post('toggle-status/(:num)', 'Admin\PerangkatController::toggleStatus/$1');
     });
 
+      // Halaman utama
+    $routes->get('kartu-nfc','Admin\KartuNfcController::index');
+
+    // Data untuk DataTable
+    $routes->get('kartu-nfc/data', 'Admin\KartuNfcController::data');
+
+    // Detail kartu
+    $routes->get('kartu-nfc/detail/(:num)',  'Admin\KartuNfcController::detail/$1');
+
+    // Update status kartu
+    $routes->post('kartu-nfc/status/(:num)','Admin\KartuNfcController::updateStatus/$1' );
+
+
     /*
 |--------------------------------------------------------------------------
 | Pengaturan Absensi
@@ -142,5 +155,13 @@ $routes->group('', ['filter' => 'auth'], function ($routes) {
         $routes->post('attendance', 'Api\AbsensiController::attendance');
 
         $routes->post('nfc/read', 'Api\NfcController::read');
+
+        $routes->get('nfc/guru', 'Api\NfcController::guru');
+        
+        $routes->get('nfc/siswa', 'Api\NfcController::siswa');
+
+        $routes->post('nfc/register-guru', 'Api\NfcController::registerGuru');
+
+        $routes->post('nfc/register-siswa',  'Api\NfcController::registerSiswa');
 
     });

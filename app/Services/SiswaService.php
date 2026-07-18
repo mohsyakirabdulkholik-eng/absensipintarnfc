@@ -117,13 +117,6 @@ class SiswaService
             throw new \Exception('NISN sudah digunakan.');
         }
 
-        if (
-            !empty($data['uid_nfc']) &&
-            ($oldData === null || $data['uid_nfc'] !== $oldData['uid_nfc']) &&
-            $this->repository->cekUid($data['uid_nfc'])
-        ) {
-            throw new \Exception('UID NFC sudah terdaftar.');
-        }
     }
 
     /**

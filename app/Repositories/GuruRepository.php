@@ -55,4 +55,14 @@ class GuruRepository
             ->where('nip', $nip)
             ->first();
     }
+    public function getBelumPunyaKartu($idSekolah)
+    {
+        return $this->model
+            ->select('guru.id, guru.nama')
+            ->join('kartu_nfc', 'kartu_nfc.id_guru = guru.id', 'left')
+            ->where('guru.id_sekolah', $idSekolah)
+            ->where('kartu_nfc.id IS NULL')
+            ->orderBy('guru.nama', 'ASC')
+            ->findAll();
+    }
 }

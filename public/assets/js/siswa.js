@@ -235,14 +235,14 @@ $(function () {
       },
 
       {
-        data: "uid_nfc",
+        data: "uid_kartu",
 
         render: function (data) {
           if (data == null || data == "") {
             return '<span class="badge bg-warning">Belum Terdaftar</span>';
           }
 
-          return '<span class="badge bg-success">' + data + "</span>";
+          return '<span class="badge bg-success">Terdaftar</span>';
         },
       },
 

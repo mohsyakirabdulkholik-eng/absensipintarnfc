@@ -48,7 +48,7 @@
 
                         <th>Kelas</th>
 
-                        <th>UID NFC</th>
+                        <th>Kartu NFC</th>
 
                         <th>Status</th>
 

@@ -16,14 +16,23 @@ class SiswaRepository
     public function getAll($idSekolah)
     {
         return $this->model
-            ->select('
-                siswa.*,
-                kelas.nama_kelas
-            ')
-            ->join('kelas', 'kelas.id = siswa.id_kelas')
-            ->where('siswa.id_sekolah', $idSekolah)
-            ->orderBy('nama_siswa', 'ASC')
-            ->findAll();
+        ->select('
+            siswa.*,
+            kelas.nama_kelas,
+            kartu_nfc.id AS id_kartu_nfc,
+            kartu_nfc.uid AS uid_kartu,
+            kartu_nfc.nomor_kartu,
+            kartu_nfc.status AS status_kartu
+        ')
+        ->join('kelas', 'kelas.id = siswa.id_kelas')
+        ->join(
+            'kartu_nfc',
+            'kartu_nfc.id_siswa = siswa.id',
+            'left'
+        )
+        ->where('siswa.id_sekolah', $idSekolah)
+        ->orderBy('siswa.nama_siswa', 'ASC')
+        ->findAll();
     }
     public function find($id)
     {
@@ -62,17 +71,23 @@ class SiswaRepository
             ->where('nis', $nis)
             ->first();
     }
-    public function cekUid($uid)
-    {
-        return $this->model
-            ->where('uid_nfc', $uid)
-            ->first();
-    }
+    
     public function cekNisn($nisn)
     {
         return $this->model
             ->where('nisn', $nisn)
             ->first();
+    }
+
+    public function getBelumPunyaKartu($idSekolah)
+    {
+        return $this->model
+            ->select('siswa.id, siswa.nama_siswa as nama')
+            ->join('kartu_nfc', 'kartu_nfc.id_siswa = siswa.id', 'left')
+            ->where('siswa.id_sekolah', $idSekolah)
+            ->where('kartu_nfc.id IS NULL')
+            ->orderBy('siswa.nama_siswa', 'ASC')
+            ->findAll();
     }
     
 }
