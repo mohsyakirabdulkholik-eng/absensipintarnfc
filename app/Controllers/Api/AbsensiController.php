@@ -48,4 +48,47 @@ class AbsensiController extends BaseController
 
         return $this->response->setJSON($result);
     }
+
+    /**
+     * Ambil Riwayat Absensi
+     */
+    public function history(): ResponseInterface
+    {
+        $token = trim(
+            $this->request
+                ->getHeaderLine('X-Device-Token')
+        );
+
+        if (empty($token)) {
+
+            return $this->response->setJSON([
+                'success' => false,
+                'code'    => 'TOKEN_REQUIRED',
+                'message' => 'Token perangkat wajib dikirim.',
+                'data'    => []
+            ]);
+        }
+
+        $limit = (int) (
+            $this->request->getGet('limit')
+            ?? 50
+        );
+
+        // Batasi agar request tidak mengambil data terlalu banyak
+        if ($limit < 1) {
+            $limit = 50;
+        }
+
+        if ($limit > 100) {
+            $limit = 100;
+        }
+
+        $result = $this->service->history(
+            $token,
+            $limit
+        );
+
+        return $this->response
+            ->setJSON($result);
+    }
 }

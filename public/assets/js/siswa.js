@@ -1,3 +1,8 @@
+const MOBILE_WIDTH = 768;
+function isMobile() {
+  return window.innerWidth < MOBILE_WIDTH;
+}
+
 $(function () {
   // Initialize Bootstrap modal and DataTable
   const modalSiswa = new bootstrap.Modal(document.getElementById("modalSiswa"));
@@ -154,6 +159,36 @@ $(function () {
     });
   }
 
+  // func data berdasarkan kelas
+  // tampilkan daftar kelas untuk filter tabel siswa
+  function loadFilterKelas() {
+    $.ajax({
+      url: base_url + "/kelas/list",
+      type: "GET",
+      dataType: "json",
+
+      success: function (res) {
+        let option = '<option value="">Semua Kelas</option>';
+
+        $.each(res, function (i, item) {
+          option += `
+          <option value="${item.nama_kelas}">
+            ${item.nama_kelas}
+          </option>
+        `;
+        });
+
+        $("#filterKelas").html(option);
+      },
+
+      error: function (xhr) {
+        console.log("Gagal mengambil data kelas:", xhr.responseText);
+      },
+    });
+  }
+
+  loadFilterKelas();
+
   // fung
   $(document).on("click", ".btn-delete", function () {
     let id = $(this).data("id");
@@ -189,7 +224,7 @@ $(function () {
   // tampilkan data guru ke datatable
   if (!table.length) return;
 
-  table.DataTable({
+  const dataTable = table.DataTable({
     processing: true,
     responsive: true,
     autoWidth: false,
@@ -198,6 +233,12 @@ $(function () {
       url: base_url + "/siswa/data",
       dataSrc: "",
     },
+    columnDefs: [
+      {
+        targets: [2, 3, 4, 6],
+        visible: !isMobile(),
+      },
+    ],
 
     columns: [
       {
@@ -291,4 +332,311 @@ $(function () {
       },
     ],
   });
+
+  // filter siswa berdasarkan kelas
+  $("#filterKelas").on("change", function () {
+    const kelas = $(this).val();
+
+    if (kelas === "") {
+      dataTable.column(4).search("").draw();
+    } else {
+      dataTable
+        .column(4)
+        .search("^" + $.fn.dataTable.util.escapeRegex(kelas) + "$", true, false)
+        .draw();
+    }
+  });
+  // munculin modal import
+  const modalImport = new bootstrap.Modal(
+    document.getElementById("modalImport"),
+  );
+
+  $("#btnTemplate").click(function () {
+    window.location = base_url + "/siswa/template";
+  });
+
+  // ambil data dan  kirim ke database
+  $("#formImport").submit(function (e) {
+    e.preventDefault();
+
+    let formData = new FormData(this);
+
+    $("#btnPreview").prop("disabled", true).html(`
+      <span class="spinner-border spinner-border-sm me-1"></span>
+      Memproses...
+    `);
+
+    $.ajax({
+      url: base_url + "/siswa/import",
+
+      type: "POST",
+
+      data: formData,
+
+      processData: false,
+
+      contentType: false,
+
+      dataType: "json",
+
+      success: function (res) {
+        $("#btnPreview").prop("disabled", false).html(`
+          <i class="fas fa-eye me-1"></i>
+          Preview
+        `);
+
+        if (!res.success) {
+          Swal.fire({
+            icon: "error",
+            title: "Gagal",
+            text: res.message,
+          });
+
+          return;
+        }
+
+        tampilkanPreview(res.data);
+      },
+
+      error: function (xhr) {
+        $("#btnPreview").prop("disabled", false).html(`
+          <i class="fas fa-eye me-1"></i>
+          Preview
+        `);
+
+        Swal.fire({
+          icon: "error",
+          title: "Oops...",
+          text: "Terjadi kesalahan pada server.",
+        });
+
+        console.log(xhr.responseText);
+      },
+    });
+  });
+
+  function tampilkanPreview(data) {
+    $("#previewTotal").text(data.total);
+    $("#previewValid").text(data.valid);
+    $("#previewInvalid").text(data.invalid);
+
+    let html = "";
+
+    $.each(data.rows, function (i, row) {
+      let status = "";
+
+      if (row.valid) {
+        status = `
+        <span class="badge bg-success">
+          <i class="fas fa-check"></i>
+          Valid
+        </span>
+      `;
+      } else {
+        status = `
+        <span class="badge bg-danger">
+          <i class="fas fa-times"></i>
+          ${row.keterangan}
+        </span>
+      `;
+      }
+
+      html += `
+      <tr>
+
+        <td>${row.baris}</td>
+
+        <td>${row.nis}</td>
+
+        <td>${row.nama}</td>
+
+        <td>${row.kelas}</td>
+
+        <td>${status}</td>
+
+      </tr>
+    `;
+    });
+
+    $("#previewBody").html(html);
+
+    $("#stepUpload").addClass("d-none");
+    $("#stepPreview").removeClass("d-none");
+
+    $("#btnPreview").hide();
+    $("#btnBatal").hide();
+
+    $("#btnKembali").show();
+
+    /*
+     * Import hanya boleh dilakukan
+     * kalau minimal ada satu data valid.
+     */
+    if (data.valid > 0) {
+      $("#btnImportSekarang").show();
+    } else {
+      $("#btnImportSekarang").hide();
+    }
+  }
+
+  $("#btnKembali").click(function () {
+    $("#stepPreview").addClass("d-none");
+    $("#stepUpload").removeClass("d-none");
+
+    $("#previewBody").html("");
+
+    $("#btnKembali").hide();
+    $("#btnImportSekarang").hide();
+
+    $("#btnPreview").show();
+    $("#btnBatal").show();
+  });
+
+  $("#btnImport").click(function () {
+    $("#formImport")[0].reset();
+
+    $("#stepUpload").removeClass("d-none");
+    $("#stepPreview").addClass("d-none");
+
+    $("#previewBody").html("");
+
+    $("#btnPreview").show();
+    $("#btnBatal").show();
+
+    $("#btnKembali").hide();
+    $("#btnImportSekarang").hide();
+
+    modalImport.show();
+  });
+
+  // ambil data sekarang
+  $("#btnImportSekarang").click(function () {
+    let fileInput = $("#file_excel")[0];
+
+    if (!fileInput.files.length) {
+      Swal.fire({
+        icon: "warning",
+        title: "File Tidak Ditemukan",
+        text: "Silakan pilih file Excel terlebih dahulu.",
+      });
+
+      return;
+    }
+
+    let formData = new FormData();
+
+    formData.append("file_excel", fileInput.files[0]);
+
+    Swal.fire({
+      title: "Import Data?",
+
+      text: "Hanya data yang valid yang akan disimpan.",
+
+      icon: "question",
+
+      showCancelButton: true,
+
+      confirmButtonText: "Ya, Import",
+
+      cancelButtonText: "Batal",
+    }).then((result) => {
+      if (!result.isConfirmed) {
+        return;
+      }
+
+      prosesImportSiswa(formData);
+    });
+  });
+  function prosesImportSiswa(formData) {
+    $("#btnImportSekarang").prop("disabled", true).html(`
+      <span class="spinner-border spinner-border-sm me-1"></span>
+      Mengimport...
+    `);
+
+    $.ajax({
+      url: base_url + "/siswa/import/store",
+
+      type: "POST",
+
+      data: formData,
+
+      processData: false,
+
+      contentType: false,
+
+      dataType: "json",
+
+      success: function (res) {
+        $("#btnImportSekarang").prop("disabled", false).html(`
+          <i class="fas fa-file-import me-1"></i>
+          Import Sekarang
+        `);
+
+        if (!res.success) {
+          Swal.fire({
+            icon: "error",
+            title: "Import Gagal",
+            text: res.message,
+          });
+
+          return;
+        }
+
+        /*
+         * Tutup modal.
+         */
+        modalImport.hide();
+
+        /*
+         * Reset form.
+         */
+        $("#formImport")[0].reset();
+
+        /*
+         * Refresh tabel siswa.
+         */
+        $("#tableSiswa").DataTable().ajax.reload(null, false);
+
+        Swal.fire({
+          icon: "success",
+
+          title: "Import Selesai",
+
+          html: `
+          <div class="text-start">
+            <p class="mb-1">
+              Total Data:
+              <strong>${res.data.total}</strong>
+            </p>
+
+            <p class="mb-1 text-success">
+              Berhasil:
+              <strong>${res.data.berhasil}</strong>
+            </p>
+
+            <p class="mb-0 text-danger">
+              Gagal / Dilewati:
+              <strong>${res.data.gagal}</strong>
+            </p>
+          </div>
+        `,
+        });
+      },
+
+      error: function (xhr) {
+        $("#btnImportSekarang").prop("disabled", false).html(`
+          <i class="fas fa-file-import me-1"></i>
+          Import Sekarang
+        `);
+
+        Swal.fire({
+          icon: "error",
+          title: "Oops...",
+          text: "Terjadi kesalahan pada server.",
+        });
+
+        console.log(xhr.responseText);
+      },
+    });
+  }
 });

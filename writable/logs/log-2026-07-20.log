@@ -1,0 +1,177 @@
+WARNING - 2026-07-20 17:01:38 --> [DEPRECATED] Creation of dynamic property App\Services\SemesterService::$tahunRepository is deprecated in APPPATH\Services\SemesterService.php on line 14.
+ 1 APPPATH\Services\Api\AbsensiService.php(41): App\Services\SemesterService->__construct()
+ 2 APPPATH\Controllers\Api\AbsensiController.php(15): App\Services\Api\AbsensiService->__construct()
+ 3 SYSTEMPATH\CodeIgniter.php(944): App\Controllers\Api\AbsensiController->__construct()
+ 4 SYSTEMPATH\CodeIgniter.php(511): CodeIgniter\CodeIgniter->createController()
+ 5 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+WARNING - 2026-07-20 17:34:43 --> [DEPRECATED] Creation of dynamic property App\Services\SemesterService::$tahunRepository is deprecated in APPPATH\Services\SemesterService.php on line 14.
+ 1 APPPATH\Services\Api\AbsensiService.php(41): App\Services\SemesterService->__construct()
+ 2 APPPATH\Controllers\Api\AbsensiController.php(15): App\Services\Api\AbsensiService->__construct()
+ 3 SYSTEMPATH\CodeIgniter.php(944): App\Controllers\Api\AbsensiController->__construct()
+ 4 SYSTEMPATH\CodeIgniter.php(511): CodeIgniter\CodeIgniter->createController()
+ 5 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-07-20 17:34:43 --> Error: Call to undefined method App\Services\Api\AbsensiService::history()
+[Method: GET, Route: api/attendance/history]
+in APPPATH\Controllers\Api\AbsensiController.php on line 86.
+ 1 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\Api\AbsensiController->history()
+ 2 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Api\AbsensiController))
+ 3 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+WARNING - 2026-07-20 17:35:22 --> [DEPRECATED] Creation of dynamic property App\Services\SemesterService::$tahunRepository is deprecated in APPPATH\Services\SemesterService.php on line 14.
+ 1 APPPATH\Services\Api\AbsensiService.php(41): App\Services\SemesterService->__construct()
+ 2 APPPATH\Controllers\Api\AbsensiController.php(15): App\Services\Api\AbsensiService->__construct()
+ 3 SYSTEMPATH\CodeIgniter.php(944): App\Controllers\Api\AbsensiController->__construct()
+ 4 SYSTEMPATH\CodeIgniter.php(511): CodeIgniter\CodeIgniter->createController()
+ 5 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2026-07-20 17:40:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-20 17:40:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-20 17:41:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-20 17:41:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2026-07-20 17:50:32 --> [DEPRECATED] Creation of dynamic property App\Services\SemesterService::$tahunRepository is deprecated in APPPATH\Services\SemesterService.php on line 14.
+ 1 APPPATH\Services\Api\AbsensiService.php(41): App\Services\SemesterService->__construct()
+ 2 APPPATH\Controllers\Api\AbsensiController.php(15): App\Services\Api\AbsensiService->__construct()
+ 3 SYSTEMPATH\CodeIgniter.php(944): App\Controllers\Api\AbsensiController->__construct()
+ 4 SYSTEMPATH\CodeIgniter.php(511): CodeIgniter\CodeIgniter->createController()
+ 5 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-07-20 17:50:32 --> ErrorException: Undefined property: App\Repositories\Api\AbsensiRepository::$db
+[Method: GET, Route: api/attendance/history]
+in APPPATH\Repositories\Api\AbsensiRepository.php on line 41.
+ 1 APPPATH\Repositories\Api\AbsensiRepository.php(41): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Repositories\\Api\\AbsensiRepository::$db', 'C:\\xampp\\htdocs\\absensipintar\\app\\Repositories\\Api\\AbsensiRepository.php', 41)
+ 2 APPPATH\Services\Api\AbsensiService.php(130): App\Repositories\Api\AbsensiRepository->getHistory(1, 50)
+ 3 APPPATH\Controllers\Api\AbsensiController.php(86): App\Services\Api\AbsensiService->history('3cb910fba42e58cba6f6a59f776b61c7fef7f26e57005deb6c406f636547e4f9', 50)
+ 4 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\Api\AbsensiController->history()
+ 5 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Api\AbsensiController))
+ 6 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-07-20 17:51:23 --> Error: Class "App\Repositories\Api\Database" not found
+[Method: GET, Route: api/attendance/history]
+in APPPATH\Repositories\Api\AbsensiRepository.php on line 14.
+ 1 APPPATH\Services\Api\AbsensiService.php(34): App\Repositories\Api\AbsensiRepository->__construct()
+ 2 APPPATH\Controllers\Api\AbsensiController.php(15): App\Services\Api\AbsensiService->__construct()
+ 3 SYSTEMPATH\CodeIgniter.php(944): App\Controllers\Api\AbsensiController->__construct()
+ 4 SYSTEMPATH\CodeIgniter.php(511): CodeIgniter\CodeIgniter->createController()
+ 5 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-07-20 17:52:15 --> Error: Class "App\Repositories\Api\Database" not found
+[Method: GET, Route: api/attendance/history]
+in APPPATH\Repositories\Api\AbsensiRepository.php on line 15.
+ 1 APPPATH\Services\Api\AbsensiService.php(34): App\Repositories\Api\AbsensiRepository->__construct()
+ 2 APPPATH\Controllers\Api\AbsensiController.php(15): App\Services\Api\AbsensiService->__construct()
+ 3 SYSTEMPATH\CodeIgniter.php(944): App\Controllers\Api\AbsensiController->__construct()
+ 4 SYSTEMPATH\CodeIgniter.php(511): CodeIgniter\CodeIgniter->createController()
+ 5 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-07-20 17:52:58 --> Error: Class "App\Repositories\Api\Database" not found
+[Method: GET, Route: api/attendance/history]
+in APPPATH\Repositories\Api\AbsensiRepository.php on line 14.
+ 1 APPPATH\Services\Api\AbsensiService.php(34): App\Repositories\Api\AbsensiRepository->__construct()
+ 2 APPPATH\Controllers\Api\AbsensiController.php(15): App\Services\Api\AbsensiService->__construct()
+ 3 SYSTEMPATH\CodeIgniter.php(944): App\Controllers\Api\AbsensiController->__construct()
+ 4 SYSTEMPATH\CodeIgniter.php(511): CodeIgniter\CodeIgniter->createController()
+ 5 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2026-07-20 17:57:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2026-07-20 17:57:32 --> [DEPRECATED] Creation of dynamic property App\Services\SemesterService::$tahunRepository is deprecated in APPPATH\Services\SemesterService.php on line 14.
+ 1 APPPATH\Services\Api\AbsensiService.php(41): App\Services\SemesterService->__construct()
+ 2 APPPATH\Controllers\Api\AbsensiController.php(15): App\Services\Api\AbsensiService->__construct()
+ 3 SYSTEMPATH\CodeIgniter.php(944): App\Controllers\Api\AbsensiController->__construct()
+ 4 SYSTEMPATH\CodeIgniter.php(511): CodeIgniter\CodeIgniter->createController()
+ 5 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+WARNING - 2026-07-20 18:28:56 --> [DEPRECATED] Creation of dynamic property App\Services\SemesterService::$tahunRepository is deprecated in APPPATH\Services\SemesterService.php on line 14.
+ 1 APPPATH\Services\Api\AbsensiService.php(41): App\Services\SemesterService->__construct()
+ 2 APPPATH\Controllers\Api\AbsensiController.php(15): App\Services\Api\AbsensiService->__construct()
+ 3 SYSTEMPATH\CodeIgniter.php(944): App\Controllers\Api\AbsensiController->__construct()
+ 4 SYSTEMPATH\CodeIgniter.php(511): CodeIgniter\CodeIgniter->createController()
+ 5 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+WARNING - 2026-07-20 18:30:02 --> [DEPRECATED] Creation of dynamic property App\Services\SemesterService::$tahunRepository is deprecated in APPPATH\Services\SemesterService.php on line 14.
+ 1 APPPATH\Services\Api\AbsensiService.php(41): App\Services\SemesterService->__construct()
+ 2 APPPATH\Controllers\Api\AbsensiController.php(15): App\Services\Api\AbsensiService->__construct()
+ 3 SYSTEMPATH\CodeIgniter.php(944): App\Controllers\Api\AbsensiController->__construct()
+ 4 SYSTEMPATH\CodeIgniter.php(511): CodeIgniter\CodeIgniter->createController()
+ 5 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+WARNING - 2026-07-20 18:31:04 --> [DEPRECATED] Creation of dynamic property App\Services\SemesterService::$tahunRepository is deprecated in APPPATH\Services\SemesterService.php on line 14.
+ 1 APPPATH\Services\Api\AbsensiService.php(41): App\Services\SemesterService->__construct()
+ 2 APPPATH\Controllers\Api\AbsensiController.php(15): App\Services\Api\AbsensiService->__construct()
+ 3 SYSTEMPATH\CodeIgniter.php(944): App\Controllers\Api\AbsensiController->__construct()
+ 4 SYSTEMPATH\CodeIgniter.php(511): CodeIgniter\CodeIgniter->createController()
+ 5 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+WARNING - 2026-07-20 19:56:13 --> [DEPRECATED] Creation of dynamic property App\Services\SemesterService::$tahunRepository is deprecated in APPPATH\Services\SemesterService.php on line 14.
+ 1 APPPATH\Services\Api\AbsensiService.php(41): App\Services\SemesterService->__construct()
+ 2 APPPATH\Controllers\Api\AbsensiController.php(15): App\Services\Api\AbsensiService->__construct()
+ 3 SYSTEMPATH\CodeIgniter.php(944): App\Controllers\Api\AbsensiController->__construct()
+ 4 SYSTEMPATH\CodeIgniter.php(511): CodeIgniter\CodeIgniter->createController()
+ 5 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+WARNING - 2026-07-20 19:57:49 --> [DEPRECATED] Creation of dynamic property App\Services\SemesterService::$tahunRepository is deprecated in APPPATH\Services\SemesterService.php on line 14.
+ 1 APPPATH\Services\Api\AbsensiService.php(41): App\Services\SemesterService->__construct()
+ 2 APPPATH\Controllers\Api\AbsensiController.php(15): App\Services\Api\AbsensiService->__construct()
+ 3 SYSTEMPATH\CodeIgniter.php(944): App\Controllers\Api\AbsensiController->__construct()
+ 4 SYSTEMPATH\CodeIgniter.php(511): CodeIgniter\CodeIgniter->createController()
+ 5 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+WARNING - 2026-07-20 20:07:49 --> [DEPRECATED] Creation of dynamic property App\Services\SemesterService::$tahunRepository is deprecated in APPPATH\Services\SemesterService.php on line 14.
+ 1 APPPATH\Services\Api\AbsensiService.php(41): App\Services\SemesterService->__construct()
+ 2 APPPATH\Controllers\Api\AbsensiController.php(15): App\Services\Api\AbsensiService->__construct()
+ 3 SYSTEMPATH\CodeIgniter.php(944): App\Controllers\Api\AbsensiController->__construct()
+ 4 SYSTEMPATH\CodeIgniter.php(511): CodeIgniter\CodeIgniter->createController()
+ 5 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2026-07-20 20:08:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-20 20:08:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-20 20:32:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-20 20:32:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-20 20:42:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-20 20:42:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-20 20:50:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-20 20:50:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-20 21:12:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-20 21:12:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2026-07-20 21:55:34 --> [DEPRECATED] Creation of dynamic property App\Services\SemesterService::$tahunRepository is deprecated in APPPATH\Services\SemesterService.php on line 14.
+ 1 APPPATH\Services\Api\AbsensiService.php(41): App\Services\SemesterService->__construct()
+ 2 APPPATH\Controllers\Api\AbsensiController.php(15): App\Services\Api\AbsensiService->__construct()
+ 3 SYSTEMPATH\CodeIgniter.php(944): App\Controllers\Api\AbsensiController->__construct()
+ 4 SYSTEMPATH\CodeIgniter.php(511): CodeIgniter\CodeIgniter->createController()
+ 5 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))

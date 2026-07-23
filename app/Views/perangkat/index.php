@@ -53,6 +53,7 @@
                                     <th>Android</th>
 
                                     <th>Status</th>
+                                    <th>Koneksi</th>
 
                                     <th>Last Sync</th>
 

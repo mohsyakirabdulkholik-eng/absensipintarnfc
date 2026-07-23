@@ -90,24 +90,35 @@ function loadData() {
           return data ?? "-";
         },
       },
-
       {
         data: "status",
-        className: "text-center",
         render: function (data) {
           if (data === "aktif") {
+            return `<span class="badge bg-success">Aktif</span>`;
+          }
+
+          return `<span class="badge bg-danger">Nonaktif</span>`;
+        },
+      },
+
+      {
+        data: "status_koneksi",
+        render: function (data) {
+          if (data === "online") {
             return `
-                <span class="badge bg-success">
-                    Aktif
-                </span>
-            `;
+                    <span class="badge bg-success">
+                        <i class="bi bi-circle-fill me-1"></i>
+                        Online
+                    </span>
+                `;
           }
 
           return `
-            <span class="badge bg-danger">
-                Nonaktif
-            </span>
-        `;
+                <span class="badge bg-secondary">
+                    <i class="bi bi-circle-fill me-1"></i>
+                    Offline
+                </span>
+            `;
         },
       },
 
@@ -115,11 +126,7 @@ function loadData() {
         data: "last_sync",
         render: function (data) {
           if (!data) {
-            return `
-                <span class="text-muted">
-                    Belum Pernah Sinkronisasi
-                </span>
-            `;
+            return "-";
           }
 
           return data;

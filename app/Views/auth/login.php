@@ -14,31 +14,128 @@
         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 
         <style>
-                .login-box{
+            html,
+            body {
+                min-height: 100%;
+            }
 
-                    width:420px;
+            body.login-page {
+                min-height: 100dvh;
+                margin: 0;
 
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                padding: 24px 16px;
+            }
+
+            .login-box {
+                width: 100%;
+                max-width: 430px;
+                margin: 0;
+            }
+
+            .login-box .card {
+                width: 100%;
+                border-radius: 18px;
+                overflow: hidden;
+
+                box-shadow:
+                    0 8px 24px rgba(0, 0, 0, 0.08);
+            }
+
+            .login-box .card-header {
+                padding-top: 32px !important;
+                padding-left: 24px;
+                padding-right: 24px;
+            }
+
+            .login-box .card-header h2 {
+                font-size: 1.8rem;
+            }
+
+            .login-box .card-header p {
+                font-size: 1rem;
+            }
+
+            .login-box .card-body {
+                padding: 28px 24px 24px;
+            }
+
+            .input-group-text {
+                min-width: 48px;
+                justify-content: center;
+            }
+
+            .form-control {
+                border-radius: 8px;
+            }
+
+            .btn {
+                border-radius: 10px;
+            }
+
+            /* Input group harus tetap menyatu */
+            .input-group > .input-group-text {
+                border-radius: 8px 0 0 8px;
+            }
+
+            .input-group > .form-control {
+                border-radius: 0;
+            }
+
+            .input-group > .form-control:last-child {
+                border-radius: 0 8px 8px 0;
+            }
+
+            #togglePassword {
+                border-radius: 0 8px 8px 0;
+            }
+
+            .btn-primary {
+                min-height: 48px;
+                font-weight: 500;
+            }
+
+            /* Footer */
+            .login-footer {
+                padding: 0 24px 24px;
+            }
+
+            /*
+            * HP dengan tinggi layar kecil.
+            * Jangan paksa posisi center agar form tidak terpotong.
+            */
+            @media (max-height: 650px) {
+                body.login-page {
+                    align-items: flex-start;
+                }
+            }
+
+            /* HP kecil */
+            @media (max-width: 576px) {
+                body.login-page {
+                    padding: 20px 16px;
                 }
 
-                .card{
-
-                    border-radius:15px;
-
+                .login-box {
+                    max-width: 100%;
                 }
 
-                .btn{
-
-                    border-radius:10px;
-
+                .login-box .card-header h2 {
+                    font-size: 1.6rem;
                 }
 
-                .form-control{
-
-                    border-radius:8px;
-
+                .login-box .card-header p {
+                    font-size: 0.95rem;
                 }
 
-                </style>
+                .login-box .card-body {
+                    padding: 24px 20px 20px;
+                }
+            }
+        </style>
         </head>
 
 <body class="login-page bg-body-secondary">
@@ -159,13 +256,11 @@
 
             </div>
         </div>
-            <div class="text-center mt-4">
+           <div class="text-center login-footer">
 
                 <small class="text-muted">
 
-                    © <?= date('Y') ?>
-
-                    Smart Absensi NFC
+                    © <?= date('Y') ?> Smart Absensi NFC
 
                 </small>
 

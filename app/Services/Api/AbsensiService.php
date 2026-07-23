@@ -107,7 +107,54 @@ class AbsensiService
                 $jam
             );
     }
+    /**
+     * Ambil riwayat absensi perangkat
+     */
+    public function history(
+        string $token,
+        int $limit = 50
+    ): array {
 
+        // Validasi perangkat
+        $device = $this->deviceService
+            ->validateDevice($token);
+
+        if (!$device['success']) {
+            return $device;
+        }
+
+        $deviceData = $device['data'];
+
+        // Ambil riwayat berdasarkan sekolah perangkat
+        $history = $this->repository
+            ->getHistory(
+                $deviceData['id_sekolah'],
+                $limit
+            );
+
+        $data = array_map(function ($item) {
+
+            $item['nama'] =
+                $item['jenis'] === 'guru'
+                    ? $item['nama_guru']
+                    : $item['nama_siswa'];
+
+            unset(
+                $item['nama_guru'],
+                $item['nama_siswa']
+            );
+
+            return $item;
+
+        }, $history);
+
+        return $this->buildResponse(
+            true,
+            'HISTORY_SUCCESS',
+            'Riwayat absensi berhasil diambil.',
+            $data
+        );
+    }
     /**
      * Validasi Tahun Ajaran & Semester
      */
@@ -400,7 +447,7 @@ class AbsensiService
         bool $success,
         string $code,
         string $message,
-        array $data = []
+        array $data = null
     ): array
     {
         return [

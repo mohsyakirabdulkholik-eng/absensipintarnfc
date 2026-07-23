@@ -84,3 +84,184 @@ DEBUG - 2026-07-18 06:20:00 --> Session: Class initialized using 'CodeIgniter\Se
 DEBUG - 2026-07-18 06:20:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 DEBUG - 2026-07-18 06:22:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 DEBUG - 2026-07-18 06:23:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-18 06:45:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-18 06:45:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-18 06:46:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-18 06:46:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-18 06:46:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-18 06:46:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-18 06:46:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-18 08:03:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-18 08:03:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-18 08:20:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-18 08:20:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-18 08:26:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-18 08:26:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-18 08:29:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-18 09:02:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-18 09:02:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-18 09:02:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-18 09:02:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-18 09:02:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-18 09:03:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-18 09:03:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-18 09:03:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-18 09:03:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-18 09:03:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-18 09:03:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2026-07-18 09:07:37 --> [DEPRECATED] Creation of dynamic property App\Services\SemesterService::$tahunRepository is deprecated in APPPATH\Services\SemesterService.php on line 14.
+ 1 APPPATH\Services\Api\AbsensiService.php(41): App\Services\SemesterService->__construct()
+ 2 APPPATH\Controllers\Api\AbsensiController.php(15): App\Services\Api\AbsensiService->__construct()
+ 3 SYSTEMPATH\CodeIgniter.php(944): App\Controllers\Api\AbsensiController->__construct()
+ 4 SYSTEMPATH\CodeIgniter.php(511): CodeIgniter\CodeIgniter->createController()
+ 5 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+WARNING - 2026-07-18 09:07:53 --> [DEPRECATED] Creation of dynamic property App\Services\SemesterService::$tahunRepository is deprecated in APPPATH\Services\SemesterService.php on line 14.
+ 1 APPPATH\Services\Api\AbsensiService.php(41): App\Services\SemesterService->__construct()
+ 2 APPPATH\Controllers\Api\AbsensiController.php(15): App\Services\Api\AbsensiService->__construct()
+ 3 SYSTEMPATH\CodeIgniter.php(944): App\Controllers\Api\AbsensiController->__construct()
+ 4 SYSTEMPATH\CodeIgniter.php(511): CodeIgniter\CodeIgniter->createController()
+ 5 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2026-07-18 09:09:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-18 09:09:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-18 09:09:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-18 09:09:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-18 09:09:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-18 09:10:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-18 09:10:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-18 09:10:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-18 09:10:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-18 09:10:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-18 09:10:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-18 09:10:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-18 09:10:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-18 09:10:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-18 09:10:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-18 09:10:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-18 09:10:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-18 09:10:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-18 09:10:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2026-07-18 09:12:29 --> [DEPRECATED] Creation of dynamic property App\Services\SemesterService::$tahunRepository is deprecated in APPPATH\Services\SemesterService.php on line 14.
+ 1 APPPATH\Services\Api\AbsensiService.php(41): App\Services\SemesterService->__construct()
+ 2 APPPATH\Controllers\Api\AbsensiController.php(15): App\Services\Api\AbsensiService->__construct()
+ 3 SYSTEMPATH\CodeIgniter.php(944): App\Controllers\Api\AbsensiController->__construct()
+ 4 SYSTEMPATH\CodeIgniter.php(511): CodeIgniter\CodeIgniter->createController()
+ 5 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+WARNING - 2026-07-18 09:12:29 --> [DEPRECATED] Creation of dynamic property App\Services\SemesterService::$tahunRepository is deprecated in APPPATH\Services\SemesterService.php on line 14.
+ 1 APPPATH\Services\Api\AbsensiService.php(41): App\Services\SemesterService->__construct()
+ 2 APPPATH\Controllers\Api\AbsensiController.php(15): App\Services\Api\AbsensiService->__construct()
+ 3 SYSTEMPATH\CodeIgniter.php(944): App\Controllers\Api\AbsensiController->__construct()
+ 4 SYSTEMPATH\CodeIgniter.php(511): CodeIgniter\CodeIgniter->createController()
+ 5 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2026-07-18 09:12:31 --> Duplicate entry 'guru-2-2026-07-18' for key 'unik_absensi'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 300.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(300): mysqli->query('INSERT INTO `absensi` (`id_sekolah`, `jenis`, `id_kartu_nfc`, `tanggal`, `jam_masuk`, `status`, `terlambat_menit`, `keterangan`, `device_id`, `created_at`, `updated_at`) VALUES (\'1\', \'guru\', \'2\', \'2026-07-18\', \'09:12:29\', \'Hadir\', 0, NULL, \'3\', \'2026-07-18 09:12:29\', \'2026-07-18 09:12:29\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(908): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `absensi` (`id_sekolah`, `jenis`, `id_kartu_nfc`, `tanggal`, `jam_masuk`, `status`, `terlambat_menit`, `keterangan`, `device_id`, `created_at`, `updated_at`) VALUES (\'1\', \'guru\', \'2\', \'2026-07-18\', \'09:12:29\', \'Hadir\', 0, NULL, \'3\', \'2026-07-18 09:12:29\', \'2026-07-18 09:12:29\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(825): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `absensi` (`id_sekolah`, `jenis`, `id_kartu_nfc`, `tanggal`, `jam_masuk`, `status`, `terlambat_menit`, `keterangan`, `device_id`, `created_at`, `updated_at`) VALUES (\'1\', \'guru\', \'2\', \'2026-07-18\', \'09:12:29\', \'Hadir\', 0, NULL, \'3\', \'2026-07-18 09:12:29\', \'2026-07-18 09:12:29\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2343): CodeIgniter\Database\BaseConnection->query('INSERT INTO `absensi` (`id_sekolah`, `jenis`, `id_kartu_nfc`, `tanggal`, `jam_masuk`, `status`, `terlambat_menit`, `keterangan`, `device_id`, `created_at`, `updated_at`) VALUES (:id_sekolah:, :jenis:, :id_kartu_nfc:, :tanggal:, :jam_masuk:, :status:, :terlambat_menit:, :keterangan:, :device_id:, :created_at:, :updated_at:)', [...], false)
+ 5 SYSTEMPATH\Model.php(357): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(899): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(670): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Repositories\Api\AbsensiRepository.php(37): CodeIgniter\Model->insert([...])
+ 9 APPPATH\Services\Api\AbsensiService.php(299): App\Repositories\Api\AbsensiRepository->saveCheckIn([...])
+10 APPPATH\Services\Api\AbsensiService.php(231): App\Services\Api\AbsensiService->checkIn([...], [...], [...], [...], '2026-07-18', '09:12:29')
+11 APPPATH\Services\Api\AbsensiService.php(101): App\Services\Api\AbsensiService->processAttendance([...], [...], [...], [...], '2026-07-18', '09:12:29')
+12 APPPATH\Controllers\Api\AbsensiController.php(44): App\Services\Api\AbsensiService->attendance('3cb910fba42e58cba6f6a59f776b61c7fef7f26e57005deb6c406f636547e4f9', '0466635A8C6680')
+13 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\Api\AbsensiController->attendance()
+14 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Api\AbsensiController))
+15 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+16 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+17 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+18 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2026-07-18 09:12:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2026-07-18 09:12:47 --> CodeIgniter\Database\Exceptions\DatabaseException: Duplicate entry 'guru-2-2026-07-18' for key 'unik_absensi'
+[Method: POST, Route: api/attendance]
+in SYSTEMPATH\Database\BaseConnection.php on line 863.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2343): CodeIgniter\Database\BaseConnection->query('INSERT INTO `absensi` (`id_sekolah`, `jenis`, `id_kartu_nfc`, `tanggal`, `jam_masuk`, `status`, `terlambat_menit`, `keterangan`, `device_id`, `created_at`, `updated_at`) VALUES (:id_sekolah:, :jenis:, :id_kartu_nfc:, :tanggal:, :jam_masuk:, :status:, :terlambat_menit:, :keterangan:, :device_id:, :created_at:, :updated_at:)', [...], false)
+ 2 SYSTEMPATH\Model.php(357): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(899): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(670): CodeIgniter\BaseModel->insert([...], true)
+ 5 APPPATH\Repositories\Api\AbsensiRepository.php(37): CodeIgniter\Model->insert([...])
+ 6 APPPATH\Services\Api\AbsensiService.php(299): App\Repositories\Api\AbsensiRepository->saveCheckIn([...])
+ 7 APPPATH\Services\Api\AbsensiService.php(231): App\Services\Api\AbsensiService->checkIn([...], [...], [...], [...], '2026-07-18', '09:12:29')
+ 8 APPPATH\Services\Api\AbsensiService.php(101): App\Services\Api\AbsensiService->processAttendance([...], [...], [...], [...], '2026-07-18', '09:12:29')
+ 9 APPPATH\Controllers\Api\AbsensiController.php(44): App\Services\Api\AbsensiService->attendance('3cb910fba42e58cba6f6a59f776b61c7fef7f26e57005deb6c406f636547e4f9', '0466635A8C6680')
+10 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\Api\AbsensiController->attendance()
+11 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Api\AbsensiController))
+12 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+15 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-07-18 09:12:47 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Duplicate entry 'guru-2-2026-07-18' for key 'unik_absensi'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 310.
+ 1 SYSTEMPATH\Database\BaseConnection.php(908): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `absensi` (`id_sekolah`, `jenis`, `id_kartu_nfc`, `tanggal`, `jam_masuk`, `status`, `terlambat_menit`, `keterangan`, `device_id`, `created_at`, `updated_at`) VALUES (\'1\', \'guru\', \'2\', \'2026-07-18\', \'09:12:29\', \'Hadir\', 0, NULL, \'3\', \'2026-07-18 09:12:29\', \'2026-07-18 09:12:29\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(825): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `absensi` (`id_sekolah`, `jenis`, `id_kartu_nfc`, `tanggal`, `jam_masuk`, `status`, `terlambat_menit`, `keterangan`, `device_id`, `created_at`, `updated_at`) VALUES (\'1\', \'guru\', \'2\', \'2026-07-18\', \'09:12:29\', \'Hadir\', 0, NULL, \'3\', \'2026-07-18 09:12:29\', \'2026-07-18 09:12:29\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2343): CodeIgniter\Database\BaseConnection->query('INSERT INTO `absensi` (`id_sekolah`, `jenis`, `id_kartu_nfc`, `tanggal`, `jam_masuk`, `status`, `terlambat_menit`, `keterangan`, `device_id`, `created_at`, `updated_at`) VALUES (:id_sekolah:, :jenis:, :id_kartu_nfc:, :tanggal:, :jam_masuk:, :status:, :terlambat_menit:, :keterangan:, :device_id:, :created_at:, :updated_at:)', [...], false)
+ 4 SYSTEMPATH\Model.php(357): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH\BaseModel.php(899): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH\Model.php(670): CodeIgniter\BaseModel->insert([...], true)
+ 7 APPPATH\Repositories\Api\AbsensiRepository.php(37): CodeIgniter\Model->insert([...])
+ 8 APPPATH\Services\Api\AbsensiService.php(299): App\Repositories\Api\AbsensiRepository->saveCheckIn([...])
+ 9 APPPATH\Services\Api\AbsensiService.php(231): App\Services\Api\AbsensiService->checkIn([...], [...], [...], [...], '2026-07-18', '09:12:29')
+10 APPPATH\Services\Api\AbsensiService.php(101): App\Services\Api\AbsensiService->processAttendance([...], [...], [...], [...], '2026-07-18', '09:12:29')
+11 APPPATH\Controllers\Api\AbsensiController.php(44): App\Services\Api\AbsensiService->attendance('3cb910fba42e58cba6f6a59f776b61c7fef7f26e57005deb6c406f636547e4f9', '0466635A8C6680')
+12 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\Api\AbsensiController->attendance()
+13 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Api\AbsensiController))
+14 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+15 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+16 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+17 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-07-18 09:12:47 --> [Caused by] mysqli_sql_exception: Duplicate entry 'guru-2-2026-07-18' for key 'unik_absensi'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 300.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(300): mysqli->query('INSERT INTO `absensi` (`id_sekolah`, `jenis`, `id_kartu_nfc`, `tanggal`, `jam_masuk`, `status`, `terlambat_menit`, `keterangan`, `device_id`, `created_at`, `updated_at`) VALUES (\'1\', \'guru\', \'2\', \'2026-07-18\', \'09:12:29\', \'Hadir\', 0, NULL, \'3\', \'2026-07-18 09:12:29\', \'2026-07-18 09:12:29\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(908): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `absensi` (`id_sekolah`, `jenis`, `id_kartu_nfc`, `tanggal`, `jam_masuk`, `status`, `terlambat_menit`, `keterangan`, `device_id`, `created_at`, `updated_at`) VALUES (\'1\', \'guru\', \'2\', \'2026-07-18\', \'09:12:29\', \'Hadir\', 0, NULL, \'3\', \'2026-07-18 09:12:29\', \'2026-07-18 09:12:29\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(825): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `absensi` (`id_sekolah`, `jenis`, `id_kartu_nfc`, `tanggal`, `jam_masuk`, `status`, `terlambat_menit`, `keterangan`, `device_id`, `created_at`, `updated_at`) VALUES (\'1\', \'guru\', \'2\', \'2026-07-18\', \'09:12:29\', \'Hadir\', 0, NULL, \'3\', \'2026-07-18 09:12:29\', \'2026-07-18 09:12:29\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2343): CodeIgniter\Database\BaseConnection->query('INSERT INTO `absensi` (`id_sekolah`, `jenis`, `id_kartu_nfc`, `tanggal`, `jam_masuk`, `status`, `terlambat_menit`, `keterangan`, `device_id`, `created_at`, `updated_at`) VALUES (:id_sekolah:, :jenis:, :id_kartu_nfc:, :tanggal:, :jam_masuk:, :status:, :terlambat_menit:, :keterangan:, :device_id:, :created_at:, :updated_at:)', [...], false)
+ 5 SYSTEMPATH\Model.php(357): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(899): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(670): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Repositories\Api\AbsensiRepository.php(37): CodeIgniter\Model->insert([...])
+ 9 APPPATH\Services\Api\AbsensiService.php(299): App\Repositories\Api\AbsensiRepository->saveCheckIn([...])
+10 APPPATH\Services\Api\AbsensiService.php(231): App\Services\Api\AbsensiService->checkIn([...], [...], [...], [...], '2026-07-18', '09:12:29')
+11 APPPATH\Services\Api\AbsensiService.php(101): App\Services\Api\AbsensiService->processAttendance([...], [...], [...], [...], '2026-07-18', '09:12:29')
+12 APPPATH\Controllers\Api\AbsensiController.php(44): App\Services\Api\AbsensiService->attendance('3cb910fba42e58cba6f6a59f776b61c7fef7f26e57005deb6c406f636547e4f9', '0466635A8C6680')
+13 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\Api\AbsensiController->attendance()
+14 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Api\AbsensiController))
+15 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+16 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+17 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+18 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2026-07-18 14:36:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-18 14:36:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2026-07-18 15:10:58 --> [DEPRECATED] Creation of dynamic property App\Services\SemesterService::$tahunRepository is deprecated in APPPATH\Services\SemesterService.php on line 14.
+ 1 APPPATH\Services\Api\AbsensiService.php(41): App\Services\SemesterService->__construct()
+ 2 APPPATH\Controllers\Api\AbsensiController.php(15): App\Services\Api\AbsensiService->__construct()
+ 3 SYSTEMPATH\CodeIgniter.php(944): App\Controllers\Api\AbsensiController->__construct()
+ 4 SYSTEMPATH\CodeIgniter.php(511): CodeIgniter\CodeIgniter->createController()
+ 5 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+WARNING - 2026-07-18 15:11:09 --> [DEPRECATED] Creation of dynamic property App\Services\SemesterService::$tahunRepository is deprecated in APPPATH\Services\SemesterService.php on line 14.
+ 1 APPPATH\Services\Api\AbsensiService.php(41): App\Services\SemesterService->__construct()
+ 2 APPPATH\Controllers\Api\AbsensiController.php(15): App\Services\Api\AbsensiService->__construct()
+ 3 SYSTEMPATH\CodeIgniter.php(944): App\Controllers\Api\AbsensiController->__construct()
+ 4 SYSTEMPATH\CodeIgniter.php(511): CodeIgniter\CodeIgniter->createController()
+ 5 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2026-07-18 23:50:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-18 23:51:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-18 23:51:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.

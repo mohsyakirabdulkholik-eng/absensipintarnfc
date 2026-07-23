@@ -38,7 +38,13 @@
 
                     <i class="fa-solid fa-circle-user me-1"></i>
 
-                    <?= session('nama') ?>
+                    <?php 
+                        $namaLengkap = session('nama');
+                        $namaNavbar = explode(' ', trim($namaLengkap))[0];
+                        
+                        echo esc($namaNavbar);
+                        echo strpos(trim($namaLengkap), ' ') !== false ? '...' : '';
+                    ?>
 
                 </a>
 

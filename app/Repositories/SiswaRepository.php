@@ -3,14 +3,17 @@
 namespace App\Repositories;
 
 use App\Models\SiswaModel;
+use App\Models\KelasModel;
 
 class SiswaRepository
 {
     protected SiswaModel $model;
+    protected KelasModel $kelasModel;
 
     public function __construct()
     {
         $this->model = new SiswaModel();
+        $this->kelasModel = new KelasModel();
     }
 
     public function getAll($idSekolah)
@@ -90,4 +93,11 @@ class SiswaRepository
             ->findAll();
     }
     
+    public function findKelasByNama(string $namaKelas, int $idSekolah)
+    {
+        return $this->kelasModel
+            ->where('nama_kelas', $namaKelas)
+            ->where('id_sekolah', $idSekolah)
+            ->first();
+    }
 }

@@ -15,9 +15,21 @@ class PerangkatService
 
     public function getAll($idSekolah)
     {
-        return $this->repository->getAll($idSekolah);
-    }
+        $data = $this->repository->getAll($idSekolah);
 
+        foreach ($data as &$device) {
+
+            $device['status_koneksi'] =
+                $this->getConnectionStatus(
+                    $device['last_sync'] ?? null,
+                    $device['status'] ?? 'nonaktif'
+                );
+        }
+
+        unset($device);
+
+        return $data;
+    }
     public function find($id)
     {
         return $this->repository->find($id);
@@ -92,6 +104,36 @@ class PerangkatService
     {
         return bin2hex(random_bytes(32));
     }
+    private function getConnectionStatus(
+        ?string $lastSync,
+        string $status
+    ): string
+    {
+        // Perangkat yang dinonaktifkan selalu dianggap offline
+        if ($status !== 'aktif') {
+            return 'offline';
+        }
+
+        // Belum pernah melakukan heartbeat
+        if (empty($lastSync)) {
+            return 'offline';
+        }
+
+        $lastSyncTimestamp = strtotime($lastSync);
+
+        if ($lastSyncTimestamp === false) {
+            return 'offline';
+        }
+
+        $difference = time() - $lastSyncTimestamp;
+
+        // Heartbeat Android setiap 60 detik
+        // Batas online kita gunakan 120 detik
+        return $difference <= 120
+            ? 'online'
+            : 'offline';
+    }
+
     public function resetDevice($id)
     {
         return $this->repository->resetDevice($id);

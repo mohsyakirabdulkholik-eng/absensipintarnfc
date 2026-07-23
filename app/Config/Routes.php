@@ -53,6 +53,9 @@ $routes->group('', ['filter' => 'auth'], function ($routes) {
         $routes->get('show/(:num)', 'Admin\GuruController::show/$1');
         $routes->post('update/(:num)', 'Admin\GuruController::update/$1');
         $routes->delete('delete/(:num)', 'Admin\GuruController::delete/$1');
+        $routes->post('import', 'Admin\GuruController::import');
+        $routes->get('template', 'Admin\GuruController::template');
+        $routes->post('import/store', 'Admin\GuruController::storeImport');
 
     });
     $routes->group('siswa', function ($routes) {
@@ -63,6 +66,9 @@ $routes->group('', ['filter' => 'auth'], function ($routes) {
         $routes->get('show/(:num)', 'Admin\SiswaController::show/$1');
         $routes->post('update/(:num)', 'Admin\SiswaController::update/$1');
         $routes->delete('delete/(:num)', 'Admin\SiswaController::delete/$1');
+        $routes->post('import', 'Admin\SiswaController::import');
+        $routes->get('template', 'Admin\SiswaController::template');
+        $routes->post('import/store', 'Admin\SiswaController::storeImport');
 
     });
     $routes->group('tahunajaran', function ($routes) {
@@ -153,6 +159,8 @@ $routes->group('', ['filter' => 'auth'], function ($routes) {
         $routes->post('device/unpair', 'Api\DeviceController::unpair');
 
         $routes->post('attendance', 'Api\AbsensiController::attendance');
+
+        $routes->get('attendance/history', 'Api\AbsensiController::history');
 
         $routes->post('nfc/read', 'Api\NfcController::read');
 

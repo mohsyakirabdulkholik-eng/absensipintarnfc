@@ -3,6 +3,15 @@ $(function () {
   const modalGuru = new bootstrap.Modal(document.getElementById("modalGuru"));
   const table = $("#tableGuru");
 
+  const modalImport = new bootstrap.Modal(
+    document.getElementById("modalImport"),
+  );
+
+  const MOBILE_WIDTH = 768;
+
+  function isMobile() {
+    return window.innerWidth < MOBILE_WIDTH;
+  }
   // Submit form guru
   $("#formGuru").submit(function (e) {
     e.preventDefault();
@@ -127,6 +136,23 @@ $(function () {
       }
     });
   });
+
+  $("#btnImport").click(function () {
+    $("#formImport")[0].reset();
+
+    $("#stepUpload").removeClass("d-none");
+    $("#stepPreview").addClass("d-none");
+
+    $("#previewBody").html("");
+
+    $("#btnPreview").show();
+    $("#btnBatal").show();
+
+    $("#btnKembali").hide();
+    $("#btnImportSekarang").hide();
+
+    modalImport.show();
+  });
   // tampilkan data guru ke datatable
   if (!table.length) return;
 
@@ -139,6 +165,13 @@ $(function () {
       url: base_url + "/guru/data",
       dataSrc: "",
     },
+
+    columnDefs: [
+      {
+        targets: [2, 3, 4],
+        visible: !isMobile(),
+      },
+    ],
 
     columns: [
       {
@@ -184,16 +217,263 @@ $(function () {
       },
     ],
   });
-  // ambil data jurusan untuk select option
-  //   $.get(base_url + "/jurusan/options", function (data) {
-  //     let option = '<option value="">- Tidak Ada -</option>';
 
-  //     $.each(data, function (_, row) {
-  //       option += `<option value="${row.id}">
-  //                         ${row.nama_jurusan}
-  //                    </option>`;
-  //     });
+  $("#formImport").submit(function (e) {
+    e.preventDefault();
 
-  //     $("#id_jurusan").html(option);
-  //   });
+    let formData = new FormData(this);
+
+    $("#btnPreview").prop("disabled", true).html(`
+      <span class="spinner-border spinner-border-sm me-1"></span>
+      Memproses...
+    `);
+
+    $.ajax({
+      url: base_url + "/guru/import",
+
+      type: "POST",
+
+      data: formData,
+
+      processData: false,
+
+      contentType: false,
+
+      dataType: "json",
+
+      success: function (res) {
+        $("#btnPreview").prop("disabled", false).html(`
+          <i class="fas fa-eye me-1"></i>
+          Preview
+        `);
+
+        if (!res.success) {
+          Swal.fire({
+            icon: "error",
+            title: "Gagal",
+            text: res.message,
+          });
+
+          return;
+        }
+
+        tampilkanPreviewGuru(res.data);
+      },
+
+      error: function (xhr) {
+        $("#btnPreview").prop("disabled", false).html(`
+          <i class="fas fa-eye me-1"></i>
+          Preview
+        `);
+
+        Swal.fire({
+          icon: "error",
+          title: "Oops...",
+          text: "Terjadi kesalahan pada server.",
+        });
+
+        console.log(xhr.responseText);
+      },
+    });
+  });
+
+  function tampilkanPreviewGuru(data) {
+    $("#previewTotal").text(data.total);
+    $("#previewValid").text(data.valid);
+    $("#previewInvalid").text(data.invalid);
+
+    let html = "";
+
+    $.each(data.rows, function (i, row) {
+      let status = "";
+
+      if (row.valid) {
+        status = `
+        <span class="badge bg-success">
+          <i class="fas fa-check"></i>
+          Valid
+        </span>
+      `;
+      } else {
+        status = `
+        <span class="badge bg-danger">
+          <i class="fas fa-times"></i>
+          ${row.keterangan}
+        </span>
+      `;
+      }
+
+      html += `
+      <tr>
+
+        <td>${row.baris}</td>
+
+        <td>
+          ${row.nip || "-"}
+        </td>
+
+        <td>${row.nama}</td>
+
+        <td>${row.jabatan}</td>
+
+        <td>${status}</td>
+
+      </tr>
+    `;
+    });
+
+    $("#previewBody").html(html);
+
+    $("#stepUpload").addClass("d-none");
+    $("#stepPreview").removeClass("d-none");
+
+    $("#btnPreview").hide();
+    $("#btnBatal").hide();
+
+    $("#btnKembali").show();
+
+    if (data.valid > 0) {
+      $("#btnImportSekarang").show();
+    } else {
+      $("#btnImportSekarang").hide();
+    }
+  }
+  $("#btnKembali").click(function () {
+    $("#stepPreview").addClass("d-none");
+    $("#stepUpload").removeClass("d-none");
+
+    $("#previewBody").html("");
+
+    $("#btnKembali").hide();
+    $("#btnImportSekarang").hide();
+
+    $("#btnPreview").show();
+    $("#btnBatal").show();
+  });
+
+  // ambil data setelah di klik
+  $("#btnImportSekarang").click(function () {
+    let fileInput = $("#file_excel")[0];
+
+    if (!fileInput.files.length) {
+      Swal.fire({
+        icon: "warning",
+        title: "File Tidak Ditemukan",
+        text: "Silakan pilih file Excel terlebih dahulu.",
+      });
+
+      return;
+    }
+
+    let formData = new FormData();
+
+    formData.append("file_excel", fileInput.files[0]);
+
+    Swal.fire({
+      title: "Import Data Guru?",
+
+      text: "Hanya data guru yang valid yang akan disimpan.",
+
+      icon: "question",
+
+      showCancelButton: true,
+
+      confirmButtonText: "Ya, Import",
+
+      cancelButtonText: "Batal",
+    }).then((result) => {
+      if (!result.isConfirmed) {
+        return;
+      }
+
+      prosesImportGuru(formData);
+    });
+  });
+
+  // func untuk proses data
+  function prosesImportGuru(formData) {
+    $("#btnImportSekarang").prop("disabled", true).html(`
+      <span class="spinner-border spinner-border-sm me-1"></span>
+      Mengimport...
+    `);
+
+    $.ajax({
+      url: base_url + "/guru/import/store",
+
+      type: "POST",
+
+      data: formData,
+
+      processData: false,
+
+      contentType: false,
+
+      dataType: "json",
+
+      success: function (res) {
+        $("#btnImportSekarang").prop("disabled", false).html(`
+          <i class="fas fa-file-import me-1"></i>
+          Import Sekarang
+        `);
+
+        if (!res.success) {
+          Swal.fire({
+            icon: "error",
+            title: "Import Gagal",
+            text: res.message,
+          });
+
+          return;
+        }
+
+        modalImport.hide();
+
+        $("#formImport")[0].reset();
+
+        $("#tableGuru").DataTable().ajax.reload(null, false);
+
+        Swal.fire({
+          icon: "success",
+
+          title: "Import Selesai",
+
+          html: `
+          <div class="text-start">
+
+            <p class="mb-1">
+              Total Data:
+              <strong>${res.data.total}</strong>
+            </p>
+
+            <p class="mb-1 text-success">
+              Berhasil:
+              <strong>${res.data.berhasil}</strong>
+            </p>
+
+            <p class="mb-0 text-danger">
+              Gagal / Dilewati:
+              <strong>${res.data.gagal}</strong>
+            </p>
+
+          </div>
+        `,
+        });
+      },
+
+      error: function (xhr) {
+        $("#btnImportSekarang").prop("disabled", false).html(`
+          <i class="fas fa-file-import me-1"></i>
+          Import Sekarang
+        `);
+
+        Swal.fire({
+          icon: "error",
+          title: "Oops...",
+          text: "Terjadi kesalahan pada server.",
+        });
+
+        console.log(xhr.responseText);
+      },
+    });
+  }
 });

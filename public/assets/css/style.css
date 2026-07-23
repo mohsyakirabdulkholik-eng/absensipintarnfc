@@ -9,3 +9,169 @@
 .sidebar-brand {
   font-weight: 600;
 }
+/* ========================================
+   PAGE ACTION BUTTONS
+   Digunakan: Guru, Siswa, dan modul lainnya
+======================================== */
+
+.page-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+}
+
+.page-actions .btn {
+  white-space: nowrap;
+}
+
+@media (max-width: 767.98px) {
+  .page-actions {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 6px;
+    width: 100%;
+  }
+
+  .page-actions .btn {
+    width: 100%;
+    padding: 7px 5px;
+    font-size: 12px;
+    white-space: nowrap;
+  }
+
+  .page-actions .btn i {
+    margin-right: 3px;
+  }
+  .content-header {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .content-header h3 {
+    font-size: 1.35rem;
+  }
+
+  .card-body {
+    padding: 10px;
+  }
+
+  .btn-sm-mobile {
+    flex: 1 1 auto;
+    white-space: nowrap;
+  }
+
+  .table {
+    font-size: 13px;
+  }
+
+  .table th,
+  .table td {
+    padding: 7px 5px;
+    vertical-align: middle;
+  }
+
+  .dataTables_wrapper .dataTables_length,
+  .dataTables_wrapper .dataTables_filter {
+    margin-bottom: 10px;
+  }
+
+  .dataTables_wrapper .dataTables_filter input {
+    max-width: 150px;
+  }
+}
+
+/* ========================================
+   IMPORT EXCEL MODAL
+   Digunakan oleh Guru & Siswa
+======================================== */
+
+#importModal .modal-content,
+#modalImport .modal-content {
+  max-height: 90vh;
+}
+
+/* Ringkasan */
+.import-summary {
+  border: 1px solid #dee2e6;
+  border-radius: 8px;
+  padding: 12px;
+  text-align: center;
+}
+
+/* Area tabel preview */
+.import-preview-table {
+  max-height: 400px;
+  overflow-y: auto;
+  overflow-x: auto;
+  border: 1px solid #dee2e6;
+  border-radius: 4px;
+}
+
+/* Header tabel tetap terlihat ketika scroll */
+.import-preview-table thead th {
+  position: sticky;
+  top: 0;
+  z-index: 5;
+  background: #f8f9fa;
+  white-space: nowrap;
+}
+
+/* Jangan beri margin bawah tabel */
+.import-preview-table table {
+  margin-bottom: 0;
+}
+
+/* ========================================
+   MOBILE
+======================================== */
+
+@media (max-width: 767.98px) {
+  #modalImport .modal-dialog {
+    margin: 10px;
+  }
+
+  #modalImport .modal-content {
+    max-height: calc(100vh - 20px);
+  }
+
+  #modalImport .modal-body {
+    padding: 12px;
+  }
+
+  /* Ringkasan */
+  .import-summary {
+    padding: 8px 4px;
+  }
+
+  .import-summary small {
+    font-size: 11px;
+  }
+
+  .import-summary h4 {
+    font-size: 18px;
+  }
+
+  /* Tabel hanya memakai sebagian tinggi layar */
+  .import-preview-table {
+    max-height: 50vh;
+  }
+
+  .import-preview-table table {
+    font-size: 11px;
+  }
+
+  .import-preview-table th,
+  .import-preview-table td {
+    padding: 5px 4px;
+  }
+
+  /* Footer */
+  #modalImport .modal-footer {
+    padding: 10px 12px;
+    gap: 6px;
+  }
+
+  #modalImport .modal-footer .btn {
+    font-size: 12px;
+  }
+}

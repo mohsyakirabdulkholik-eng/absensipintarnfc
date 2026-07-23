@@ -3,6 +3,7 @@
 namespace App\Services;
 
 use App\Repositories\SiswaRepository;
+use PhpOffice\PhpSpreadsheet\IOFactory;
 
 class SiswaService
 {
@@ -142,5 +143,295 @@ class SiswaService
         }
 
         return 'default.png';
+    }
+
+    public function import($file): array
+    {
+        if (!$file || !$file->isValid()) {
+            throw new \Exception(
+                'File Excel tidak ditemukan.'
+            );
+        }
+
+        $spreadsheet = IOFactory::load(
+            $file->getTempName()
+        );
+
+        $rows = $spreadsheet
+            ->getActiveSheet()
+            ->toArray(null, true, true, true);
+
+        if (count($rows) <= 1) {
+            throw new \Exception(
+                'File Excel kosong.'
+            );
+        }
+
+        $this->validateImportHeader($rows[1]);
+
+        $preview = $this->validateImportRows($rows);
+
+        $valid = count(
+            array_filter(
+                $preview,
+                fn ($row) => $row['valid']
+            )
+        );
+
+        $invalid = count($preview) - $valid;
+
+        return responseSuccess(
+            'Preview import berhasil dibuat.',
+            [
+                'total' => count($preview),
+                'valid' => $valid,
+                'invalid' => $invalid,
+                'rows' => $preview
+            ]
+        );
+    }
+
+    private function validateImportHeader(array $header): void
+    {
+        $template = [
+            'NIS',
+            'NISN',
+            'Nama',
+            'Jenis Kelamin',
+            'Kelas',
+            'Status'
+        ];
+
+        $header = array_values($header);
+
+        if ($header !== $template) {
+            throw new \Exception(
+                'Format template Excel tidak sesuai.'
+            );
+        }
+    }
+
+    private function validateImportRows(array $rows): array
+    {
+        $preview = [];
+
+        $idSekolah = (int) session('id_sekolah');
+
+        unset($rows[1]); // hapus header
+
+        foreach ($rows as $index => $row) {
+
+            $nis = trim((string) ($row['A'] ?? ''));
+            $nisn = trim((string) ($row['B'] ?? ''));
+            $nama = trim((string) ($row['C'] ?? ''));
+            $jenisKelamin = strtoupper(
+                trim((string) ($row['D'] ?? ''))
+            );
+            $kelas = trim((string) ($row['E'] ?? ''));
+            $status = strtolower(
+                trim((string) ($row['F'] ?? ''))
+            );
+
+            /*
+            * Lewati baris Excel yang benar-benar kosong
+            */
+            if (
+                $nis === '' &&
+                $nisn === '' &&
+                $nama === '' &&
+                $jenisKelamin === '' &&
+                $kelas === '' &&
+                $status === ''
+            ) {
+                continue;
+            }
+
+            $errors = [];
+
+            /*
+            * NIS
+            */
+            if ($nis === '') {
+
+                $errors[] = 'NIS wajib diisi.';
+
+            } elseif ($this->repository->cekNis($nis)) {
+
+                $errors[] = 'NIS sudah digunakan.';
+            }
+
+            /*
+            * NISN
+            */
+            if (
+                $nisn !== '' &&
+                $this->repository->cekNisn($nisn)
+            ) {
+                $errors[] = 'NISN sudah digunakan.';
+            }
+
+            /*
+            * Nama siswa
+            */
+            if ($nama === '') {
+                $errors[] = 'Nama siswa wajib diisi.';
+            }
+
+            /*
+            * Jenis kelamin
+            */
+            if (!in_array($jenisKelamin, ['L', 'P'], true)) {
+                $errors[] = 'Jenis kelamin harus L atau P.';
+            }
+
+            /*
+            * Kelas
+            */
+            $dataKelas = null;
+
+            if ($kelas === '') {
+
+                $errors[] = 'Kelas wajib diisi.';
+
+            } else {
+
+                $dataKelas = $this->repository
+                    ->findKelasByNama($kelas, $idSekolah);
+
+                if (!$dataKelas) {
+                    $errors[] = 'Kelas tidak ditemukan.';
+                }
+            }
+
+            /*
+            * Status
+            */
+            if (!in_array(
+                $status,
+                ['aktif', 'lulus', 'keluar'],
+                true
+            )) {
+                $errors[] =
+                    'Status harus aktif, lulus, atau keluar.';
+            }
+
+            $preview[] = [
+
+                'baris' => $index,
+
+                'nis' => $nis,
+
+                'nisn' => $nisn,
+
+                'nama' => $nama,
+
+                'jenis_kelamin' => $jenisKelamin,
+
+                'kelas' => $kelas,
+
+                /*
+                * Ini penting untuk proses INSERT nanti.
+                */
+                'id_kelas' => $dataKelas['id'] ?? null,
+
+                'status' => $status,
+
+                'valid' => empty($errors),
+
+                'errors' => $errors,
+
+                'keterangan' => empty($errors)
+                    ? 'Siap diimport'
+                    : implode(' ', $errors)
+            ];
+        }
+
+        return $preview;
+    }
+    public function storeImport($file): array
+    {
+        if (!$file || !$file->isValid()) {
+            throw new \Exception('File Excel tidak ditemukan.');
+        }
+
+        $spreadsheet = IOFactory::load(
+            $file->getTempName()
+        );
+
+        $rows = $spreadsheet
+            ->getActiveSheet()
+            ->toArray(null, true, true, true);
+
+        if (count($rows) <= 1) {
+            throw new \Exception('File Excel kosong.');
+        }
+
+        /*
+        * Validasi header lagi.
+        */
+        $this->validateImportHeader($rows[1]);
+
+        /*
+        * Validasi semua data lagi.
+        */
+        $preview = $this->validateImportRows($rows);
+
+        $idSekolah = (int) session('id_sekolah');
+
+        $berhasil = 0;
+        $gagal = 0;
+
+        foreach ($preview as $row) {
+
+            /*
+            * Jangan simpan data bermasalah.
+            */
+            if (!$row['valid']) {
+
+                $gagal++;
+
+                continue;
+            }
+
+            $data = [
+
+                'id_sekolah' => $idSekolah,
+
+                'id_kelas' => $row['id_kelas'],
+
+                'nis' => $row['nis'],
+
+                'nisn' => $row['nisn'] !== ''
+                    ? $row['nisn']
+                    : null,
+
+                'nama_siswa' => $row['nama'],
+
+                'jenis_kelamin' => $row['jenis_kelamin'],
+
+                'status' => $row['status'],
+
+            ];
+
+            $result = $this->repository->insert($data);
+
+            if ($result) {
+
+                $berhasil++;
+
+            } else {
+
+                $gagal++;
+            }
+        }
+
+        return responseSuccess(
+            'Import data siswa selesai.',
+            [
+                'total' => count($preview),
+                'berhasil' => $berhasil,
+                'gagal' => $gagal
+            ]
+        );
     }
 }
