@@ -24,6 +24,7 @@ $routes->group('', ['filter' => 'auth'], function ($routes) {
     $routes->get('setting-sekolah', 'Admin\SettingSekolahController::index');
     $routes->post('setting-sekolah/update', 'Admin\SettingSekolahController::update');
     $routes->post('setting-sekolah/upload-logo', 'Admin\SettingSekolahController::uploadLogo');
+    $routes->post('setting-sekolah/hari-aktif',  'Admin\SettingSekolahController::updateHariAktif');
 
     $routes->get('dashboard', 'Admin\DashboardController::index');
 
@@ -144,6 +145,39 @@ $routes->group('', ['filter' => 'auth'], function ($routes) {
         $routes->get('getAktif', 'Admin\PengaturanAbsensiController::getAktif');
 
     });
+
+    /*
+     * Kehadiran
+     */
+    $routes->get(
+        'kehadiran',
+        'Admin\KehadiranController::index'
+    );
+
+    $routes->get(
+        'kehadiran/data',
+        'Admin\KehadiranController::getData'
+    );
+     /*
+     * Rekap Kehadiran
+    */
+    $routes->get(
+        'rekap-kehadiran',
+        'Admin\RekapKehadiranController::index'
+    );
+
+    $routes->get(
+        'rekap-kehadiran/data',
+        'Admin\RekapKehadiranController::getData'
+    );
+    $routes->get(
+        'rekap-kehadiran/detail',
+        'Admin\RekapKehadiranController::detail'
+    );
+    $routes->get(
+        'rekap-kehadiran/export-excel',
+        'Admin\RekapKehadiranController::exportExcel'
+    );
 
 });
 

@@ -124,6 +124,27 @@
                         </p>
                     </a>
                 </li>
+                <li class="nav-item">
+                    <a href="<?= site_url('kehadiran') ?>"
+                    class="nav-link <?= url_is('kehadiran*') ? 'active' : '' ?>">
+
+                        <i class="nav-icon fas fa-clipboard-check"></i>
+
+                        <p>Kehadiran</p>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a
+                        href="<?= site_url('rekap-kehadiran') ?>"
+                        class="nav-link <?= url_is('rekap-kehadiran*') ? 'active' : '' ?>"
+                    >
+                        <i class="nav-icon fas fa-chart-column"></i>
+
+                        <p>
+                            Rekap Kehadiran
+                        </p>
+                    </a>
+                </li>
             </ul>
         </nav>
 

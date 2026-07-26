@@ -55,6 +55,12 @@ switch ($uri) {
         echo '<script src="'.base_url('assets/js/perangkat.js').'"></script>
             <script src="'.base_url('assets/plugins/qrcode/qrcode.min.js').'"></script>';
         break;
+    case 'kehadiran':
+        echo '<script src="'.base_url('assets/js/kehadiran.js').'"></script>';
+        break;
+    case 'rekap-kehadiran':
+        echo '<script src="'.base_url('assets/js/rekap-kehadiran.js').'"></script>';
+        break;
 
 
 } 

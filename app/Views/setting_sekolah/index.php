@@ -248,7 +248,94 @@
         </div>
 
     </form>
+    <!-- HARI AKTIF SEKOLAH -->
+     <div class="p-2">
+        <div class="card shadow-sm mt-3">
 
+            <div class="card-header">
+                <h3 class="card-title mb-0">
+                    Hari Aktif Sekolah
+                </h3>
+            </div>
+
+            <div class="card-body">
+
+                <p class="text-muted mb-3">
+                    Tentukan hari yang digunakan sebagai hari aktif
+                    kegiatan sekolah.
+                </p>
+
+                <?php
+                $daftarHari = [
+                    1 => 'Senin',
+                    2 => 'Selasa',
+                    3 => 'Rabu',
+                    4 => 'Kamis',
+                    5 => 'Jumat',
+                    6 => 'Sabtu',
+                    7 => 'Minggu'
+                ];
+                ?>
+
+                <form id="formHariAktif">
+
+                    <div class="row g-3">
+
+                        <?php foreach ($daftarHari as $nomor => $nama): ?>
+
+                            <div class="col-6 col-md-4 col-lg-3">
+
+                                <div class="form-check">
+
+                                    <input
+                                        class="form-check-input hari-aktif-checkbox"
+                                        type="checkbox"
+                                        name="hari[]"
+                                        value="<?= $nomor ?>"
+                                        id="hariAktif<?= $nomor ?>"
+                                        <?= !empty($hariAktif[$nomor])
+                                            ? 'checked'
+                                            : '' ?>
+                                    >
+
+                                    <label
+                                        class="form-check-label"
+                                        for="hariAktif<?= $nomor ?>"
+                                    >
+                                        <?= esc($nama) ?>
+                                    </label>
+
+                                </div>
+
+                            </div>
+
+                        <?php endforeach ?>
+
+                    </div>
+
+
+                    <hr class="my-4">
+
+
+                    <div class="d-flex justify-content-end">
+
+                        <button
+                            type="submit"
+                            class="btn btn-primary"
+                            id="btnSimpanHariAktif"
+                        >
+                            <i class="fas fa-save me-1"></i>
+                            Simpan Hari Aktif
+                        </button>
+
+                    </div>
+
+                </form>
+
+            </div>
+
+        </div>
+    </div>                       
 </div>
 
 <script>
