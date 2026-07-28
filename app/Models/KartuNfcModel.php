@@ -14,6 +14,7 @@ class KartuNfcModel extends Model
 
     protected $allowedFields = [
         'uid',
+        'id_sekolah',
         'id_guru',
         'id_siswa',
         'nomor_kartu',

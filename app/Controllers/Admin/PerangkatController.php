@@ -35,6 +35,7 @@ class PerangkatController extends BaseAdminController
         $data = [
             'id_sekolah'      => session()->get('id_sekolah'),
             'nama_perangkat'  => $this->request->getPost('nama_perangkat'),
+            'jenis_perangkat'  => $this->request->getPost('jenis_perangkat'),
             'status'          => $this->request->getPost('status')
         ];
 

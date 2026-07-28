@@ -61,10 +61,14 @@ class PerangkatService
             ];
         }
 
-        if (!empty($perangkat['android_id'])) {
+        if (
+            !empty($perangkat['android_id']) ||
+            !empty($perangkat['hardware_id'])
+        ) {
             return [
                 'success' => false,
-                'message' => 'Perangkat masih terhubung dengan Android. Lakukan Reset Device terlebih dahulu.'
+                'message' =>
+                    'Perangkat masih terhubung. Lakukan Reset Device terlebih dahulu.'
             ];
         }
 
@@ -153,15 +157,27 @@ class PerangkatService
             ? 'nonaktif'
             : 'aktif';
 
-        $this->repository->updateStatus($id, [
-            'status' => $statusBaru
-        ]);
+        $this->repository->updateStatus($id, $statusBaru);
 
         return [
             'success' => true,
             'message' => 'Status perangkat berhasil diperbarui.',
             'status' => $statusBaru
         ];
+    }
+
+    public function getByHardwareId(string $hardwareId)
+    {
+        return $this->repository
+            ->findByHardwareId($hardwareId);
+    }
+
+    public function pairNodeMcu(
+        int $id,
+        string $hardwareId
+    ) {
+        return $this->repository
+            ->pairNodeMcu($id, $hardwareId);
     }
     
 }

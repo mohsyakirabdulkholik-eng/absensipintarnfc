@@ -50,21 +50,24 @@ class DeviceRepository
     }
 
     /**
-     * Hapus informasi pairing Android.
+     * Hapus informasi pairing perangkat.
+     * Mendukung Android dan NodeMCU.
      */
     public function clearPairing(int $id): bool
     {
         return $this->model->update($id, [
 
-            'android_id' => null,
+            // Android
+            'android_id'      => null,
+            'merk'            => null,
+            'model'           => null,
+            'versi_android'   => null,
 
-            'merk' => null,
+            // NodeMCU
+            'hardware_id'     => null,
 
-            'model' => null,
-
-            'versi_android' => null,
-
-            'last_sync' => null
+            // Umum
+            'last_sync'       => null
 
         ]);
     }
@@ -72,6 +75,17 @@ class DeviceRepository
     {
         return $this->model
             ->where('android_id', $androidId)
+            ->first();
+    }
+
+    /**
+     * Cek apakah Hardware ID NodeMCU
+     * sudah digunakan perangkat lain.
+     */
+    public function isHardwareIdUsed(string $hardwareId): ?array
+    {
+        return $this->model
+            ->where('hardware_id', $hardwareId)
             ->first();
     }
 }

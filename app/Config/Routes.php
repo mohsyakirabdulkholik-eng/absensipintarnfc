@@ -206,4 +206,7 @@ $routes->group('', ['filter' => 'auth'], function ($routes) {
 
         $routes->post('nfc/register-siswa',  'Api\NfcController::registerSiswa');
 
+        $routes->get('kehadiran',  'Api\KehadiranController::index');
+
+        $routes->get('kelas', 'Api\KelasController::index');
     });

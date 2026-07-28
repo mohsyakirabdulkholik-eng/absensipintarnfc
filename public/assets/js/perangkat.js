@@ -27,7 +27,7 @@ function loadData() {
     autoWidth: false,
     columnDefs: [
       {
-        targets: [2, 3, 4, 6],
+        targets: [2, 3, 5, 6],
         visible: !isMobile(),
       },
     ],
@@ -38,6 +38,7 @@ function loadData() {
     },
 
     columns: [
+      // NO
       {
         data: null,
         render: function (data, type, row, meta) {
@@ -45,62 +46,112 @@ function loadData() {
         },
       },
 
+      // NAMA PERANGKAT
       {
         data: null,
         render: function (data) {
           if (isMobile()) {
+            let jenis =
+              data.jenis_perangkat === "nodemcu" ? "NodeMCU" : "Android";
+
+            let identitas =
+              data.jenis_perangkat === "nodemcu"
+                ? (data.hardware_id ?? "Belum Terhubung")
+                : (data.model ?? "Belum Terhubung");
+
             return `
-                            <div>
-                                <strong>${data.nama_perangkat}</strong><br>
+                    <div>
+                        <strong>
+                            ${data.nama_perangkat}
+                        </strong>
+                        <br>
 
-                                <small class="text-muted">
-                                    ${data.merk ?? "Belum Terhubung"}
-                                    ${data.model ?? ""}
-                                </small><br>
+                        <small class="text-primary">
+                            ${jenis}
+                        </small>
+                        <br>
 
-                                <small class="text-primary">
-                                    Android ${data.versi_android ?? "-"}
-                                </small>
-
-                            </div>
-                        `;
+                        <small class="text-muted">
+                            ${identitas}
+                        </small>
+                    </div>
+                `;
           }
 
           return data.nama_perangkat;
         },
       },
 
+      // JENIS
       {
-        data: "merk",
+        data: "jenis_perangkat",
         render: function (data) {
-          return data ?? "-";
+          if (data === "nodemcu") {
+            return `
+                    <span class="badge bg-info">
+                        NodeMCU
+                    </span>
+                `;
+          }
+
+          return `
+                <span class="badge bg-primary">
+                    Android
+                </span>
+            `;
         },
       },
 
+      // IDENTITAS DEVICE
       {
-        data: "model",
+        data: null,
         render: function (data) {
-          return data ?? "-";
+          if (data.jenis_perangkat === "nodemcu") {
+            return (
+              data.hardware_id ??
+              '<span class="text-muted">Belum Terhubung</span>'
+            );
+          }
+
+          if (data.android_id) {
+            return `
+                    ${data.merk ?? ""} ${data.model ?? ""}
+                    <br>
+                    <small class="text-muted">
+                        Android ${data.versi_android ?? "-"}
+                    </small>
+                `;
+          }
+
+          return `
+                <span class="text-muted">
+                    Belum Terhubung
+                </span>
+            `;
         },
       },
 
-      {
-        data: "versi_android",
-        render: function (data) {
-          return data ?? "-";
-        },
-      },
+      // STATUS
       {
         data: "status",
         render: function (data) {
           if (data === "aktif") {
-            return `<span class="badge bg-success">Aktif</span>`;
+            return `
+                    <span class="badge bg-success">
+                        Aktif
+                    </span>
+                `;
           }
 
-          return `<span class="badge bg-danger">Nonaktif</span>`;
+          return `
+                <span class="badge bg-danger">
+                    Nonaktif
+                </span>
+            `;
         },
       },
 
+      // KONEKSI
       {
         data: "status_koneksi",
         render: function (data) {
@@ -122,23 +173,27 @@ function loadData() {
         },
       },
 
+      // LAST SYNC
       {
         data: "last_sync",
         render: function (data) {
-          if (!data) {
-            return "-";
-          }
-
-          return data;
+          return data ?? "-";
         },
       },
 
+      // AKSI
       {
         data: null,
         orderable: false,
         searchable: false,
         className: "text-center",
+
         render: function (data) {
+          const pairingText =
+            data.jenis_perangkat === "nodemcu"
+              ? "Pairing NodeMCU"
+              : "Pairing Android";
+
           return `
                 <div class="dropdown">
 
@@ -154,7 +209,8 @@ function loadData() {
                     <ul class="dropdown-menu dropdown-menu-end">
 
                         <li>
-                            <a class="dropdown-item btnDetail"
+                            <a
+                                class="dropdown-item btnDetail"
                                 href="#"
                                 data-id="${data.id}">
 
@@ -165,18 +221,20 @@ function loadData() {
                         </li>
 
                         <li>
-                            <a class="dropdown-item btnPairing"
+                            <a
+                                class="dropdown-item btnPairing"
                                 href="#"
                                 data-id="${data.id}">
 
                                 <i class="fas fa-qrcode me-2 text-success"></i>
-                                Pairing Android
+                                ${pairingText}
 
                             </a>
                         </li>
 
                         <li>
-                            <a class="dropdown-item btnEdit"
+                            <a
+                                class="dropdown-item btnEdit"
                                 href="#"
                                 data-id="${data.id}">
 
@@ -186,10 +244,13 @@ function loadData() {
                             </a>
                         </li>
 
-                        <li><hr class="dropdown-divider"></li>
+                        <li>
+                            <hr class="dropdown-divider">
+                        </li>
 
                         <li>
-                            <a class="dropdown-item btnReset"
+                            <a
+                                class="dropdown-item btnReset"
                                 href="#"
                                 data-id="${data.id}">
 
@@ -200,9 +261,11 @@ function loadData() {
                         </li>
 
                         <li>
-                            <a class="dropdown-item btnStatus"
+                            <a
+                                class="dropdown-item btnStatus"
                                 href="#"
-                                data-id="${data.id}" data-status="${data.status}">
+                                data-id="${data.id}"
+                                data-status="${data.status}">
 
                                 <i class="fas fa-power-off me-2 text-secondary"></i>
                                 Ubah Status
@@ -210,10 +273,13 @@ function loadData() {
                             </a>
                         </li>
 
-                        <li><hr class="dropdown-divider"></li>
+                        <li>
+                            <hr class="dropdown-divider">
+                        </li>
 
                         <li>
-                            <a class="dropdown-item text-danger btnDelete"
+                            <a
+                                class="dropdown-item text-danger btnDelete"
                                 href="#"
                                 data-id="${data.id}">
 
@@ -226,7 +292,7 @@ function loadData() {
                     </ul>
 
                 </div>
-                `;
+            `;
         },
       },
     ],
@@ -256,6 +322,8 @@ $(document).on("click", ".btnEdit", function () {
     $("#id").val(response.id);
 
     $("#nama_perangkat").val(response.nama_perangkat);
+
+    $("#jenis_perangkat").val(response.jenis_perangkat);
 
     $("#status").val(response.status);
 

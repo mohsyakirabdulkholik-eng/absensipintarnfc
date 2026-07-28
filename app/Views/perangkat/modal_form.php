@@ -35,8 +35,32 @@
                             class="form-control"
                             id="nama_perangkat"
                             name="nama_perangkat"
-                            placeholder="Contoh: Guru Piket 1"
+                            placeholder="Contoh: Mesin Absensi Utama"
                             required>
+
+                    </div>
+
+                    <div class="mb-3">
+
+                        <label class="form-label">
+                            Jenis Perangkat
+                        </label>
+
+                        <select
+                            class="form-select"
+                            id="jenis_perangkat"
+                            name="jenis_perangkat"
+                            required>
+
+                            <option value="android">
+                                Android
+                            </option>
+
+                            <option value="nodemcu">
+                                NodeMCU
+                            </option>
+
+                        </select>
 
                     </div>
 

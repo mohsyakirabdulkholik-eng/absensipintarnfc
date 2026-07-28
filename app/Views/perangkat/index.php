@@ -37,30 +37,24 @@
                         <table
                         class="table table-bordered table-hover table-striped w-100"
                         id="tablePerangkat">
-
                             <thead>
-
                                 <tr>
-
                                     <th width="5%">No</th>
 
                                     <th>Nama Perangkat</th>
 
-                                    <th>Merk</th>
+                                    <th>Jenis</th>
 
-                                    <th>Model</th>
-
-                                    <th>Android</th>
+                                    <th>Identitas Device</th>
 
                                     <th>Status</th>
+
                                     <th>Koneksi</th>
 
                                     <th>Last Sync</th>
 
                                     <th width="15%">Aksi</th>
-
                                 </tr>
-
                             </thead>
 
                             <tbody>

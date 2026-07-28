@@ -14,6 +14,10 @@ class PerangkatModel extends Model
     protected $allowedFields = [
         'id_sekolah',
         'nama_perangkat',
+
+        'jenis_perangkat',
+        'hardware_id',
+
         'android_id',
         'merk',
         'model',

@@ -84,8 +84,37 @@ class AbsensiService
         if (!$holiday['success']) {
             return $holiday;
         }
+        
+        $tanggal = date('Y-m-d');
+        $jam     = date('H:i:s');
 
-        // 4. Ambil Pengaturan Absensi
+        /*
+        * =====================================
+        * GURU
+        * =====================================
+        *
+        * Guru tidak membutuhkan pengaturan
+        * jam masuk / terlambat / jam pulang siswa.
+        */
+        if ($card['type'] === 'guru') {
+
+            return $this->processAttendance(
+                $card,
+                $academicData,
+                [],
+                $deviceData,
+                $tanggal,
+                $jam
+            );
+        }
+
+        /*
+        * =====================================
+        * SISWA
+        * =====================================
+        *
+        * Siswa mengikuti pengaturan absensi sekolah.
+        */
         $setting = $this->validateSetting(
             $card['id_sekolah']
         );
@@ -93,19 +122,17 @@ class AbsensiService
         if (!$setting['success']) {
             return $setting;
         }
+
         $settingData = $setting['data'];
 
-        $tanggal = date('Y-m-d');
-        $jam = date('H:i:s');
-        // 5. Proses Check In / Check Out
-       return $this->processAttendance(
-                $card,
-                $academicData,
-                $settingData,
-                $deviceData,
-                $tanggal,
-                $jam
-            );
+        return $this->processAttendance(
+            $card,
+            $academicData,
+            $settingData,
+            $deviceData,
+            $tanggal,
+            $jam
+        );
     }
     /**
      * Ambil riwayat absensi perangkat
@@ -267,39 +294,84 @@ class AbsensiService
         string $jam
     ): array
     {
-         $attendance = $this->repository->getTodayAttendance(
+        $attendance = $this->repository->getTodayAttendance(
             $card['id_sekolah'],
             $card['id_kartu_nfc'],
             $tanggal
-            );
+        );
 
-            // Belum ada absensi hari ini
+        /*
+        * =====================================
+        * GURU
+        * =====================================
+        *
+        * Guru tidak mengikuti jam masuk,
+        * batas terlambat, maupun jam pulang siswa.
+        */
+        if ($card['type'] === 'guru') {
+
+            // Tap pertama = masuk
             if (!$attendance) {
-                return $this->checkIn(
+
+                return $this->checkInGuru(
                     $card,
                     $academic,
-                    $setting,
                     $device,
                     $tanggal,
                     $jam
                 );
             }
 
-            // Sudah check in, tetapi belum check out
+            // Tap kedua = pulang
             if (empty($attendance['jam_pulang'])) {
-                return $this->checkOut(
+
+                return $this->checkOutGuru(
                     $attendance,
-                    $setting,
                     $jam
                 );
             }
 
-            // Sudah check in dan check out
             return $this->buildResponse(
                 false,
                 'ATTENDANCE_COMPLETED',
-                'Absensi hari ini sudah selesai.'
+                'Absensi guru hari ini sudah selesai.'
             );
+        }
+
+        /*
+        * =====================================
+        * SISWA
+        * =====================================
+        */
+
+        // Belum ada absensi hari ini
+        if (!$attendance) {
+
+            return $this->checkIn(
+                $card,
+                $academic,
+                $setting,
+                $device,
+                $tanggal,
+                $jam
+            );
+        }
+
+        // Sudah masuk tetapi belum pulang
+        if (empty($attendance['jam_pulang'])) {
+
+            return $this->checkOut(
+                $attendance,
+                $setting,
+                $jam
+            );
+        }
+
+        return $this->buildResponse(
+            false,
+            'ATTENDANCE_COMPLETED',
+            'Absensi hari ini sudah selesai.'
+        );
     }
 
     /**
@@ -403,6 +475,100 @@ class AbsensiService
             true,
             'CHECKOUT_SUCCESS',
             'Absensi pulang berhasil.',
+            [
+                'jam_pulang' => $jam
+            ]
+        );
+    }
+
+    /**
+     * =========================================
+     * CHECK IN GURU
+     * =========================================
+     *
+     * Guru tidak terikat jam masuk siswa
+     * dan tidak memiliki status terlambat.
+     */
+    private function checkInGuru(
+        array $card,
+        array $academic,
+        array $device,
+        string $tanggal,
+        string $jam
+    ): array
+    {
+        $data = [
+            'id_sekolah'      => $card['id_sekolah'],
+            'jenis'           => $card['type'],
+            'id_kartu_nfc'    => $card['id_kartu_nfc'],
+            'tanggal'         => $tanggal,
+            'jam_masuk'       => $jam,
+
+            // Guru selalu hadir ketika melakukan check-in
+            'status'          => 'Hadir',
+            'terlambat_menit' => 0,
+
+            'keterangan'      => null,
+            'device_id'       => $device['id']
+        ];
+
+        if (!$this->repository->saveCheckIn($data)) {
+
+            return $this->buildResponse(
+                false,
+                'CHECKIN_FAILED',
+                'Absensi masuk guru gagal disimpan.'
+            );
+        }
+
+        return $this->buildResponse(
+            true,
+            'CHECKIN_SUCCESS',
+            'Absensi masuk guru berhasil.',
+            [
+                'nama'            => $card['nama'],
+                'jenis'           => $card['type'],
+                'tanggal'         => $tanggal,
+                'jam_masuk'       => $jam,
+                'status'          => 'Hadir',
+                'terlambat_menit' => 0
+            ]
+        );
+    }
+
+    /**
+     * =========================================
+     * CHECK OUT GURU
+     * =========================================
+     *
+     * Guru dapat melakukan check-out tanpa
+     * mengikuti toleransi jam pulang siswa.
+     */
+    private function checkOutGuru(
+        array $attendance,
+        string $jam
+    ): array
+    {
+        $update = [
+            'jam_pulang' => $jam
+        ];
+
+        if (!$this->repository->saveCheckOut(
+            $attendance['id'],
+            $update
+        )) {
+
+            return $this->buildResponse(
+                false,
+                'CHECKOUT_FAILED',
+                'Absensi pulang guru gagal disimpan.'
+            );
+        }
+
+        return $this->buildResponse(
+            true,
+            'CHECKOUT_SUCCESS',
+            'Absensi pulang guru berhasil.',
             [
                 'jam_pulang' => $jam
             ]
