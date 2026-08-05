@@ -121,4 +121,69 @@ class KehadiranService
 
         return $statistik;
     }
+    /**
+     * Batalkan absensi pulang guru.
+     */
+    public function cancelGuruCheckout(
+        int $idSekolah,
+        int $idAbsensi
+    ): array
+    {
+        /*
+        * Cari absensi dan pastikan:
+        * - milik sekolah yang sedang login
+        * - jenisnya guru
+        */
+        $attendance = $this->repository
+            ->findGuruAttendance(
+                $idAbsensi,
+                $idSekolah
+            );
+
+        if (!$attendance) {
+
+            return [
+                'success' => false,
+                'code'    => 'ATTENDANCE_NOT_FOUND',
+                'message' => 'Data absensi guru tidak ditemukan.'
+            ];
+        }
+
+        /*
+        * Jam pulang memang harus sudah terisi.
+        */
+        if (empty($attendance['jam_pulang'])) {
+
+            return [
+                'success' => false,
+                'code'    => 'CHECKOUT_EMPTY',
+                'message' => 'Guru belum melakukan absensi pulang.'
+            ];
+        }
+
+        /*
+        * Batalkan jam pulang.
+        */
+        $success = $this->repository
+            ->cancelGuruCheckout($idAbsensi);
+
+        if (!$success) {
+
+            return [
+                'success' => false,
+                'code'    => 'CANCEL_FAILED',
+                'message' => 'Absensi pulang guru gagal dibatalkan.'
+            ];
+        }
+
+        return [
+            'success' => true,
+            'code'    => 'CHECKOUT_CANCELLED',
+            'message' => 'Absensi pulang guru berhasil dibatalkan.',
+            'data'    => [
+                'id_absensi' => $idAbsensi,
+                'jam_pulang' => null
+            ]
+        ];
+    }
 }

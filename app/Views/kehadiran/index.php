@@ -312,6 +312,9 @@
                         <th>
                             Keterangan
                         </th>
+                        <th width="10%">
+                            Aksi
+                        </th>
 
                     </tr>
 

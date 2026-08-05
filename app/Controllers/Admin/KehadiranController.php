@@ -143,4 +143,60 @@ class KehadiranController extends BaseAdminController
             ]
         ]);
     }
+
+    /**
+     * Batalkan absensi pulang guru.
+     */
+    public function cancelGuruCheckout()
+    {
+        $idSekolah = (int) session('id_sekolah');
+
+        $idAbsensi = (int) $this->request
+            ->getPost('id_absensi');
+
+        /*
+        * Validasi ID.
+        */
+        if ($idAbsensi <= 0) {
+
+            return $this->response
+                ->setStatusCode(400)
+                ->setJSON([
+                    'success' => false,
+                    'code'    => 'INVALID_ATTENDANCE_ID',
+                    'message' => 'ID absensi tidak valid.'
+                ]);
+        }
+
+        $result = $this->kehadiranService
+            ->cancelGuruCheckout(
+                $idSekolah,
+                $idAbsensi
+            );
+
+        /*
+        * Data tidak ditemukan / bukan milik sekolah.
+        */
+        if (
+            !$result['success'] &&
+            $result['code'] === 'ATTENDANCE_NOT_FOUND'
+        ) {
+
+            return $this->response
+                ->setStatusCode(404)
+                ->setJSON($result);
+        }
+
+        /*
+        * Request valid tetapi tidak dapat dibatalkan.
+        */
+        if (!$result['success']) {
+
+            return $this->response
+                ->setStatusCode(400)
+                ->setJSON($result);
+        }
+
+        return $this->response->setJSON($result);
+    }
 }

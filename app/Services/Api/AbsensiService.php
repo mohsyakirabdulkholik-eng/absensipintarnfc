@@ -7,6 +7,7 @@ use App\Services\HariLiburService;
 use App\Services\PengaturanAbsensiService;
 use App\Services\SemesterService;
 use App\Services\TahunAjaranService;
+use App\Services\HariAktifSekolahService;
 
 class AbsensiService
 {
@@ -14,6 +15,9 @@ class AbsensiService
      * Repository
      */
     protected AbsensiRepository $repository;
+
+    // hari aktif sekolah
+    protected HariAktifSekolahService $hariAktifService;
 
     /**
      * API Services
@@ -37,6 +41,7 @@ class AbsensiService
         $this->nfcService = new NfcService();
 
         $this->hariLiburService = new HariLiburService();
+        $this->hariAktifService = new HariAktifSekolahService();
         $this->tahunAjaranService = new TahunAjaranService();
         $this->semesterService = new SemesterService();
         $this->pengaturanService = new PengaturanAbsensiService();
@@ -83,6 +88,15 @@ class AbsensiService
 
         if (!$holiday['success']) {
             return $holiday;
+        }
+
+        // 4. Validasi Hari Aktif
+        $activeDay = $this->validateActiveDay(
+            $card['id_sekolah']
+        );
+
+        if (!$activeDay['success']) {
+            return $activeDay;
         }
         
         $tanggal = date('Y-m-d');
@@ -622,5 +636,45 @@ class AbsensiService
             'message' => $message,
             'data'    => $data
         ];
+    }
+    /**
+     * Validasi Hari Aktif
+     */
+    private function validateActiveDay(int $idSekolah ): array {
+
+        $hari = (int) date('N');
+
+        if (
+            !$this->hariAktifService
+                ->isHariAktif(
+                    $idSekolah,
+                    $hari
+                )
+        ) {
+
+            $namaHari = [
+                1 => 'Senin',
+                2 => 'Selasa',
+                3 => 'Rabu',
+                4 => 'Kamis',
+                5 => 'Jumat',
+                6 => 'Sabtu',
+                7 => 'Minggu'
+            ];
+
+            return $this->buildResponse(
+                false,
+                'DAY_NOT_ACTIVE',
+                'Hari ' . $namaHari[$hari] . ' Libur Sekolah.'
+            );
+
+        }
+
+        return $this->buildResponse(
+            true,
+            'DAY_ACTIVE',
+            'Hari aktif.'
+        );
+
     }
 }

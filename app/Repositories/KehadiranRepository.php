@@ -182,4 +182,46 @@ class KehadiranRepository
             ->get()
             ->getResultArray();
     }
+    /**
+     * Cari absensi guru berdasarkan ID dan sekolah.
+     */
+    public function findGuruAttendance(
+        int $idAbsensi,
+        int $idSekolah
+    ): ?array
+    {
+        $data = $this->db
+            ->table('absensi')
+            ->select('
+                absensi.id,
+                absensi.id_sekolah,
+                absensi.jenis,
+                absensi.tanggal,
+                absensi.jam_masuk,
+                absensi.jam_pulang
+            ')
+            ->where('absensi.id', $idAbsensi)
+            ->where('absensi.id_sekolah', $idSekolah)
+            ->where('absensi.jenis', 'guru')
+            ->get()
+            ->getRowArray();
+
+        return $data ?: null;
+    }
+
+
+    /**
+     * Batalkan absensi pulang guru.
+     */
+    public function cancelGuruCheckout(
+        int $idAbsensi
+    ): bool
+    {
+        return $this->db
+            ->table('absensi')
+            ->where('id', $idAbsensi)
+            ->update([
+                'jam_pulang' => null
+            ]);
+    }
 }

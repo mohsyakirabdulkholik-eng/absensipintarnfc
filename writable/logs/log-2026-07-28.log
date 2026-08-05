@@ -1,0 +1,111 @@
+DEBUG - 2026-07-28 10:21:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-28 10:21:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-28 10:22:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-28 10:22:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2026-07-28 10:22:18 --> MySQL server has gone away
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 300.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(300): mysqli->query('SELECT COUNT(*) AS `numrows`
+FROM `absensi`
+WHERE `id_sekolah` = \'1\'
+AND `tanggal` = \'2026-07-28\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(908): CodeIgniter\Database\MySQLi\Connection->execute('SELECT COUNT(*) AS `numrows`
+FROM `absensi`
+WHERE `id_sekolah` = \'1\'
+AND `tanggal` = \'2026-07-28\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(825): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COUNT(*) AS `numrows`
+FROM `absensi`
+WHERE `id_sekolah` = \'1\'
+AND `tanggal` = \'2026-07-28\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1731): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*) AS `numrows`
+FROM `absensi`
+WHERE `id_sekolah` = :id_sekolah:
+AND `tanggal` = :tanggal:', [...], false)
+ 5 APPPATH\Repositories\DashboardRepository.php(37): CodeIgniter\Database\BaseBuilder->countAllResults()
+ 6 APPPATH\Services\DashboardService.php(18): App\Repositories\DashboardRepository->getStatistik('1')
+ 7 APPPATH\Controllers\Admin\DashboardController.php(19): App\Services\DashboardService->getStatistik('1')
+ 8 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\Admin\DashboardController->index()
+ 9 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\DashboardController))
+10 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-07-28 10:22:18 --> CodeIgniter\Database\Exceptions\DatabaseException: MySQL server has gone away
+[Method: GET, Route: dashboard]
+in SYSTEMPATH\Database\BaseConnection.php on line 863.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1731): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*) AS `numrows`
+FROM `absensi`
+WHERE `id_sekolah` = :id_sekolah:
+AND `tanggal` = :tanggal:', [...], false)
+ 2 APPPATH\Repositories\DashboardRepository.php(37): CodeIgniter\Database\BaseBuilder->countAllResults()
+ 3 APPPATH\Services\DashboardService.php(18): App\Repositories\DashboardRepository->getStatistik('1')
+ 4 APPPATH\Controllers\Admin\DashboardController.php(19): App\Services\DashboardService->getStatistik('1')
+ 5 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\Admin\DashboardController->index()
+ 6 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\DashboardController))
+ 7 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-07-28 10:22:18 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: MySQL server has gone away
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 310.
+ 1 SYSTEMPATH\Database\BaseConnection.php(908): CodeIgniter\Database\MySQLi\Connection->execute('SELECT COUNT(*) AS `numrows`
+FROM `absensi`
+WHERE `id_sekolah` = \'1\'
+AND `tanggal` = \'2026-07-28\'')
+ 2 SYSTEMPATH\Database\BaseConnection.php(825): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COUNT(*) AS `numrows`
+FROM `absensi`
+WHERE `id_sekolah` = \'1\'
+AND `tanggal` = \'2026-07-28\'')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1731): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*) AS `numrows`
+FROM `absensi`
+WHERE `id_sekolah` = :id_sekolah:
+AND `tanggal` = :tanggal:', [...], false)
+ 4 APPPATH\Repositories\DashboardRepository.php(37): CodeIgniter\Database\BaseBuilder->countAllResults()
+ 5 APPPATH\Services\DashboardService.php(18): App\Repositories\DashboardRepository->getStatistik('1')
+ 6 APPPATH\Controllers\Admin\DashboardController.php(19): App\Services\DashboardService->getStatistik('1')
+ 7 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\Admin\DashboardController->index()
+ 8 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\DashboardController))
+ 9 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-07-28 10:22:18 --> [Caused by] mysqli_sql_exception: MySQL server has gone away
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 300.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(300): mysqli->query('SELECT COUNT(*) AS `numrows`
+FROM `absensi`
+WHERE `id_sekolah` = \'1\'
+AND `tanggal` = \'2026-07-28\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(908): CodeIgniter\Database\MySQLi\Connection->execute('SELECT COUNT(*) AS `numrows`
+FROM `absensi`
+WHERE `id_sekolah` = \'1\'
+AND `tanggal` = \'2026-07-28\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(825): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COUNT(*) AS `numrows`
+FROM `absensi`
+WHERE `id_sekolah` = \'1\'
+AND `tanggal` = \'2026-07-28\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1731): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*) AS `numrows`
+FROM `absensi`
+WHERE `id_sekolah` = :id_sekolah:
+AND `tanggal` = :tanggal:', [...], false)
+ 5 APPPATH\Repositories\DashboardRepository.php(37): CodeIgniter\Database\BaseBuilder->countAllResults()
+ 6 APPPATH\Services\DashboardService.php(18): App\Repositories\DashboardRepository->getStatistik('1')
+ 7 APPPATH\Controllers\Admin\DashboardController.php(19): App\Services\DashboardService->getStatistik('1')
+ 8 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\Admin\DashboardController->index()
+ 9 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\DashboardController))
+10 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2026-07-28 10:24:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-28 10:24:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-28 10:24:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-28 10:24:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-28 10:24:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-28 10:25:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-28 10:25:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-28 10:25:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-28 10:25:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-28 10:25:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-28 10:25:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-28 10:57:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-28 10:57:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-28 10:57:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.

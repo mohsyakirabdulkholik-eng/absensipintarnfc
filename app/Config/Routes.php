@@ -3,7 +3,8 @@
 use CodeIgniter\Router\RouteCollection;
 
 /** @var RouteCollection $routes */
-$routes->get('/', 'Auth\AuthController::index');
+$routes->get('/', 'LandingController::index');
+$routes->get('/login', 'Auth\AuthController::index');
 $routes->post('/login', 'Auth\AuthController::login');
 $routes->get('/logout', 'Auth\AuthController::logout');
 $routes->get('jurusan/options', 'Admin\JurusanController::options');
@@ -177,6 +178,11 @@ $routes->group('', ['filter' => 'auth'], function ($routes) {
     $routes->get(
         'rekap-kehadiran/export-excel',
         'Admin\RekapKehadiranController::exportExcel'
+    );
+
+    $routes->post(
+        'kehadiran/cancel-guru-checkout',
+        'Admin\KehadiranController::cancelGuruCheckout'
     );
 
 });
