@@ -1,0 +1,262 @@
+body {
+  margin: 0;
+  font-family: "Inter", sans-serif;
+  background: linear-gradient(135deg, #eef4ff 0%, #f8fafc 55%, #ffffff 100%);
+  overflow-x: hidden;
+  position: relative;
+}
+
+body::before,
+body::after {
+  content: "";
+  position: fixed;
+  border-radius: 50%;
+  z-index: -1;
+  filter: blur(80px);
+}
+
+body::before {
+  width: 260px;
+  height: 260px;
+  background: rgba(37, 99, 235, 0.15);
+  top: -80px;
+  left: -80px;
+}
+
+body::after {
+  width: 300px;
+  height: 300px;
+  background: rgba(59, 130, 246, 0.08);
+  right: -120px;
+  bottom: -120px;
+}
+
+.register-wrapper {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+}
+
+.register-card {
+  width: 100%;
+  max-width: 1180px;
+  min-height: 720px;
+  display: flex;
+  overflow: hidden;
+  border-radius: 28px;
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(12px);
+  box-shadow:
+    0 30px 80px rgba(15, 23, 42, 0.12),
+    0 10px 25px rgba(15, 23, 42, 0.06);
+}
+
+.register-sidebar {
+  width: 340px;
+  padding: 50px 35px;
+  background: linear-gradient(180deg, #2563eb, #1e40af);
+  color: white;
+  position: relative;
+}
+.logo-title {
+  font-size: 2rem;
+  font-weight: 800;
+  line-height: 1.2;
+}
+
+.logo-subtitle {
+  opacity: 0.85;
+  margin-top: 10px;
+  font-size: 0.95rem;
+}
+
+.register-content {
+  flex: 1;
+  padding: 55px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.page-title h2 {
+  font-size: 2.2rem;
+  font-weight: 800;
+  color: #0f172a;
+}
+
+.page-title p {
+  color: #64748b;
+  margin-top: 10px;
+}
+.step {
+  animation: fade 0.35s ease;
+}
+.btn-primary {
+  height: 54px;
+  border: none;
+  border-radius: 14px;
+  font-weight: 700;
+  transition: 0.25s;
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 25px rgba(37, 99, 235, 0.25);
+}
+
+.btn-light {
+  border-radius: 12px;
+
+  height: 50px;
+}
+.step-card {
+  background: #fff;
+  border-radius: 22px;
+  padding: 38px;
+  border: 1px solid #eef2f7;
+  box-shadow: 0 15px 40px rgba(15, 23, 42, 0.06);
+}
+.step-item {
+  position: relative;
+  display: flex;
+  gap: 15px;
+  align-items: flex-start;
+  margin-bottom: 30px;
+  transition: 0.25s;
+}
+.step-item:hover {
+  transform: translateX(5px);
+}
+.step-item:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  width: 2px;
+  height: 42px;
+  left: 20px;
+  top: 45px;
+  background: rgba(255, 255, 255, 0.2);
+}
+.step-number {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.18);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  transition: 0.3s;
+}
+.step-title {
+  font-weight: 700;
+  margin-bottom: 3px;
+}
+
+.step-item small {
+  opacity: 0.75;
+}
+.step-item.active .step-number {
+  background: white;
+
+  color: #2563eb;
+}
+.step-item.done .step-number {
+  background: #22c55e;
+
+  color: white;
+}
+.sidebar-image {
+  margin-top: auto;
+  text-align: center;
+  opacity: 0.25;
+}
+
+.sidebar-image i {
+  font-size: 95px;
+}
+.form-control,
+.form-select {
+  height: 54px;
+  border-radius: 14px;
+  border: 1px solid #dbe4ee;
+}
+textarea.form-control {
+  height: 130px;
+}
+.form-control:focus,
+.form-select:focus {
+  border-color: #2563eb;
+  box-shadow: 0 0 0 0.22rem rgba(37, 99, 235, 0.12);
+}
+.step-number {
+  transition: 0.35s;
+}
+
+.step-item.done .step-number {
+  transform: scale(1.1);
+}
+.logo-title {
+  letter-spacing: -1px;
+}
+
+.logo-subtitle {
+  line-height: 1.7;
+}
+
+@keyframes fade {
+  from {
+    opacity: 0;
+    transform: translateX(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+@keyframes slideLeft {
+  from {
+    opacity: 0;
+    transform: translateX(35px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.step-content {
+  animation: slideLeft 0.35s ease;
+}
+
+@media (max-width: 991px) {
+  .register-card {
+    flex-direction: column;
+  }
+
+  .register-sidebar {
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .register-wrapper {
+    padding: 15px;
+  }
+
+  .register-content {
+    padding: 30px;
+  }
+
+  .register-sidebar {
+    width: 100%;
+
+    padding: 35px;
+  }
+
+  .page-title h2 {
+    font-size: 1.8rem;
+  }
+}
