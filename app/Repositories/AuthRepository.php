@@ -33,9 +33,20 @@ class AuthRepository
                 jenjang.is_jurusan,
                 roles.nama_role
             ')
-            ->join('sekolah', 'sekolah.id = users.id_sekolah')
-            ->join('jenjang', 'jenjang.id = sekolah.id_jenjang')
-            ->join('roles', 'roles.id = users.id_role')
+            ->join(
+                'sekolah',
+                'sekolah.id = users.id_sekolah',
+                'left'
+            )
+            ->join(
+                'jenjang',
+                'jenjang.id = sekolah.id_jenjang',
+                'left'
+            )
+            ->join(
+                'roles',
+                'roles.id = users.id_role'
+            )
             ->groupStart()
                 ->where('users.username', $login)
                 ->orWhere('users.email', $login)

@@ -57,9 +57,17 @@ class AuthService
 
         ]);
 
+        
+        if ((int) $user['id_role'] === 1) {
+            $redirect = base_url('superadmin');
+        }else {
+            $redirect = base_url('dashboard');
+        }
+
         return [
-            'status' => true,
-            'message' => 'Login berhasil.'
+            'status'   => true,
+            'message'  => 'Login berhasil.',
+            'redirect' => $redirect
         ];
     }
 

@@ -23,6 +23,10 @@
     <link rel="stylesheet"
           href="<?= base_url('assets/adminlte/dist/css/adminlte.min.css')?>">
 
+      <!-- Superadmin Dashboard Responsive -->
+      <link rel="stylesheet"
+            href="<?= base_url('assets/css/superadmin-dashboard.css')?>">
+
           <link rel="stylesheet"
 href="https://cdn.datatables.net/2.3.1/css/dataTables.bootstrap5.css">
 

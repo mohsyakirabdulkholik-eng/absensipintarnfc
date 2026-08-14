@@ -145,6 +145,18 @@
                         </p>
                     </a>
                 </li>
+                <li class="nav-item">
+                    <a
+                        href="<?= site_url('pembayaran') ?>"
+                        class="nav-link <?= url_is('pembayaran*') ? 'active' : '' ?>"
+                    >
+                        <i class="nav-icon fas fa-money-bill"></i>
+
+                        <p>
+                            Pembayaran
+                        </p>
+                    </a>
+                </li>
             </ul>
         </nav>
 

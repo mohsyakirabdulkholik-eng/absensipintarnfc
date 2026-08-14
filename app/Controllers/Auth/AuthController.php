@@ -16,8 +16,9 @@ class AuthController extends BaseController
     public function index()
     {
         if (session()->get('isLoggedIn')) {
-            return redirect()->to(base_url('/dashboard'));
+            return $this->redirectByRole();
         }
+
         return view('auth/login', [
             'title' => 'Login'
         ]);
@@ -37,12 +38,12 @@ class AuthController extends BaseController
     public function register()
     {
         if (session()->get('isLoggedIn')) {
-            return redirect()->to(base_url('/dashboard'));
+            return $this->redirectByRole();
         }
 
         return view('auth/register', [
-            'title' => 'Daftar Akun',
-            'jenjang'  => $this->authService->getJenjang()
+            'title'   => 'Daftar Akun',
+            'jenjang' => $this->authService->getJenjang()
         ]);
     }
     public function storeRegister()
@@ -95,5 +96,13 @@ class AuthController extends BaseController
             'alamat'                => trim($this->request->getPost('alamat'))
 
         ];
+    }
+    private function redirectByRole()
+    {
+        if (session()->get('nama_role') === 'superadmin') {
+            return redirect()->to(base_url('superadmin'));
+        }
+
+        return redirect()->to(base_url('dashboard'));
     }
 }

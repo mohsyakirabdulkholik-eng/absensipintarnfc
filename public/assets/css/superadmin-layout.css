@@ -1,0 +1,1073 @@
+/* =========================================================
+   ABSENSI PINTAR
+   SUPERADMIN RESPONSIVE UI
+   =========================================================
+
+   Digunakan khusus untuk layout Superadmin.
+
+   Catatan:
+   - Navbar tetap shared dengan Admin Sekolah.
+   - Semua selector dibatasi dengan .superadmin-layout
+     agar tidak mengganggu halaman Admin Sekolah.
+   - Tidak membutuhkan JavaScript tambahan.
+   ========================================================= */
+
+/* =========================================================
+   1. DASHBOARD - DESKTOP
+   ========================================================= */
+
+.superadmin-layout .superadmin-dashboard {
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  box-sizing: border-box;
+}
+
+/* Header dashboard */
+
+.superadmin-layout .dashboard-header {
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+.superadmin-layout .dashboard-header h3 {
+  margin-bottom: 0.25rem;
+  font-size: 1.5rem;
+  font-weight: 600;
+  line-height: 1.35;
+}
+
+.superadmin-layout .dashboard-header p {
+  margin-bottom: 0;
+  font-size: 0.95rem;
+  line-height: 1.4;
+}
+
+/* =========================================================
+   2. STATISTIK
+   ========================================================= */
+
+.superadmin-layout .stat-card {
+  width: 100%;
+  height: 100%;
+  border-radius: 12px;
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.superadmin-layout .stat-card .card-body {
+  padding: 1.1rem 1.15rem;
+}
+
+.superadmin-layout .stat-card .stat-label {
+  margin-bottom: 0.25rem;
+  font-size: 0.9rem;
+  line-height: 1.3;
+}
+
+.superadmin-layout .stat-card .stat-value {
+  margin: 0;
+  font-size: 1.8rem;
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+.superadmin-layout .stat-card .stat-icon {
+  font-size: 2rem;
+  line-height: 1;
+}
+
+/* =========================================================
+   3. CARD DASHBOARD
+   ========================================================= */
+
+.superadmin-layout .dashboard-card {
+  width: 100%;
+  max-width: 100%;
+
+  border-radius: 12px;
+  overflow: hidden;
+
+  box-sizing: border-box;
+}
+
+.superadmin-layout .dashboard-card .card-header {
+  padding: 0.9rem 1rem;
+}
+
+.superadmin-layout .dashboard-card .card-header h5 {
+  margin: 0;
+
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.3;
+}
+
+/* =========================================================
+   4. TABEL SEKOLAH - DESKTOP
+   ========================================================= */
+
+.superadmin-layout .school-table {
+  width: 100%;
+  min-width: 500px;
+
+  margin-bottom: 0;
+}
+
+.superadmin-layout .school-table th {
+  font-size: 0.85rem;
+  white-space: nowrap;
+}
+
+.superadmin-layout .school-table td {
+  font-size: 0.9rem;
+  vertical-align: middle;
+}
+
+/* =========================================================
+   5. LANGGANAN
+   ========================================================= */
+
+.superadmin-layout .subscription-item {
+  box-sizing: border-box;
+}
+
+.superadmin-layout .subscription-item:last-child {
+  border-bottom: 0 !important;
+}
+
+.superadmin-layout .subscription-item .school-name {
+  line-height: 1.3;
+}
+
+.superadmin-layout .empty-state {
+  text-align: center;
+}
+
+/* =========================================================
+   6. TABLET / SIDEBAR
+   ========================================================= */
+
+@media (max-width: 991.98px) {
+  /* -----------------------------------------------------
+       Sidebar
+       ----------------------------------------------------- */
+
+  .superadmin-layout .app-sidebar {
+    width: 270px;
+    max-width: 85vw;
+  }
+
+  .superadmin-layout .app-sidebar .sidebar-brand {
+    height: 56px;
+    min-height: 56px;
+  }
+
+  .superadmin-layout .app-sidebar .brand-text {
+    font-size: 0.95rem;
+  }
+
+  .superadmin-layout .sidebar-menu .nav-link {
+    min-height: 44px;
+
+    display: flex;
+    align-items: center;
+
+    padding: 0.7rem 1rem;
+  }
+
+  .superadmin-layout .sidebar-menu .nav-icon {
+    width: 1.5rem;
+    margin-right: 0.35rem;
+
+    font-size: 1rem;
+  }
+
+  .superadmin-layout .sidebar-menu .nav-link p {
+    margin-bottom: 0;
+    font-size: 0.88rem;
+  }
+
+  .superadmin-layout .sidebar-menu .nav-header {
+    padding: 0.9rem 1rem 0.45rem;
+    font-size: 0.7rem;
+  }
+
+  /* -----------------------------------------------------
+       Area utama
+       ----------------------------------------------------- */
+
+  .superadmin-layout .app-main {
+    min-width: 0;
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+
+  .superadmin-layout .app-content {
+    min-width: 0;
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+}
+
+/* =========================================================
+   7. MOBILE - <= 767px
+   ========================================================= */
+
+@media (max-width: 767.98px) {
+  /* -----------------------------------------------------
+       Navbar
+       ----------------------------------------------------- */
+
+  .superadmin-layout .app-header {
+    width: 100%;
+    max-width: 100%;
+    min-height: 56px;
+  }
+
+  .superadmin-layout .app-header .container-fluid {
+    width: 100%;
+    max-width: 100%;
+
+    padding-left: 0.35rem;
+    padding-right: 0.35rem;
+
+    box-sizing: border-box;
+  }
+
+  .superadmin-layout .app-header .navbar-brand {
+    margin-left: 0.15rem;
+
+    font-size: 0.92rem;
+
+    white-space: nowrap;
+  }
+
+  .superadmin-layout .app-header .navbar-brand img {
+    max-height: 30px;
+    width: auto;
+  }
+
+  .superadmin-layout .app-header .nav-link {
+    min-width: 42px;
+    min-height: 44px;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .superadmin-layout .app-header .navbar-nav.ms-auto .nav-link {
+    max-width: 110px;
+
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  /* -----------------------------------------------------
+       Area utama
+       ----------------------------------------------------- */
+
+  .superadmin-layout .app-main {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+
+    margin-left: 0;
+
+    box-sizing: border-box;
+  }
+
+  .superadmin-layout .app-content {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+
+    padding-top: 0.75rem;
+
+    box-sizing: border-box;
+  }
+
+  .superadmin-layout .app-content > .container-fluid {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+
+    padding-left: 0;
+    padding-right: 0;
+
+    box-sizing: border-box;
+  }
+
+  /* -----------------------------------------------------
+       Dashboard
+       ----------------------------------------------------- */
+
+  .superadmin-layout .superadmin-dashboard {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+
+    box-sizing: border-box;
+  }
+
+  /* -----------------------------------------------------
+       Header
+       ----------------------------------------------------- */
+
+  .superadmin-layout .dashboard-header {
+    width: 100%;
+    max-width: 100%;
+
+    padding-left: 0.05rem;
+    padding-right: 0.05rem;
+
+    margin-bottom: 1rem !important;
+
+    box-sizing: border-box;
+  }
+
+  .superadmin-layout .dashboard-header h3 {
+    margin-bottom: 0.2rem !important;
+
+    font-size: 1.25rem;
+    line-height: 1.35;
+  }
+
+  .superadmin-layout .dashboard-header p {
+    margin-bottom: 0;
+
+    font-size: 0.84rem;
+  }
+
+  /* -----------------------------------------------------
+       Statistik
+       ----------------------------------------------------- */
+
+  .superadmin-layout .stat-row {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+
+    margin-left: 0;
+    margin-right: 0;
+
+    --bs-gutter-x: 0.65rem;
+    --bs-gutter-y: 0.65rem;
+
+    box-sizing: border-box;
+  }
+
+  .superadmin-layout .stat-row > [class*="col-"] {
+    min-width: 0;
+
+    padding-left: 0.325rem;
+    padding-right: 0.325rem;
+  }
+
+  .superadmin-layout .stat-card {
+    width: 100%;
+    max-width: 100%;
+
+    border-radius: 10px;
+  }
+
+  .superadmin-layout .stat-card .card-body {
+    min-height: 82px;
+    padding: 0.8rem;
+  }
+
+  .superadmin-layout .stat-card .stat-label {
+    max-width: 100%;
+
+    font-size: 0.76rem;
+    line-height: 1.25;
+  }
+
+  .superadmin-layout .stat-card .stat-value {
+    font-size: 1.4rem;
+  }
+
+  .superadmin-layout .stat-card .stat-icon {
+    font-size: 1.5rem;
+  }
+
+  /* -----------------------------------------------------
+       Content row
+       ----------------------------------------------------- */
+
+  .superadmin-layout .content-row {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 0.75rem !important;
+
+    --bs-gutter-x: 0;
+    --bs-gutter-y: 0.85rem;
+
+    box-sizing: border-box;
+  }
+
+  .superadmin-layout .content-row > [class*="col-"] {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+
+    flex: 0 0 100%;
+
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  /* -----------------------------------------------------
+       Dashboard card
+       ----------------------------------------------------- */
+
+  .superadmin-layout .dashboard-card {
+    width: 100%;
+    max-width: 100%;
+
+    border-radius: 10px;
+
+    box-sizing: border-box;
+  }
+
+  .superadmin-layout .dashboard-card .card-header {
+    padding: 0.8rem 0.9rem;
+  }
+
+  .superadmin-layout .dashboard-card .card-header h5 {
+    font-size: 0.94rem;
+  }
+
+  /* -----------------------------------------------------
+       Langganan
+       ----------------------------------------------------- */
+
+  .superadmin-layout .subscription-item {
+    width: 100%;
+    max-width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 0.7rem;
+
+    padding: 0.8rem 0 !important;
+
+    box-sizing: border-box;
+  }
+
+  .superadmin-layout .subscription-item > div:first-child {
+    min-width: 0;
+    flex: 1 1 auto;
+  }
+
+  .superadmin-layout .subscription-item > div:last-child {
+    flex: 0 0 auto;
+    text-align: right;
+  }
+
+  .superadmin-layout .subscription-item .school-name {
+    font-size: 0.84rem;
+    line-height: 1.3;
+  }
+
+  .superadmin-layout .subscription-item small {
+    font-size: 0.74rem;
+  }
+
+  .superadmin-layout .subscription-item .subscription-date {
+    font-size: 0.72rem;
+  }
+
+  .superadmin-layout .subscription-item .badge {
+    font-size: 0.67rem;
+  }
+
+  /* -----------------------------------------------------
+       Empty state
+       ----------------------------------------------------- */
+
+  .superadmin-layout .empty-state {
+    padding: 1.7rem 0.9rem !important;
+
+    font-size: 0.8rem;
+    line-height: 1.4;
+  }
+}
+
+/* =========================================================
+   8. HP - <= 575px
+   ========================================================= */
+
+@media (max-width: 575.98px) {
+  /* -----------------------------------------------------
+       GLOBAL WIDTH FIX
+       ----------------------------------------------------- */
+
+  .superadmin-layout {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+
+    overflow-x: hidden;
+  }
+
+  .superadmin-layout .app-wrapper {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+
+    overflow-x: hidden;
+  }
+
+  .superadmin-layout .app-main {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+
+    margin-left: 0 !important;
+
+    overflow-x: hidden;
+
+    box-sizing: border-box;
+  }
+
+  .superadmin-layout .app-content {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+
+    padding-left: 0.65rem;
+    padding-right: 0.65rem;
+
+    overflow-x: hidden;
+
+    box-sizing: border-box;
+  }
+
+  .superadmin-layout .app-content > .container-fluid {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+
+    padding-left: 0;
+    padding-right: 0;
+
+    box-sizing: border-box;
+  }
+
+  /* -----------------------------------------------------
+       HEADER DASHBOARD
+       ----------------------------------------------------- */
+
+  .superadmin-layout .dashboard-header {
+    width: 100%;
+    max-width: 100%;
+
+    padding-left: 0;
+    padding-right: 0;
+
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .superadmin-layout .dashboard-header h3 {
+    font-size: 1.18rem;
+    line-height: 1.35;
+  }
+
+  .superadmin-layout .dashboard-header p {
+    font-size: 0.82rem;
+  }
+
+  /* -----------------------------------------------------
+       STATISTIK - 2 KOLOM
+       ----------------------------------------------------- */
+
+  .superadmin-layout .stat-row {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+
+    margin-left: 0;
+    margin-right: 0;
+
+    --bs-gutter-x: 0.55rem;
+    --bs-gutter-y: 0.55rem;
+  }
+
+  .superadmin-layout .stat-row > [class*="col-"] {
+    width: 50%;
+    max-width: 50%;
+    min-width: 0;
+
+    flex: 0 0 50%;
+
+    padding-left: 0.275rem;
+    padding-right: 0.275rem;
+
+    box-sizing: border-box;
+  }
+
+  .superadmin-layout .stat-card {
+    width: 100%;
+    max-width: 100%;
+    height: 100%;
+
+    border-radius: 10px;
+  }
+
+  .superadmin-layout .stat-card .card-body {
+    min-height: 78px;
+    padding: 0.7rem;
+  }
+
+  .superadmin-layout .stat-card .stat-label {
+    max-width: 100%;
+
+    font-size: 0.71rem;
+    line-height: 1.25;
+
+    margin-bottom: 0.2rem !important;
+  }
+
+  .superadmin-layout .stat-card .stat-value {
+    font-size: 1.28rem;
+    line-height: 1.2;
+  }
+
+  .superadmin-layout .stat-card .stat-icon {
+    font-size: 1.3rem;
+    line-height: 1;
+  }
+
+  /* -----------------------------------------------------
+       PANEL BAWAH
+       ----------------------------------------------------- */
+
+  .superadmin-layout .content-row {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+
+    margin-left: 0;
+    margin-right: 0;
+
+    margin-top: 0.75rem !important;
+
+    --bs-gutter-x: 0;
+    --bs-gutter-y: 0.75rem;
+  }
+
+  .superadmin-layout .content-row > [class*="col-"] {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+
+    flex: 0 0 100%;
+
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .superadmin-layout .dashboard-card {
+    width: 100%;
+    max-width: 100%;
+
+    border-radius: 10px;
+    overflow: hidden;
+  }
+
+  .superadmin-layout .dashboard-card .card-header {
+    padding: 0.75rem 0.8rem;
+  }
+
+  .superadmin-layout .dashboard-card .card-header h5 {
+    font-size: 0.94rem;
+    line-height: 1.3;
+  }
+
+  /* =====================================================
+       SEKOLAH TERBARU
+       TABLE -> MOBILE LIST
+       ===================================================== */
+
+  .superadmin-layout .school-table {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+
+    margin-bottom: 0;
+
+    border: 0;
+
+    box-sizing: border-box;
+  }
+
+  .superadmin-layout .school-table thead {
+    display: none;
+  }
+
+  .superadmin-layout .school-table tbody {
+    display: block;
+
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+  }
+
+  .superadmin-layout .school-table tbody tr {
+    position: relative;
+
+    display: block;
+
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+
+    padding: 0.75rem 0.85rem;
+
+    border-bottom: 1px solid #e9ecef;
+
+    background: #fff;
+
+    box-sizing: border-box;
+  }
+
+  .superadmin-layout .school-table tbody tr:last-child {
+    border-bottom: 0;
+  }
+
+  /* Cell */
+
+  .superadmin-layout .school-table tbody td {
+    display: block;
+
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+
+    padding: 0;
+
+    border: 0;
+
+    box-sizing: border-box;
+
+    text-align: left;
+  }
+
+  /* Nama sekolah */
+
+  .superadmin-layout .school-table tbody td:nth-child(1) {
+    width: calc(100% - 60px);
+
+    padding-right: 0.25rem;
+
+    font-size: 0.84rem;
+    font-weight: 600;
+    line-height: 1.35;
+  }
+
+  /* Jenjang */
+
+  .superadmin-layout .school-table tbody td:nth-child(2) {
+    width: calc(100% - 60px);
+
+    margin-top: 0.2rem;
+
+    color: #6c757d;
+
+    font-size: 0.72rem;
+    line-height: 1.35;
+  }
+
+  /* Status */
+
+  .superadmin-layout .school-table tbody td:nth-child(3) {
+    position: absolute;
+
+    top: 0.75rem;
+    right: 0.85rem;
+
+    width: auto;
+
+    display: block;
+
+    text-align: right;
+  }
+
+  /* Hilangkan label pseudo */
+
+  .superadmin-layout .school-table tbody td::before {
+    display: none !important;
+  }
+
+  /* Badge */
+
+  .superadmin-layout .school-table .badge {
+    display: inline-block;
+
+    padding: 0.25rem 0.4rem;
+
+    border-radius: 5px;
+
+    font-size: 0.65rem;
+    font-weight: 500;
+
+    white-space: nowrap;
+  }
+
+  /* Tabel kosong */
+
+  .superadmin-layout .school-table tbody tr td[colspan] {
+    position: static;
+
+    display: block;
+
+    width: 100%;
+    max-width: 100%;
+
+    padding: 1.5rem 0.75rem;
+
+    color: #6c757d;
+
+    font-size: 0.78rem;
+
+    text-align: center;
+  }
+
+  /* =====================================================
+       LANGGANAN AKAN BERAKHIR
+       ===================================================== */
+
+  .superadmin-layout .subscription-item {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 0.65rem;
+
+    padding: 0.75rem 0 !important;
+
+    box-sizing: border-box;
+  }
+
+  .superadmin-layout .subscription-item > div:first-child {
+    min-width: 0;
+    flex: 1 1 auto;
+  }
+
+  .superadmin-layout .subscription-item > div:last-child {
+    flex: 0 0 auto;
+
+    text-align: right;
+  }
+
+  .superadmin-layout .subscription-item .school-name {
+    max-width: 100%;
+
+    font-size: 0.82rem;
+    line-height: 1.3;
+  }
+
+  .superadmin-layout .subscription-item small {
+    font-size: 0.72rem;
+  }
+
+  .superadmin-layout .subscription-item .subscription-date {
+    font-size: 0.7rem;
+  }
+
+  .superadmin-layout .subscription-item .badge {
+    padding: 0.25rem 0.4rem;
+
+    font-size: 0.66rem;
+  }
+
+  /* =====================================================
+       EMPTY STATE
+       ===================================================== */
+
+  .superadmin-layout .empty-state {
+    padding: 1.5rem 0.75rem !important;
+
+    font-size: 0.8rem;
+    line-height: 1.4;
+  }
+
+  .superadmin-layout .empty-state i {
+    font-size: 1.7rem !important;
+  }
+
+  /* =====================================================
+       NAVBAR
+       Navbar tetap shared dengan Admin Sekolah
+       ===================================================== */
+
+  .superadmin-layout .app-header {
+    width: 100%;
+    max-width: 100%;
+
+    min-height: 56px;
+  }
+
+  .superadmin-layout .app-header .container-fluid {
+    width: 100%;
+    max-width: 100%;
+
+    padding-left: 0.3rem;
+    padding-right: 0.3rem;
+
+    box-sizing: border-box;
+  }
+
+  .superadmin-layout .app-header .navbar-brand {
+    margin-left: 0.1rem;
+
+    font-size: 0.9rem;
+
+    white-space: nowrap;
+  }
+
+  .superadmin-layout .app-header .nav-link {
+    min-width: 42px;
+    min-height: 44px;
+
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    padding-left: 0.55rem;
+    padding-right: 0.55rem;
+  }
+
+  .superadmin-layout .app-header .navbar-nav.ms-auto .nav-link {
+    max-width: 100px;
+
+    overflow: hidden;
+
+    text-overflow: ellipsis;
+
+    white-space: nowrap;
+  }
+
+  /* =====================================================
+       SIDEBAR
+       ===================================================== */
+
+  .superadmin-layout .app-sidebar {
+    width: 270px;
+    max-width: 85vw;
+  }
+
+  .superadmin-layout .app-sidebar .sidebar-brand {
+    width: 100%;
+
+    height: 56px;
+    min-height: 56px;
+  }
+
+  .superadmin-layout .app-sidebar .brand-text {
+    font-size: 0.95rem;
+  }
+
+  .superadmin-layout .sidebar-menu .nav-link {
+    min-height: 44px;
+
+    display: flex;
+
+    align-items: center;
+
+    padding: 0.65rem 1rem;
+  }
+
+  .superadmin-layout .sidebar-menu .nav-icon {
+    width: 1.5rem;
+
+    margin-right: 0.35rem;
+
+    font-size: 1rem;
+  }
+
+  .superadmin-layout .sidebar-menu .nav-link p {
+    margin-bottom: 0;
+
+    font-size: 0.86rem;
+  }
+
+  .superadmin-layout .sidebar-menu .nav-header {
+    padding: 0.85rem 1rem 0.4rem;
+
+    font-size: 0.68rem;
+  }
+}
+
+/* =========================================================
+   9. HP SANGAT KECIL - <= 380px
+   ========================================================= */
+
+@media (max-width: 380px) {
+  /* Statistik */
+
+  .superadmin-layout .stat-card .stat-icon {
+    display: none;
+  }
+
+  .superadmin-layout .stat-card .stat-value {
+    font-size: 1.2rem;
+  }
+
+  .superadmin-layout .stat-card .stat-label {
+    font-size: 0.69rem;
+  }
+
+  /* Navbar */
+
+  .superadmin-layout .app-header .navbar-brand {
+    font-size: 0.88rem;
+  }
+
+  .superadmin-layout .app-header .navbar-nav.ms-auto .nav-link {
+    max-width: 95px;
+  }
+
+  /* Sekolah terbaru */
+
+  .superadmin-layout .school-table tbody tr {
+    padding-left: 0.7rem;
+    padding-right: 0.7rem;
+  }
+
+  .superadmin-layout .school-table tbody td:nth-child(1),
+  .superadmin-layout .school-table tbody td:nth-child(2) {
+    width: calc(100% - 55px);
+  }
+
+  .superadmin-layout .school-table tbody td:nth-child(1) {
+    font-size: 0.8rem;
+  }
+
+  .superadmin-layout .school-table tbody td:nth-child(2) {
+    font-size: 0.69rem;
+  }
+
+  .superadmin-layout .school-table tbody td:nth-child(3) {
+    right: 0.7rem;
+  }
+}

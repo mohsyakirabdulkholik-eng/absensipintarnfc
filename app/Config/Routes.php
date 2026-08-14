@@ -13,6 +13,39 @@ $routes->get('kelas/list', 'Admin\KelasController::list');
 $routes->get('/register', 'Auth\AuthController::register');
 $routes->post('/register/store', 'Auth\AuthController::storeRegister');
 
+$routes->group('superadmin', ['filter' => ['auth', 'superadmin']], function ($routes) {
+
+    $routes->get('/', 'Superadmin\DashboardController::index');
+    $routes->get('dashboard', 'Superadmin\DashboardController::index');
+    $routes->get('sekolah', 'Superadmin\SekolahController::index' );
+    $routes->get('sekolah/detail/(:num)', 'Superadmin\SekolahController::detail/$1');
+    $routes->post('sekolah/langganan/aktifkan',   'Superadmin\SekolahController::activateSubscription');
+    $routes->post('sekolah/langganan/perpanjang', 'Superadmin\SekolahController::extendSubscription');
+    // langganan
+    $routes->get('langganan', 'Superadmin\LanggananController::index');
+    // pembayaran
+    $routes->get(
+        'pembayaran',
+        'Superadmin\PembayaranController::index'
+    );
+
+    $routes->get(
+        'pembayaran/detail/(:num)',
+        'Superadmin\PembayaranController::detail/$1'
+    );
+
+    $routes->post(
+        'pembayaran/approve/(:num)',
+        'Superadmin\PembayaranController::approve/$1'
+    );
+
+    $routes->post(
+        'pembayaran/reject/(:num)',
+        'Superadmin\PembayaranController::reject/$1'
+    );
+
+});
+
 $routes->group('', ['filter' => 'auth'], function ($routes) {
     
     //  route ke profile
@@ -29,104 +62,104 @@ $routes->group('', ['filter' => 'auth'], function ($routes) {
 
     $routes->get('dashboard', 'Admin\DashboardController::index');
 
-        $routes->group('jurusan', function ($routes) {
+        $routes->group('jurusan', ['filter' => 'subscription'], function ($routes) {
             $routes->get('/', 'Admin\JurusanController::index');
             $routes->get('data', 'Admin\JurusanController::getData');
             $routes->post('store', 'Admin\JurusanController::store');
             $routes->get('show/(:num)', 'Admin\JurusanController::show/$1');
             $routes->post('update/(:num)', 'Admin\JurusanController::update/$1');
             $routes->delete('delete/(:num)', 'Admin\JurusanController::delete/$1');
-    });
-     $routes->group('kelas', function ($routes) {
-        $routes->get('/', 'Admin\KelasController::index');
-        $routes->get('data', 'Admin\KelasController::getData');
-        $routes->post('store', 'Admin\KelasController::store');
-        
-        $routes->get('show/(:num)', 'Admin\KelasController::show/$1');
-        $routes->post('update/(:num)', 'Admin\KelasController::update/$1');
-        $routes->delete('delete/(:num)', 'Admin\KelasController::delete/$1');
-    });
+        });
+        $routes->group('kelas', ['filter' => 'subscription'], function ($routes) {
+            $routes->get('/', 'Admin\KelasController::index');
+            $routes->get('data', 'Admin\KelasController::getData');
+            $routes->post('store', 'Admin\KelasController::store');
+            
+            $routes->get('show/(:num)', 'Admin\KelasController::show/$1');
+            $routes->post('update/(:num)', 'Admin\KelasController::update/$1');
+            $routes->delete('delete/(:num)', 'Admin\KelasController::delete/$1');
+        });
 
-    $routes->group('guru', function ($routes) {
+        $routes->group('guru', ['filter' => 'subscription'], function ($routes) {
 
-        $routes->get('/', 'Admin\GuruController::index');
-        $routes->get('data', 'Admin\GuruController::getData');
-        $routes->post('store', 'Admin\GuruController::store');
-        $routes->get('show/(:num)', 'Admin\GuruController::show/$1');
-        $routes->post('update/(:num)', 'Admin\GuruController::update/$1');
-        $routes->delete('delete/(:num)', 'Admin\GuruController::delete/$1');
-        $routes->post('import', 'Admin\GuruController::import');
-        $routes->get('template', 'Admin\GuruController::template');
-        $routes->post('import/store', 'Admin\GuruController::storeImport');
+            $routes->get('/', 'Admin\GuruController::index');
+            $routes->get('data', 'Admin\GuruController::getData');
+            $routes->post('store', 'Admin\GuruController::store');
+            $routes->get('show/(:num)', 'Admin\GuruController::show/$1');
+            $routes->post('update/(:num)', 'Admin\GuruController::update/$1');
+            $routes->delete('delete/(:num)', 'Admin\GuruController::delete/$1');
+            $routes->post('import', 'Admin\GuruController::import');
+            $routes->get('template', 'Admin\GuruController::template');
+            $routes->post('import/store', 'Admin\GuruController::storeImport');
 
-    });
-    $routes->group('siswa', function ($routes) {
+        });
+        $routes->group('siswa', ['filter' => 'subscription'], function ($routes) {
 
-        $routes->get('/', 'Admin\SiswaController::index');
-        $routes->get('data', 'Admin\SiswaController::getData');
-        $routes->post('store', 'Admin\SiswaController::store');
-        $routes->get('show/(:num)', 'Admin\SiswaController::show/$1');
-        $routes->post('update/(:num)', 'Admin\SiswaController::update/$1');
-        $routes->delete('delete/(:num)', 'Admin\SiswaController::delete/$1');
-        $routes->post('import', 'Admin\SiswaController::import');
-        $routes->get('template', 'Admin\SiswaController::template');
-        $routes->post('import/store', 'Admin\SiswaController::storeImport');
+            $routes->get('/', 'Admin\SiswaController::index');
+            $routes->get('data', 'Admin\SiswaController::getData');
+            $routes->post('store', 'Admin\SiswaController::store');
+            $routes->get('show/(:num)', 'Admin\SiswaController::show/$1');
+            $routes->post('update/(:num)', 'Admin\SiswaController::update/$1');
+            $routes->delete('delete/(:num)', 'Admin\SiswaController::delete/$1');
+            $routes->post('import', 'Admin\SiswaController::import');
+            $routes->get('template', 'Admin\SiswaController::template');
+            $routes->post('import/store', 'Admin\SiswaController::storeImport');
 
-    });
-    $routes->group('tahunajaran', function ($routes) {
-        $routes->get('/', 'Admin\TahunAjaranController::index');
-        $routes->get('getData', 'Admin\TahunAjaranController::getData');
-        $routes->get('show/(:num)', 'Admin\TahunAjaranController::show/$1');
-        $routes->post('store', 'Admin\TahunAjaranController::store');
-        $routes->post('update/(:num)', 'Admin\TahunAjaranController::update/$1');
-        $routes->post('delete/(:num)', 'Admin\TahunAjaranController::delete/$1');
-        $routes->post('setAktif/(:num)', 'Admin\TahunAjaranController::setAktif/$1');
+        });
+        $routes->group('tahunajaran', ['filter' => 'subscription'], function ($routes) {
+            $routes->get('/', 'Admin\TahunAjaranController::index');
+            $routes->get('getData', 'Admin\TahunAjaranController::getData');
+            $routes->get('show/(:num)', 'Admin\TahunAjaranController::show/$1');
+            $routes->post('store', 'Admin\TahunAjaranController::store');
+            $routes->post('update/(:num)', 'Admin\TahunAjaranController::update/$1');
+            $routes->post('delete/(:num)', 'Admin\TahunAjaranController::delete/$1');
+            $routes->post('setAktif/(:num)', 'Admin\TahunAjaranController::setAktif/$1');
 
-    });
-    $routes->group('semester', function ($routes) {
-        $routes->get('/', 'Admin\SemesterController::index');
-        $routes->get('getData', 'Admin\SemesterController::getData');
-        $routes->get('show/(:num)', 'Admin\SemesterController::show/$1');
-        $routes->post('store', 'Admin\SemesterController::store');
-        $routes->post('update/(:num)', 'Admin\SemesterController::update/$1');
-        $routes->post('delete/(:num)', 'Admin\SemesterController::delete/$1');
-        $routes->post('setAktif/(:num)', 'Admin\SemesterController::setAktif/$1');
+        });
+        $routes->group('semester', ['filter' => 'subscription'], function ($routes) {
+            $routes->get('/', 'Admin\SemesterController::index');
+            $routes->get('getData', 'Admin\SemesterController::getData');
+            $routes->get('show/(:num)', 'Admin\SemesterController::show/$1');
+            $routes->post('store', 'Admin\SemesterController::store');
+            $routes->post('update/(:num)', 'Admin\SemesterController::update/$1');
+            $routes->post('delete/(:num)', 'Admin\SemesterController::delete/$1');
+            $routes->post('setAktif/(:num)', 'Admin\SemesterController::setAktif/$1');
 
-    });
+        });
 
-    $routes->group('harilibur', static function ($routes) {
-        $routes->get('/', 'Admin\HariLiburController::index');
-        $routes->get('getData', 'Admin\HariLiburController::getData');
-        $routes->get('show/(:num)', 'Admin\HariLiburController::show/$1');
-        $routes->post('store', 'Admin\HariLiburController::store');
-        $routes->post('update/(:num)', 'Admin\HariLiburController::update/$1');
-        $routes->post('delete/(:num)', 'Admin\HariLiburController::delete/$1');
+        $routes->group('harilibur', ['filter' => 'subscription'], static function ($routes) {
+            $routes->get('/', 'Admin\HariLiburController::index');
+            $routes->get('getData', 'Admin\HariLiburController::getData');
+            $routes->get('show/(:num)', 'Admin\HariLiburController::show/$1');
+            $routes->post('store', 'Admin\HariLiburController::store');
+            $routes->post('update/(:num)', 'Admin\HariLiburController::update/$1');
+            $routes->post('delete/(:num)', 'Admin\HariLiburController::delete/$1');
 
-    });
-    // route menuju perangkat
-    $routes->group('perangkat', function ($routes) {
-        $routes->get('/', 'Admin\PerangkatController::index');
-        $routes->get('data', 'Admin\PerangkatController::getData');
-        $routes->post('save', 'Admin\PerangkatController::save');
-         $routes->get('detail/(:num)', 'Admin\PerangkatController::detail/$1');
-        $routes->get('edit/(:num)', 'Admin\PerangkatController::edit/$1');
-        $routes->post('delete/(:num)', 'Admin\PerangkatController::delete/$1');
-        $routes->post('regenerate-token/(:num)', 'Admin\PerangkatController::regenerateToken/$1');
-        $routes->post('reset-device/(:num)', 'Admin\PerangkatController::resetDevice/$1');
-        $routes->post('toggle-status/(:num)', 'Admin\PerangkatController::toggleStatus/$1');
-    });
+        });
+        // route menuju perangkat
+        $routes->group('perangkat', ['filter' => 'subscription'], function ($routes) {
+            $routes->get('/', 'Admin\PerangkatController::index');
+            $routes->get('data', 'Admin\PerangkatController::getData');
+            $routes->post('save', 'Admin\PerangkatController::save');
+            $routes->get('detail/(:num)', 'Admin\PerangkatController::detail/$1');
+            $routes->get('edit/(:num)', 'Admin\PerangkatController::edit/$1');
+            $routes->post('delete/(:num)', 'Admin\PerangkatController::delete/$1');
+            $routes->post('regenerate-token/(:num)', 'Admin\PerangkatController::regenerateToken/$1');
+            $routes->post('reset-device/(:num)', 'Admin\PerangkatController::resetDevice/$1');
+            $routes->post('toggle-status/(:num)', 'Admin\PerangkatController::toggleStatus/$1');
+        });
 
       // Halaman utama
-    $routes->get('kartu-nfc','Admin\KartuNfcController::index');
+    $routes->get('kartu-nfc','Admin\KartuNfcController::index', ['filter' => 'subscription']);
 
     // Data untuk DataTable
-    $routes->get('kartu-nfc/data', 'Admin\KartuNfcController::data');
+    $routes->get('kartu-nfc/data', 'Admin\KartuNfcController::data', ['filter' => 'subscription'],);
 
     // Detail kartu
-    $routes->get('kartu-nfc/detail/(:num)',  'Admin\KartuNfcController::detail/$1');
+    $routes->get('kartu-nfc/detail/(:num)',  'Admin\KartuNfcController::detail/$1', ['filter' => 'subscription'],);
 
     // Update status kartu
-    $routes->post('kartu-nfc/status/(:num)','Admin\KartuNfcController::updateStatus/$1' );
+    $routes->post('kartu-nfc/status/(:num)','Admin\KartuNfcController::updateStatus/$1', ['filter' => 'subscription'], );
 
 
     /*
@@ -134,7 +167,7 @@ $routes->group('', ['filter' => 'auth'], function ($routes) {
 | Pengaturan Absensi
 |--------------------------------------------------------------------------
 */
-    $routes->group('pengaturanabsensi', static function ($routes) {
+    $routes->group('pengaturanabsensi', ['filter' => 'subscription'], static function ($routes) {
 
         $routes->get('/', 'Admin\PengaturanAbsensiController::index');
         $routes->get('getData', 'Admin\PengaturanAbsensiController::getData');
@@ -150,41 +183,20 @@ $routes->group('', ['filter' => 'auth'], function ($routes) {
     /*
      * Kehadiran
      */
-    $routes->get(
-        'kehadiran',
-        'Admin\KehadiranController::index'
-    );
-
-    $routes->get(
-        'kehadiran/data',
-        'Admin\KehadiranController::getData'
-    );
+    $routes->get('kehadiran', 'Admin\KehadiranController::index', ['filter' => 'subscription']);
+    $routes->get('kehadiran/data', 'Admin\KehadiranController::getData', ['filter' => 'subscription'] );
      /*
      * Rekap Kehadiran
     */
-    $routes->get(
-        'rekap-kehadiran',
-        'Admin\RekapKehadiranController::index'
-    );
-
-    $routes->get(
-        'rekap-kehadiran/data',
-        'Admin\RekapKehadiranController::getData'
-    );
-    $routes->get(
-        'rekap-kehadiran/detail',
-        'Admin\RekapKehadiranController::detail'
-    );
-    $routes->get(
-        'rekap-kehadiran/export-excel',
-        'Admin\RekapKehadiranController::exportExcel'
-    );
-
-    $routes->post(
-        'kehadiran/cancel-guru-checkout',
-        'Admin\KehadiranController::cancelGuruCheckout'
-    );
-
+    $routes->get('rekap-kehadiran','Admin\RekapKehadiranController::index', ['filter' => 'subscription'] );
+    $routes->get('rekap-kehadiran/data', 'Admin\RekapKehadiranController::getData', ['filter' => 'subscription']);
+    $routes->get('rekap-kehadiran/detail', 'Admin\RekapKehadiranController::detail', ['filter' => 'subscription'] );
+    $routes->get( 'rekap-kehadiran/export-excel', 'Admin\RekapKehadiranController::exportExcel' , ['filter' => 'subscription'] );
+    $routes->post('kehadiran/cancel-guru-checkout', 'Admin\KehadiranController::cancelGuruCheckout', ['filter' => 'subscription'] );
+    // payment atau pembayaran
+    $routes->get('pembayaran', 'Admin\PembayaranController::index');
+    $routes->post('pembayaran', 'Admin\PembayaranController::store');
+// penutup admin
 });
 
 // route ke API Device

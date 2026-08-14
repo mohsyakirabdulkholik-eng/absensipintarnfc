@@ -61,6 +61,9 @@ switch ($uri) {
     case 'rekap-kehadiran':
         echo '<script src="'.base_url('assets/js/rekap-kehadiran.js').'"></script>';
         break;
+    case 'superadmin':
+        echo '<script src="'.base_url('assets/js/superadmin.js').'"></script>';
+        break;
 
 
 } 
