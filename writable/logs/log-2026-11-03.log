@@ -1,0 +1,197 @@
+DEBUG - 2026-11-03 05:56:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-03 05:56:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-03 05:56:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-03 05:57:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-03 05:57:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-03 05:57:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2026-11-03 06:32:44 --> ErrorException: Namespace declaration statement has to be the very first statement or after any declare call in the script
+[Method: GET, Route: api/soal/1/pilihan]
+in APPPATH\Controllers\Api\PilihanJawabanController.php on line 4.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2026-11-03 06:33:10 --> ErrorException: Namespace declaration statement has to be the very first statement or after any declare call in the script
+[Method: GET, Route: api/soal/1/pilihan]
+in APPPATH\Controllers\Api\PilihanJawabanController.php on line 4.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2026-11-03 06:34:48 --> ErrorException: Namespace declaration statement has to be the very first statement or after any declare call in the script
+[Method: GET, Route: api/soal/1/pilihan]
+in APPPATH\Controllers\Api\PilihanJawabanController.php on line 4.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2026-11-03 06:37:23 --> ErrorException: Namespace declaration statement has to be the very first statement or after any declare call in the script
+[Method: GET, Route: api/soal/1/pilihan]
+in APPPATH\Services\PilihanJawabanService.php on line 4.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2026-11-03 06:38:19 --> Error: Class "App\Models\PilihanJawabanModel" not found
+[Method: GET, Route: api/soal/1/pilihan]
+in APPPATH\Repositories\PilihanJawabanRepository.php on line 13.
+ 1 APPPATH\Services\PilihanJawabanService.php(16): App\Repositories\PilihanJawabanRepository->__construct()
+ 2 APPPATH\Controllers\Api\PilihanJawabanController.php(18): App\Services\PilihanJawabanService->__construct()
+ 3 SYSTEMPATH\CodeIgniter.php(944): App\Controllers\Api\PilihanJawabanController->__construct()
+ 4 SYSTEMPATH\CodeIgniter.php(511): CodeIgniter\CodeIgniter->createController()
+ 5 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-11-03 06:40:07 --> Error: Class "App\Models\PilihanJawabanModel" not found
+[Method: GET, Route: api/soal/1/pilihan]
+in APPPATH\Repositories\PilihanJawabanRepository.php on line 13.
+ 1 APPPATH\Services\PilihanJawabanService.php(16): App\Repositories\PilihanJawabanRepository->__construct()
+ 2 APPPATH\Controllers\Api\PilihanJawabanController.php(18): App\Services\PilihanJawabanService->__construct()
+ 3 SYSTEMPATH\CodeIgniter.php(944): App\Controllers\Api\PilihanJawabanController->__construct()
+ 4 SYSTEMPATH\CodeIgniter.php(511): CodeIgniter\CodeIgniter->createController()
+ 5 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-11-03 06:40:31 --> Error: Class "App\Models\PilihanJawabanModel" not found
+[Method: POST, Route: api/soal/1/pilihan]
+in APPPATH\Repositories\PilihanJawabanRepository.php on line 13.
+ 1 APPPATH\Services\PilihanJawabanService.php(16): App\Repositories\PilihanJawabanRepository->__construct()
+ 2 APPPATH\Controllers\Api\PilihanJawabanController.php(18): App\Services\PilihanJawabanService->__construct()
+ 3 SYSTEMPATH\CodeIgniter.php(944): App\Controllers\Api\PilihanJawabanController->__construct()
+ 4 SYSTEMPATH\CodeIgniter.php(511): CodeIgniter\CodeIgniter->createController()
+ 5 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-11-03 06:40:40 --> Error: Class "App\Models\PilihanJawabanModel" not found
+[Method: GET, Route: api/soal/1/pilihan]
+in APPPATH\Repositories\PilihanJawabanRepository.php on line 13.
+ 1 APPPATH\Services\PilihanJawabanService.php(16): App\Repositories\PilihanJawabanRepository->__construct()
+ 2 APPPATH\Controllers\Api\PilihanJawabanController.php(18): App\Services\PilihanJawabanService->__construct()
+ 3 SYSTEMPATH\CodeIgniter.php(944): App\Controllers\Api\PilihanJawabanController->__construct()
+ 4 SYSTEMPATH\CodeIgniter.php(511): CodeIgniter\CodeIgniter->createController()
+ 5 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-11-03 06:45:44 --> Error: Class "App\Models\PilihanJawabanModel" not found
+[Method: GET, Route: api/soal/1/pilihan]
+in APPPATH\Repositories\PilihanJawabanRepository.php on line 13.
+ 1 APPPATH\Services\PilihanJawabanService.php(16): App\Repositories\PilihanJawabanRepository->__construct()
+ 2 APPPATH\Controllers\Api\PilihanJawabanController.php(18): App\Services\PilihanJawabanService->__construct()
+ 3 SYSTEMPATH\CodeIgniter.php(944): App\Controllers\Api\PilihanJawabanController->__construct()
+ 4 SYSTEMPATH\CodeIgniter.php(511): CodeIgniter\CodeIgniter->createController()
+ 5 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-11-03 07:52:32 --> Error: Class "App\Models\PilihanJawabanModel" not found
+[Method: GET, Route: api/soal/1/pilihan]
+in APPPATH\Repositories\PilihanJawabanRepository.php on line 13.
+ 1 APPPATH\Services\PilihanJawabanService.php(16): App\Repositories\PilihanJawabanRepository->__construct()
+ 2 APPPATH\Controllers\Api\PilihanJawabanController.php(18): App\Services\PilihanJawabanService->__construct()
+ 3 SYSTEMPATH\CodeIgniter.php(944): App\Controllers\Api\PilihanJawabanController->__construct()
+ 4 SYSTEMPATH\CodeIgniter.php(511): CodeIgniter\CodeIgniter->createController()
+ 5 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-11-03 07:52:39 --> Error: Class "App\Models\PilihanJawabanModel" not found
+[Method: GET, Route: api/soal/1/pilihan]
+in APPPATH\Repositories\PilihanJawabanRepository.php on line 13.
+ 1 APPPATH\Services\PilihanJawabanService.php(16): App\Repositories\PilihanJawabanRepository->__construct()
+ 2 APPPATH\Controllers\Api\PilihanJawabanController.php(18): App\Services\PilihanJawabanService->__construct()
+ 3 SYSTEMPATH\CodeIgniter.php(944): App\Controllers\Api\PilihanJawabanController->__construct()
+ 4 SYSTEMPATH\CodeIgniter.php(511): CodeIgniter\CodeIgniter->createController()
+ 5 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-11-03 07:53:49 --> Error: Class "App\Models\PilihanJawabanModel" not found
+[Method: GET, Route: api/soal/1/pilihan]
+in APPPATH\Repositories\PilihanJawabanRepository.php on line 13.
+ 1 APPPATH\Services\PilihanJawabanService.php(16): App\Repositories\PilihanJawabanRepository->__construct()
+ 2 APPPATH\Controllers\Api\PilihanJawabanController.php(18): App\Services\PilihanJawabanService->__construct()
+ 3 SYSTEMPATH\CodeIgniter.php(944): App\Controllers\Api\PilihanJawabanController->__construct()
+ 4 SYSTEMPATH\CodeIgniter.php(511): CodeIgniter\CodeIgniter->createController()
+ 5 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-11-03 11:06:01 --> Error: Class "App\Models\PesertaUjianModel" not found
+[Method: POST, Route: api/ujian/1/peserta/register]
+in APPPATH\Repositories\PesertaUjianRepository.php on line 15.
+ 1 APPPATH\Services\PesertaUjianService.php(16): App\Repositories\PesertaUjianRepository->__construct()
+ 2 APPPATH\Controllers\Api\PesertaUjianController.php(21): App\Services\PesertaUjianService->__construct()
+ 3 SYSTEMPATH\CodeIgniter.php(944): App\Controllers\Api\PesertaUjianController->__construct()
+ 4 SYSTEMPATH\CodeIgniter.php(511): CodeIgniter\CodeIgniter->createController()
+ 5 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-11-03 11:43:50 --> ArgumentCountError: Too few arguments to function App\Controllers\Api\UjianController::activate(), 0 passed in C:\xampp\htdocs\absensipintar\system\CodeIgniter.php on line 974 and exactly 1 expected
+[Method: POST, Route: api/ujian/1/activate]
+in APPPATH\Controllers\Api\UjianController.php on line 311.
+ 1 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\Api\UjianController->activate()
+ 2 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Api\UjianController))
+ 3 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-11-03 15:12:47 --> Error: Class "App\Controllers\Api\BaseApiController" not found
+[Method: POST, Route: api/peserta-ujian/1/selesai]
+in APPPATH\Controllers\Api\HasilUjianController.php on line 9.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(340): include_once()
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(320): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp\\htdocs\\absensipintar\\app\\Controllers\\Api\\HasilUjianController.php')
+ 3 SYSTEMPATH\Autoloader\Autoloader.php(296): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Api\\HasilUjianController')
+ 4 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Api\\HasilUjianController')
+ 5 SYSTEMPATH\Router\Router.php(790): class_exists('\\App\\Controllers\\Api\\HasilUjianController')
+ 6 SYSTEMPATH\Router\Router.php(228): CodeIgniter\Router\Router->processRouteAttributes()
+ 7 SYSTEMPATH\CodeIgniter.php(852): CodeIgniter\Router\Router->handle('api/peserta-ujian/1/selesai')
+ 8 SYSTEMPATH\CodeIgniter.php(464): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+ 9 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-11-03 15:15:20 --> Error: Class "App\Controllers\Api\BaseController" not found
+[Method: POST, Route: api/peserta-ujian/1/selesai]
+in APPPATH\Controllers\Api\HasilUjianController.php on line 9.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(340): include_once()
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(320): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp\\htdocs\\absensipintar\\app\\Controllers\\Api\\HasilUjianController.php')
+ 3 SYSTEMPATH\Autoloader\Autoloader.php(296): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Api\\HasilUjianController')
+ 4 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Api\\HasilUjianController')
+ 5 SYSTEMPATH\Router\Router.php(790): class_exists('\\App\\Controllers\\Api\\HasilUjianController')
+ 6 SYSTEMPATH\Router\Router.php(228): CodeIgniter\Router\Router->processRouteAttributes()
+ 7 SYSTEMPATH\CodeIgniter.php(852): CodeIgniter\Router\Router->handle('api/peserta-ujian/1/selesai')
+ 8 SYSTEMPATH\CodeIgniter.php(464): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+ 9 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-11-03 15:16:16 --> Error: Class "App\Controllers\Api\BaseController" not found
+[Method: POST, Route: api/peserta-ujian/1/selesai]
+in APPPATH\Controllers\Api\HasilUjianController.php on line 9.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(340): include_once()
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(320): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp\\htdocs\\absensipintar\\app\\Controllers\\Api\\HasilUjianController.php')
+ 3 SYSTEMPATH\Autoloader\Autoloader.php(296): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Api\\HasilUjianController')
+ 4 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Api\\HasilUjianController')
+ 5 SYSTEMPATH\Router\Router.php(790): class_exists('\\App\\Controllers\\Api\\HasilUjianController')
+ 6 SYSTEMPATH\Router\Router.php(228): CodeIgniter\Router\Router->processRouteAttributes()
+ 7 SYSTEMPATH\CodeIgniter.php(852): CodeIgniter\Router\Router->handle('api/peserta-ujian/1/selesai')
+ 8 SYSTEMPATH\CodeIgniter.php(464): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+ 9 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-11-03 16:00:54 --> Error: Class "App\Controllers\Api\BaseController" not found
+[Method: POST, Route: api/peserta-ujian/1/selesai]
+in APPPATH\Controllers\Api\HasilUjianController.php on line 9.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(340): include_once()
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(320): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp\\htdocs\\absensipintar\\app\\Controllers\\Api\\HasilUjianController.php')
+ 3 SYSTEMPATH\Autoloader\Autoloader.php(296): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Api\\HasilUjianController')
+ 4 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Api\\HasilUjianController')
+ 5 SYSTEMPATH\Router\Router.php(790): class_exists('\\App\\Controllers\\Api\\HasilUjianController')
+ 6 SYSTEMPATH\Router\Router.php(228): CodeIgniter\Router\Router->processRouteAttributes()
+ 7 SYSTEMPATH\CodeIgniter.php(852): CodeIgniter\Router\Router->handle('api/peserta-ujian/1/selesai')
+ 8 SYSTEMPATH\CodeIgniter.php(464): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+ 9 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2026-11-03 16:07:00 --> [HasilUjianController] Call to undefined method App\Controllers\Api\HasilUjianController::getDevice()
+DEBUG - 2026-11-03 16:15:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-03 16:15:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-03 16:15:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-03 16:15:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-03 16:15:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-03 16:15:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.

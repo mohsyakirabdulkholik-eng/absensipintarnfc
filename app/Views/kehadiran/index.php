@@ -312,7 +312,7 @@
                         <th>
                             Keterangan
                         </th>
-                        <th width="10%">
+                        <th width="8%">
                             Aksi
                         </th>
 

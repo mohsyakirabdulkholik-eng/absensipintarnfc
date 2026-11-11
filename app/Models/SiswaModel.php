@@ -19,6 +19,7 @@ class SiswaModel extends Model
         'id_kelas',
         'id_jurusan',
         'nis',
+        'password',
         'nisn',
         'nama_siswa',
         'jenis_kelamin',

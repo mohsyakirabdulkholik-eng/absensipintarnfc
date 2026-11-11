@@ -86,7 +86,86 @@ class KehadiranService
         return $data;
     }
 
+/**
+ * Simpan kehadiran manual siswa.
+ *
+ * Digunakan untuk menandai siswa sebagai:
+ * - sakit
+ * - izin
+ * - alpa
+ *
+ * Tidak mengubah proses absensi NFC.
+ */
+public function saveStudentManualAttendance(
+    int $idSekolah,
+    int $idKartuNfc,
+    string $tanggal,
+    string $status,
+    ?string $keterangan = null
+): bool {
+    /*
+     * Status yang diperbolehkan untuk
+     * input kehadiran manual.
+     */
+    $allowedStatus = [
+        'sakit',
+        'izin',
+        'alpa'
+    ];
 
+    /*
+     * Normalisasi status.
+     */
+    $status = strtolower(trim($status));
+
+    /*
+     * Pastikan status valid.
+     */
+    if (!in_array($status, $allowedStatus, true)) {
+        return false;
+    }
+
+    /*
+     * Keterangan boleh kosong.
+     */
+    $keterangan = $keterangan !== null
+        ? trim($keterangan)
+        : null;
+
+    /*
+     * Jika kosong, simpan sebagai NULL.
+     */
+    if ($keterangan === '') {
+        $keterangan = null;
+    }
+
+    /*
+     * Siswa harus mempunyai kartu NFC.
+     *
+     * Karena tabel absensi siswa menggunakan
+     * id_kartu_nfc sebagai relasi siswa.
+     */
+    if ($idKartuNfc <= 0) {
+        return false;
+    }
+
+    /*
+     * Simpan melalui Repository.
+     *
+     * Jika absensi pada tanggal tersebut
+     * sudah ada → update.
+     *
+     * Jika belum ada → insert.
+     */
+    return $this->repository
+        ->saveStudentManualAttendance(
+            $idSekolah,
+            $idKartuNfc,
+            $tanggal,
+            $status,
+            $keterangan
+        );
+}
     /**
      * Statistik daftar kehadiran.
      */
@@ -121,7 +200,8 @@ class KehadiranService
 
         return $statistik;
     }
-    /**
+    
+      /**
      * Batalkan absensi pulang guru.
      */
     public function cancelGuruCheckout(

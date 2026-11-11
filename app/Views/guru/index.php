@@ -111,6 +111,8 @@
 <?= view('guru/modal') ?>
 <?= view('guru/modal_import') ?>
 
-
+<script>
+    const base_url = "<?= base_url() ?>";
+</script>
 
 <?= $this->endSection() ?>

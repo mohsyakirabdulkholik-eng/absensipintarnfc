@@ -25,7 +25,7 @@
 
       <!-- Superadmin Dashboard Responsive -->
       <link rel="stylesheet"
-            href="<?= base_url('assets/css/superadmin-dashboard.css')?>">
+            href="<?= base_url('assets/css/superadmin-layout.css')?>">
 
           <link rel="stylesheet"
 href="https://cdn.datatables.net/2.3.1/css/dataTables.bootstrap5.css">
@@ -33,8 +33,6 @@ href="https://cdn.datatables.net/2.3.1/css/dataTables.bootstrap5.css">
           <!-- sweatalert2 -->
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
-    <!-- url jurusan -->
-    <script> const base_url="<?= base_url();?>"; </script>
 
     <!-- chart.js -->
       <script src="https://cdn.jsdelivr.net/npm/chart.js@4.5.0/dist/chart.umd.min.js"></script>

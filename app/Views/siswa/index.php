@@ -94,5 +94,7 @@
 
 <?= view('siswa/modal') ?>
 <?= view('siswa/modal_import') ?>
-
+<script>
+    const base_url = "<?= base_url() ?>";
+</script>
 <?= $this->endSection() ?>

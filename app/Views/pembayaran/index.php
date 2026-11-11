@@ -7,11 +7,11 @@
     <div class="mb-4">
 
         <h2 class="mb-1">
-            Pembayaran
+            Support
         </h2>
 
         <p class="text-muted mb-0">
-            Kelola pembayaran langganan Absensi Pintar.
+            Support atau dukungan untuk founder dan pengembang layanan Absensi Pintar berbasis NFC dalam menyediakan layanan absensi digital dengan memanfaatkan teknologi NFC yang ada di smartphone.
         </p>
 
     </div>
@@ -23,7 +23,7 @@
         <div class="card-header bg-white">
 
             <h5 class="mb-0">
-                Paket Langganan
+                Dukungan & terima kasih
             </h5>
 
         </div>
@@ -50,7 +50,7 @@
 
                                 <div class="fs-4 fw-bold mb-2">
 
-                                    Rp<?= number_format(
+                                    <?= number_format( 
                                         (float) $item['harga'],
                                         0,
                                         ',',

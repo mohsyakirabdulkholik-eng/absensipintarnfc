@@ -19,28 +19,30 @@ class SiswaRepository
     public function getAll($idSekolah)
     {
         return $this->model
-        ->select('
-            siswa.*,
-            kelas.nama_kelas,
-            kartu_nfc.id AS id_kartu_nfc,
-            kartu_nfc.uid AS uid_kartu,
-            kartu_nfc.nomor_kartu,
-            kartu_nfc.status AS status_kartu
-        ')
-        ->join('kelas', 'kelas.id = siswa.id_kelas')
-        ->join(
-            'kartu_nfc',
-            'kartu_nfc.id_siswa = siswa.id',
-            'left'
-        )
-        ->where('siswa.id_sekolah', $idSekolah)
-        ->orderBy('siswa.nama_siswa', 'ASC')
-        ->findAll();
+            ->select('
+                siswa.*,
+                kelas.nama_kelas,
+                kartu_nfc.id AS id_kartu_nfc,
+                kartu_nfc.uid AS uid_kartu,
+                kartu_nfc.nomor_kartu,
+                kartu_nfc.status AS status_kartu
+            ')
+            ->join('kelas', 'kelas.id = siswa.id_kelas')
+            ->join(
+                'kartu_nfc',
+                'kartu_nfc.id_siswa = siswa.id',
+                'left'
+            )
+            ->where('siswa.id_sekolah', $idSekolah)
+            ->orderBy('siswa.nama_siswa', 'ASC')
+            ->findAll();
     }
+
     public function find($id)
     {
         return $this->model->find($id);
     }
+
     public function insert(array $data)
     {
         return $this->model->insert($data);
@@ -55,6 +57,7 @@ class SiswaRepository
     {
         return $this->model->delete($id);
     }
+
     public function getBySekolah($idSekolah)
     {
         return $this->model
@@ -68,13 +71,14 @@ class SiswaRepository
             ->where('siswa.id_sekolah', $idSekolah)
             ->findAll();
     }
+
     public function cekNis($nis)
     {
         return $this->model
             ->where('nis', $nis)
             ->first();
     }
-    
+
     public function cekNisn($nisn)
     {
         return $this->model
@@ -82,17 +86,33 @@ class SiswaRepository
             ->first();
     }
 
+    /**
+     * Mengambil siswa yang belum memiliki kartu NFC aktif.
+     *
+     * Siswa akan masuk daftar apabila:
+     * - belum pernah memiliki kartu NFC, atau
+     * - kartu lamanya berstatus hilang/nonaktif.
+     *
+     * Siswa yang sudah memiliki kartu NFC aktif
+     * tidak akan masuk daftar.
+     */
     public function getBelumPunyaKartu($idSekolah)
     {
         return $this->model
             ->select('siswa.id, siswa.nama_siswa as nama')
-            ->join('kartu_nfc', 'kartu_nfc.id_siswa = siswa.id', 'left')
             ->where('siswa.id_sekolah', $idSekolah)
-            ->where('kartu_nfc.id IS NULL')
+            ->where("
+                NOT EXISTS (
+                    SELECT 1
+                    FROM kartu_nfc
+                    WHERE kartu_nfc.id_siswa = siswa.id
+                    AND kartu_nfc.status = 'aktif'
+                )
+            ", null, false)
             ->orderBy('siswa.nama_siswa', 'ASC')
             ->findAll();
     }
-    
+
     public function findKelasByNama(string $namaKelas, int $idSekolah)
     {
         return $this->kelasModel

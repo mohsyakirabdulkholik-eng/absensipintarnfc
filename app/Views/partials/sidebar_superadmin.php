@@ -34,7 +34,7 @@
                         class="nav-link <?= uri_string() === 'superadmin' ? 'active' : '' ?>"
                     >
 
-                        <i class="nav-icon bi bi-speedometer2"></i>
+                        <i class="nav-icon fas fa-gauge"></i>
 
                         <p>
                             Dashboard
@@ -59,7 +59,7 @@
                         class="nav-link"
                     >
 
-                        <i class="nav-icon bi bi-building"></i>
+                        <i class="nav-icon fas fa-building"></i>
 
                         <p>
                             Daftar Sekolah
@@ -84,7 +84,7 @@
                         class="nav-link"
                     >
 
-                        <i class="nav-icon bi bi-credit-card"></i>
+                        <i class="nav-icon fas fa-credit-card"></i>
 
                         <p>
                             Langganan
@@ -103,7 +103,7 @@
                         class="nav-link"
                     >
 
-                        <i class="nav-icon bi bi-receipt"></i>
+                        <i class="nav-icon fas fa-receipt"></i>
 
                         <p>
                             Pembayaran
@@ -128,7 +128,7 @@
                         class="nav-link"
                     >
 
-                        <i class="nav-icon bi bi-gear"></i>
+                        <i class="nav-icon fas fa-gear"></i>
 
                         <p>
                             Pengaturan Platform
@@ -147,7 +147,7 @@
                         class="nav-link"
                     >
 
-                        <i class="nav-icon bi bi-box-arrow-right"></i>
+                        <i class="nav-icon fas fa-right-from-bracket"></i>
 
                         <p>
                             Logout

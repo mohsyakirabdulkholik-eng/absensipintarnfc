@@ -153,7 +153,7 @@
                         <i class="nav-icon fas fa-money-bill"></i>
 
                         <p>
-                            Pembayaran
+                            Dukungan
                         </p>
                     </a>
                 </li>

@@ -185,6 +185,7 @@ $routes->group('', ['filter' => 'auth'], function ($routes) {
      */
     $routes->get('kehadiran', 'Admin\KehadiranController::index', ['filter' => 'subscription']);
     $routes->get('kehadiran/data', 'Admin\KehadiranController::getData', ['filter' => 'subscription'] );
+    $routes->post('kehadiran/update-siswa', 'Admin\KehadiranController::updateStudentAttendance', ['filter' => 'subscription'] );
      /*
      * Rekap Kehadiran
     */
@@ -224,7 +225,109 @@ $routes->group('', ['filter' => 'auth'], function ($routes) {
 
         $routes->post('nfc/register-siswa',  'Api\NfcController::registerSiswa');
 
+        $routes->post('nfc/replace-siswa-card',  'Api\NfcController::replaceSiswaCard');
+
         $routes->get('kehadiran',  'Api\KehadiranController::index');
 
         $routes->get('kelas', 'Api\KelasController::index');
+
+            // ==============================
+            // UJIAN
+            // ==============================
+
+            $routes->get('ujian', 'Api\UjianController::index');
+            $routes->get('ujian/(:num)', 'Api\UjianController::show');
+            $routes->post('ujian', 'Api\UjianController::create');
+            $routes->put('ujian/(:num)', 'Api\UjianController::update');
+            $routes->delete('ujian/(:num)', 'Api\UjianController::delete');
+            $routes->post('ujian/(:num)/activate', 'Api\UjianController::activate');
+            $routes->post('ujian/(:num)/finish', 'Api\UjianController::finish');
+
+            // ==========================
+            // SOAL UJIAN
+            // ==========================
+
+            $routes->get('ujian/(:num)/soal', 'Api\SoalController::index');
+
+            $routes->get('ujian/(:num)/soal/(:num)',  'Api\SoalController::show');
+
+            $routes->post(
+                'ujian/(:num)/soal',
+                'Api\SoalController::create'
+            );
+
+            $routes->put(
+                'ujian/(:num)/soal/(:num)',
+                'Api\SoalController::update'
+            );
+
+            $routes->delete(
+                'ujian/(:num)/soal/(:num)',
+                'Api\SoalController::delete'
+            );
+
+            // PILIHAN JAWABAN
+            $routes->get(
+                'soal/(:num)/pilihan',
+                'Api\PilihanJawabanController::index'
+            );
+
+            $routes->post(
+                'soal/(:num)/pilihan',
+                'Api\PilihanJawabanController::create'
+            );
+
+            $routes->put(
+                'soal/(:num)/pilihan/(:num)',
+                'Api\PilihanJawabanController::update'
+            );
+
+            $routes->delete(
+                'soal/(:num)/pilihan/(:num)',
+                'Api\PilihanJawabanController::delete'
+            );
+
+            $routes->get(
+                'ujian/(:num)/peserta',
+                'Api\PesertaUjianController::index'
+            );
+
+            $routes->post(
+                'ujian/(:num)/peserta/register',
+                'Api\PesertaUjianController::register'
+            );
+            
+            $routes->get(
+                'peserta-ujian/(:num)/jawaban',
+                'Api\JawabanUjianController::index'
+            );
+
+            $routes->post(
+                'peserta-ujian/(:num)/jawaban',
+                'Api\JawabanUjianController::save'
+            );
+            
+            $routes->post(
+                'peserta-ujian/(:num)/mulai',
+                'Api\PesertaUjianController::start'
+            );
+            
+            $routes->post(
+                'peserta-ujian/(:num)/selesai',
+                'Api\HasilUjianController::selesai'
+            );
+
+            /*
+            |--------------------------------------------------------------------------
+            | LOGIN SISWA
+            |--------------------------------------------------------------------------
+            */
+
+            $routes->post(
+                'siswa/login',
+                'Api\LoginSiswaController::login'
+            );
+
+
+
     });

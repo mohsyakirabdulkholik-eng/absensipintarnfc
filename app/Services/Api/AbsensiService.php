@@ -341,7 +341,8 @@ class AbsensiService
 
                 return $this->checkOutGuru(
                     $attendance,
-                    $jam
+                    $jam,
+                    $card
                 );
             }
 
@@ -377,7 +378,8 @@ class AbsensiService
             return $this->checkOut(
                 $attendance,
                 $setting,
-                $jam
+                $jam,
+                $card
             );
         }
 
@@ -458,7 +460,8 @@ class AbsensiService
     private function checkOut(
         array $attendance,
         array $setting,
-        string $jam
+        string $jam,
+        array $card
     ): array
     {
         // Belum waktunya pulang
@@ -490,6 +493,8 @@ class AbsensiService
             'CHECKOUT_SUCCESS',
             'Absensi pulang berhasil.',
             [
+                'nama'       => $card['nama'],
+                'jenis'      => $card['type'],
                 'jam_pulang' => $jam
             ]
         );
@@ -560,7 +565,8 @@ class AbsensiService
      */
     private function checkOutGuru(
         array $attendance,
-        string $jam
+        string $jam,
+        array $card
     ): array
     {
         $update = [
@@ -584,6 +590,8 @@ class AbsensiService
             'CHECKOUT_SUCCESS',
             'Absensi pulang guru berhasil.',
             [
+                'nama'       => $card['nama'],
+                'jenis'      => $card['type'],
                 'jam_pulang' => $jam
             ]
         );

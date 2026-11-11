@@ -44,7 +44,7 @@
                         </div>
 
                         <div class="fs-1 text-primary stat-icon">
-                            <i class="bi bi-buildings"></i>
+                            <i class="fas fa-building"></i>
                         </div>
 
                     </div>
@@ -78,7 +78,7 @@
                         </div>
 
                         <div class="fs-1 text-success stat-icon">
-                            <i class="bi bi-building-check"></i>
+                            <i class="fas fa-building-circle-check"></i>
                         </div>
 
                     </div>
@@ -112,7 +112,7 @@
                         </div>
 
                         <div class="fs-1 text-success stat-icon">
-                            <i class="bi bi-credit-card"></i>
+                            <i class="fas fa-credit-card"></i>
                         </div>
 
                     </div>
@@ -146,7 +146,7 @@
                         </div>
 
                         <div class="fs-1 text-danger stat-icon">
-                            <i class="bi bi-credit-card-2-front"></i>
+                            <i class="fas fa-credit-card"></i>
                         </div>
 
                     </div>

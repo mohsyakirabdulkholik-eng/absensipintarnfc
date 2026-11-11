@@ -182,6 +182,73 @@ class KehadiranRepository
             ->get()
             ->getResultArray();
     }
+/**
+ * Simpan atau ubah kehadiran manual siswa.
+ *
+ * Jika absensi pada tanggal tersebut sudah ada,
+ * maka status dan keterangan akan diperbarui.
+ *
+ * Jika belum ada, maka dibuat record absensi baru.
+ */
+public function saveStudentManualAttendance(
+    int $idSekolah,
+    int $idKartuNfc,
+    string $tanggal,
+    string $status,
+    ?string $keterangan
+): bool {
+    /*
+     * Cari absensi siswa pada tanggal yang dipilih.
+     */
+    $attendance = $this->db
+        ->table('absensi')
+        ->where('id_sekolah', $idSekolah)
+        ->where('id_kartu_nfc', $idKartuNfc)
+        ->where('tanggal', $tanggal)
+        ->where('jenis', 'siswa')
+        ->get()
+        ->getRowArray();
+
+    /*
+     * Jika sudah ada absensi,
+     * cukup update status dan keterangan.
+     */
+    if ($attendance) {
+        return $this->db
+            ->table('absensi')
+            ->where('id', $attendance['id'])
+            ->update([
+                'status'          => $status,
+                'keterangan'      => $keterangan,
+                'terlambat_menit' => 0
+            ]);
+    }
+
+    /*
+     * Jika belum ada absensi,
+     * buat record baru.
+     *
+     * Jam masuk dan jam pulang
+     * sengaja dikosongkan karena
+     * ini adalah input manual.
+     */
+    return $this->db
+        ->table('absensi')
+        ->insert([
+            'id_sekolah'       => $idSekolah,
+            'jenis'            => 'siswa',
+            'id_kartu_nfc'     => $idKartuNfc,
+            'tanggal'          => $tanggal,
+            'jam_masuk'        => null,
+            'jam_pulang'       => null,
+            'status'           => $status,
+            'terlambat_menit'  => 0,
+            'keterangan'       => $keterangan,
+            'device_id'        => null
+        ]);
+}
+   
+    
     /**
      * Cari absensi guru berdasarkan ID dan sekolah.
      */

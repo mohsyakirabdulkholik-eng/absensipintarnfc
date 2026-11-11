@@ -266,7 +266,7 @@ class NfcService
         /*
         * 6. Cek UID sudah terdaftar atau belum
         */
-        $existingUid = $this->kartuRepository->findByUid(
+        $existingUid = $this->kartuRepository->findByAnyUid(
             $uid,
             $idSekolah
         );
@@ -282,7 +282,7 @@ class NfcService
         /*
         * 7. Cek Guru sudah memiliki kartu aktif atau belum
         */
-        $existingCard = $this->kartuRepository->findByGuru(
+        $existingCard = $this->kartuRepository->findAnyByGuru(
             $idGuru,
             $idSekolah
         );
@@ -406,7 +406,7 @@ class NfcService
         /*
         * 6. Cek UID sudah terdaftar atau belum
         */
-        $existingUid = $this->kartuRepository->findByUid(
+        $existingUid = $this->kartuRepository->findAnyByUid(
             $uid,
             $idSekolah
         );
@@ -476,4 +476,190 @@ class NfcService
             ]
         ];
     }
+
+
+    /**
+     * =========================================
+     * GANTI KARTU NFC SISWA
+     * =========================================
+     *
+     * Kartu lama tidak dihapus.
+     * Kartu lama diubah menjadi status "hilang".
+     * Kartu baru dibuat dengan status "aktif".
+     */
+    public function replaceSiswaCard(
+        string $token,
+        int $idKartuLama,
+        string $uidBaru
+    ): array {
+
+        /*
+        * 1. Validasi UID baru
+        */
+        if (empty($uidBaru)) {
+            return [
+                'success' => false,
+                'code'    => 'UID_REQUIRED',
+                'message' => 'UID kartu NFC baru wajib diisi.'
+            ];
+        }
+
+        /*
+        * 2. Validasi Device
+        */
+        $device = $this->deviceService->validateDevice($token);
+
+        if (!$device['success']) {
+            return $device;
+        }
+
+        $idSekolah = (int) $device['data']['id_sekolah'];
+
+        /*
+        * 3. Cari kartu lama
+        */
+        $kartuLama = $this->kartuRepository->findById(
+            $idKartuLama,
+            $idSekolah
+        );
+
+        if (!$kartuLama) {
+            return [
+                'success' => false,
+                'code'    => 'CARD_NOT_FOUND',
+                'message' => 'Kartu NFC lama tidak ditemukan.'
+            ];
+        }
+
+        /*
+        * 4. Pastikan kartu lama adalah kartu siswa
+        */
+        if (empty($kartuLama['id_siswa'])) {
+            return [
+                'success' => false,
+                'code'    => 'CARD_NOT_STUDENT',
+                'message' => 'Kartu yang dipilih bukan kartu siswa.'
+            ];
+        }
+
+        /*
+        * 5. Pastikan kartu lama memang berstatus hilang
+        */
+        if ($kartuLama['status'] !== 'hilang') {
+            return [
+                'success' => false,
+                'code'    => 'CARD_NOT_LOST',
+                'message' => 'Kartu lama harus berstatus hilang.'
+            ];
+        }
+
+        /*
+        * 6. Cari data siswa
+        */
+        $idSiswa = (int) $kartuLama['id_siswa'];
+
+        $siswa = $this->siswaRepository->find($idSiswa);
+
+        if (!$siswa) {
+            return [
+                'success' => false,
+                'code'    => 'SISWA_NOT_FOUND',
+                'message' => 'Data siswa tidak ditemukan.'
+            ];
+        }
+
+        /*
+        * 7. Pastikan siswa berasal dari sekolah yang sama
+        */
+        if ((int) $siswa['id_sekolah'] !== $idSekolah) {
+            return [
+                'success' => false,
+                'code'    => 'SISWA_INVALID_SCHOOL',
+                'message' => 'Siswa tidak terdaftar pada sekolah perangkat ini.'
+            ];
+        }
+
+        /*
+        * 8. Pastikan siswa masih aktif
+        */
+        if ($siswa['status'] !== 'aktif') {
+            return [
+                'success' => false,
+                'code'    => 'SISWA_INACTIVE',
+                'message' => 'Siswa tidak aktif.'
+            ];
+        }
+
+        /*
+        * 9. Pastikan UID baru belum digunakan
+        */
+        $existingUid = $this->kartuRepository->findAnyByUid(
+            $uidBaru,
+            $idSekolah
+        );
+
+        if ($existingUid) {
+            return [
+                'success' => false,
+                'code'    => 'UID_ALREADY_REGISTERED',
+                'message' => 'Kartu NFC baru sudah terdaftar.'
+            ];
+        }
+
+        /*
+        * 10. Generate nomor kartu baru
+        */
+        $nomorKartu = 'SISWA-' .
+            $idSekolah . '-' .
+            $idSiswa . '-' .
+            date('YmdHis');
+
+        /*
+        * 11. Data kartu baru
+        */
+        $dataKartuBaru = [
+            'uid'            => $uidBaru,
+            'id_sekolah'     => $idSekolah,
+            'id_guru'        => null,
+            'id_siswa'       => $idSiswa,
+            'nomor_kartu'    => $nomorKartu,
+            'status'         => 'aktif',
+            'tanggal_daftar' => date('Y-m-d H:i:s')
+        ];
+
+        /*
+        * 12. Ganti kartu menggunakan transaksi
+        */
+        $replaced = $this->kartuRepository->replaceSiswaCard(
+            $idKartuLama,
+            $idSekolah,
+            $dataKartuBaru
+        );
+
+        if (!$replaced) {
+            return [
+                'success' => false,
+                'code'    => 'REPLACE_CARD_FAILED',
+                'message' => 'Gagal mengganti kartu NFC siswa.'
+            ];
+        }
+
+        /*
+        * 13. Berhasil
+        */
+        return [
+            'success' => true,
+            'code'    => 'REPLACE_CARD_SUCCESS',
+            'message' => 'Kartu NFC siswa berhasil diganti.',
+            'data'    => [
+                'id_siswa'          => $idSiswa,
+                'nama'              => $siswa['nama_siswa'],
+                'id_kartu_lama'     => $idKartuLama,
+                'uid_kartu_lama'    => $kartuLama['uid'],
+                'uid_kartu_baru'    => $uidBaru,
+                'nomor_kartu_baru'  => $nomorKartu
+            ]
+        ];
+    }
+
 }

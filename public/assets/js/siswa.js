@@ -314,7 +314,7 @@ $(function () {
           return `
                 <button
                     class="btn btn-warning btn-sm btn-edit"
-                    data-id="${data.id_siswa}">
+                    data-id="${data.id}">
 
                     <i class="fa-solid fa-pen"></i>
 
@@ -322,7 +322,7 @@ $(function () {
 
                 <button
                     class="btn btn-danger btn-sm btn-delete"
-                    data-id="${data.id_siswa}">
+                    data-id="${data.id}">
 
                     <i class="fa-solid fa-trash"></i>
 

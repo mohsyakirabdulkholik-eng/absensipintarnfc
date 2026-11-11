@@ -41,6 +41,7 @@ class NfcController extends BaseController
 
         return $this->response->setJSON($result);
     }
+
     public function siswa()
     {
         $token = $this->request->getHeaderLine('X-Device-Token');
@@ -122,6 +123,56 @@ class NfcController extends BaseController
             $token,
             $request['uid'],
             (int) $request['id_siswa']
+        );
+
+        return $this->response->setJSON($result);
+    }
+
+    /**
+     * Ganti kartu NFC siswa
+     *
+     * Kartu lama harus berstatus "hilang".
+     * Kartu lama tidak dihapus.
+     * UID baru akan didaftarkan sebagai kartu aktif.
+     */
+    public function replaceSiswaCard()
+    {
+        // Ambil token perangkat
+        $token = $this->request->getHeaderLine('X-Device-Token');
+
+        // Ambil JSON body
+        $request = $this->request->getJSON(true);
+
+        if (!$request) {
+            $request = $this->request->getPost();
+        }
+
+        // Validasi kartu lama
+        if (empty($request['id_kartu_lama'])) {
+            return $this->response->setJSON([
+                'success' => false,
+                'code'    => 'CARD_REQUIRED',
+                'message' => 'ID kartu lama wajib diisi.'
+            ]);
+        }
+
+        // Validasi UID baru
+        if (empty($request['uid_baru'])) {
+            return $this->response->setJSON([
+                'success' => false,
+                'code'    => 'UID_REQUIRED',
+                'message' => 'UID kartu NFC baru wajib diisi.'
+            ]);
+        }
+
+        // Normalisasi UID
+        $uidBaru = strtoupper(trim($request['uid_baru']));
+
+        // Proses penggantian kartu
+        $result = $this->service->replaceSiswaCard(
+            $token,
+            (int) $request['id_kartu_lama'],
+            $uidBaru
         );
 
         return $this->response->setJSON($result);

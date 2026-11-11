@@ -143,6 +143,112 @@ class KehadiranController extends BaseAdminController
             ]
         ]);
     }
+    
+    public function updateStudentAttendance()
+{
+    /*
+     * Ambil data dari request.
+     */
+    $idKartuNfc = (int) $this->request->getPost('id_kartu_nfc');
+    $tanggal    = trim((string) $this->request->getPost('tanggal'));
+    $status     = strtolower(trim((string) $this->request->getPost('status')));
+    $keterangan = $this->request->getPost('keterangan');
+
+    /*
+     * Validasi data dasar.
+     */
+    if ($idKartuNfc <= 0) {
+        return $this->response->setJSON([
+            'success' => false,
+            'message' => 'Kartu NFC siswa tidak ditemukan.'
+        ]);
+    }
+
+    if ($tanggal === '') {
+        return $this->response->setJSON([
+            'success' => false,
+            'message' => 'Tanggal kehadiran wajib diisi.'
+        ]);
+    }
+
+    /*
+     * Validasi format tanggal.
+     */
+    $date = \DateTime::createFromFormat('Y-m-d', $tanggal);
+
+    if (!$date || $date->format('Y-m-d') !== $tanggal) {
+        return $this->response->setJSON([
+            'success' => false,
+            'message' => 'Format tanggal tidak valid.'
+        ]);
+    }
+
+    /*
+     * Status manual yang diperbolehkan.
+     */
+    $allowedStatus = [
+        'sakit',
+        'izin',
+        'alpa'
+    ];
+
+    if (!in_array($status, $allowedStatus, true)) {
+        return $this->response->setJSON([
+            'success' => false,
+            'message' => 'Status kehadiran tidak valid.'
+        ]);
+    }
+
+    /*
+     * Bersihkan keterangan.
+     */
+    if ($keterangan !== null) {
+        $keterangan = trim((string) $keterangan);
+    }
+
+    if ($keterangan === '') {
+        $keterangan = null;
+    }
+
+    /*
+     * Ambil ID sekolah dari session.
+     *
+     * Gunakan cara yang sama seperti method
+     * lain di Controller ini jika nama session
+     * berbeda pada project kamu.
+     */
+    $idSekolah = (int) session()->get('id_sekolah');
+
+    if ($idSekolah <= 0) {
+        return $this->response->setJSON([
+            'success' => false,
+            'message' => 'Data sekolah tidak ditemukan.'
+        ]);
+    }
+
+    /*
+     * Simpan melalui Service.
+     */
+    $result = $this->kehadiranService->saveStudentManualAttendance(
+        $idSekolah,
+        $idKartuNfc,
+        $tanggal,
+        $status,
+        $keterangan
+    );
+
+    if (!$result) {
+        return $this->response->setJSON([
+            'success' => false,
+            'message' => 'Kehadiran siswa gagal disimpan.'
+        ]);
+    }
+
+    return $this->response->setJSON([
+        'success' => true,
+        'message' => 'Kehadiran siswa berhasil diperbarui.'
+    ]);
+}
 
     /**
      * Batalkan absensi pulang guru.
